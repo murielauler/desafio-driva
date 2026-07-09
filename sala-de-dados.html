@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sala de Dados — Desafio Driva</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="dot"></span>Driva</a>
+    <div class="nav-links">
+      <a href="index.html">Início</a>
+      <a href="como-funciona.html">Como funciona</a>
+      <a href="quem-somos.html">Quem somos</a>
+      <a href="sala-de-dados.html">Sala de dados</a>
+    </div>
+    <a class="btn" href="setup.html">Guia de setup →</a>
+  </div>
+</nav>
+
+<header class="phead">
+  <div class="wrap">
+    <p class="crumb"><a href="index.html">Início</a> › Sala de dados</p>
+    <h1>Sala de Dados · Desafio Driva</h1>
+    <p class="lead">Bem-vindo, analista. Aqui está tudo o que você precisa para o pré-work do workshop de Claude Cowork. Leia o briefing, baixe os materiais e organize sua pasta local antes do dia.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="brief">
+      <p class="eyebrow" style="color:var(--mint)">O briefing do CEO</p>
+      <h2>Por que estamos perdendo tantos clientes?</h2>
+      <p style="color:#DCEFEC">A Driva cresce rápido, mas o churn está em torno de <b style="color:#fff">5% por semana</b> — perto de um quinto da base saindo todo mês. Como cada cliente novo custa cerca de <b style="color:#fff">R$ 1.200 (CAC + onboarding)</b> antes de gerar qualquer receita, esse ritmo de saída ameaça a meta de chegar a 8.000 carros em 2027.</p>
+      <p style="color:#DCEFEC">Na última reunião de operações, a diretoria se dividiu: o CX quer <b style="color:#fff">contratar mais atendentes</b>, o CFO quer <b style="color:#fff">cortar 20% do time</b>, e ninguém concorda sobre a causa. O CEO chamou você — o time de análise — para responder, com base nos dados:</p>
+      <div style="margin-top:18px">
+        <div class="q"><b>1</b><p>Faz sentido contratar os +8 atendentes que o CX está pedindo? Por quê?</p></div>
+        <div class="q"><b>2</b><p>Por que o churn está alto? Quem está saindo, quando e por quê — e o que você recomenda para reduzir?</p></div>
+        <div class="q"><b>3</b><p>Quais KPIs você usaria para acompanhar se o plano está funcionando?</p></div>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top:26px">
+      ⚠️ <b>Atenção ao campo “motivo do churn”.</b> Ele é preenchido à mão pelo time de retenção e é <b>pouco confiável</b>: às vezes vem em branco, às vezes o cliente não diz a verdade, às vezes é classificado às pressas. Os sinais reais do que aconteceu estão no <b>comportamento</b> — tickets, cobranças, uso e onboarding. Use o motivo como pista, mas confirme cruzando os dados.
+    </div>
+  </div>
+</section>
+
+<section class="section soft">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:10px">
+      <p class="eyebrow">Materiais do desafio</p>
+      <h2>Baixe os arquivos</h2>
+      <p class="lead" style="margin-inline:auto">Cinco materiais da Driva. Baixe todos e guarde na sua pasta local — você vai analisá-los no Claude Cowork.</p>
+    </div>
+    <div class="dl-grid">
+      <a class="dl" href="downloads/driva_base_operacional.xlsx" download>
+        <div class="ft xls">XLSX</div>
+        <div><h3>Base operacional</h3><p>6 abas: clientes, tickets, cobranças, agentes, bases + leia-me</p></div>
+        <div class="go">↓</div>
+      </a>
+      <a class="dl" href="downloads/driva_institucional.pdf" download>
+        <div class="ft pdf">PDF</div>
+        <div><h3>Institucional Driva</h3><p>O que é a empresa, planos, personas e números</p></div>
+        <div class="go">↓</div>
+      </a>
+      <a class="dl" href="downloads/driva_diretrizes_atendimento_sla.pdf" download>
+        <div class="ft pdf">PDF</div>
+        <div><h3>Diretrizes & SLAs de atendimento</h3><p>Tom de voz, SLAs por categoria, régua de retenção</p></div>
+        <div class="go">↓</div>
+      </a>
+      <a class="dl" href="downloads/driva_ata_operacoes.pdf" download>
+        <div class="ft pdf">PDF</div>
+        <div><h3>Ata da reunião de operações</h3><p>O debate da diretoria sobre o churn (25/06/2026)</p></div>
+        <div class="go">↓</div>
+      </a>
+      <a class="dl" href="downloads/driva_tickets_zendesk_export.json" download>
+        <div class="ft" style="background:#03363d">JSON</div>
+        <div><h3>Export de tickets (estilo Zendesk)</h3><p>53 tickets + conversas dos 20 que cancelaram, no schema do Zendesk</p></div>
+        <div class="go">↓</div>
+      </a>
+      <a class="dl" href="downloads/driva_historicos_atendimento_churn.md" download>
+        <div class="ft" style="background:#0e9f92">TXT</div>
+        <div><h3>Históricos de atendimento (leitura)</h3><p>As mesmas conversas em texto, fáceis de ler</p></div>
+        <div class="go">↓</div>
+      </a>
+    </div>
+    <div class="callout" style="margin-top:24px">
+      <b>Dica:</b> a “Base operacional” é o coração do desafio — abra as abas e repare que o mesmo <code>customer_id</code> aparece em clientes, tickets e cobranças. É cruzando essas tabelas que a resposta aparece.
+    </div>
+
+    <div style="margin-top:40px">
+      <p class="eyebrow">Sinais públicos</p>
+      <h2 style="font-size:1.6rem">O que os clientes andam falando por aí</h2>
+      <p class="lead" style="max-width:62ch">Antes de mergulhar nos dados internos, vale olhar a cara pública da Driva. A reputação no portal de reclamações traz pistas qualitativas — do que mais irrita o cliente até o motivo real de quem cancela.</p>
+      <a class="dl" href="reclame-driva.html" target="_blank" rel="noopener" style="max-width:540px;margin-top:6px">
+        <div class="ft" style="background:#0e9f92">RA</div>
+        <div><h3>Driva no ReclameAí</h3><p>Reputação 6.3 · reclamações e respostas recentes — abre em nova aba</p></div>
+        <div class="go">↗</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap center">
+    <p class="eyebrow">Próximo passo</p>
+    <h2>Monte sua pasta antes do dia</h2>
+    <p class="lead" style="margin-inline:auto">Quem chega com o ambiente pronto aproveita 100% da prática. O guia de setup mostra o passo a passo — leva 10 minutos.</p>
+    <a class="btn big" href="setup.html" style="margin-top:10px">Abrir o guia de setup →</a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <div class="brand" style="font-family:var(--display);font-weight:700;font-size:1.4rem">● Driva</div>
+      <p style="max-width:34ch;margin-top:10px">A assinatura de carro para quem roda para viver. São Paulo, Brasil.</p>
+    </div>
+    <div><h4>Empresa</h4><a href="quem-somos.html">Quem somos</a><a href="como-funciona.html">Como funciona</a><a href="como-funciona.html">Planos</a></div>
+    <div><h4>Workshop</h4><a href="sala-de-dados.html">Sala de dados</a><a href="setup.html">Guia de setup</a></div>
+  </div>
+  <div class="wrap"><div class="disc">⚠️ Driva é uma empresa <b>fictícia</b>. Site, dados, clientes e números foram criados para fins didáticos (workshop de Claude Cowork). Qualquer semelhança com empresas reais é coincidência.</div></div>
+</footer>
+
+</body>
+</html>

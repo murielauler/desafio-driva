@@ -1,0 +1,6483 @@
+{
+  "manifest": {
+    "exported_at": "2026-07-09T18:13:48Z",
+    "source": "Zendesk Support (export simulado para treinamento)",
+    "subdomain": "driva",
+    "aviso": "Dados 100% fictícios. Estrutura inspirada na API do Zendesk Support (tickets + comments + users + custom_fields).",
+    "counts": {
+      "tickets": 53,
+      "users": 28,
+      "end_users": 20,
+      "agents": 8
+    },
+    "custom_field_definitions": [
+      {
+        "id": 45001,
+        "key": "csat_1_5",
+        "title": "CSAT (1 a 5)",
+        "type": "integer"
+      },
+      {
+        "id": 45002,
+        "key": "categoria",
+        "title": "Categoria do chamado",
+        "type": "text"
+      },
+      {
+        "id": 45003,
+        "key": "tipo_cliente",
+        "title": "Tipo de cliente",
+        "type": "text"
+      },
+      {
+        "id": 45004,
+        "key": "plano",
+        "title": "Plano",
+        "type": "text"
+      },
+      {
+        "id": 45005,
+        "key": "motivo_cancelamento",
+        "title": "Motivo do cancelamento (preenchido pela retenção)",
+        "type": "dropdown"
+      },
+      {
+        "id": 45006,
+        "key": "guincho_acionado",
+        "title": "Guincho acionado",
+        "type": "checkbox"
+      }
+    ],
+    "nota_didatica": "O campo 45005 (motivo_cancelamento) é preenchido manualmente pela retenção e é POUCO CONFIÁVEL. Compare com o conteúdo das conversas (comments) para achar a causa real do churn."
+  },
+  "users": [
+    {
+      "id": 10001,
+      "external_id": "10001",
+      "name": "Rafael Silva",
+      "role": "end-user",
+      "email": "rafael.silva@email.com",
+      "phone": "+55 11 99600-7829",
+      "created_at": "2026-06-08T09:00:00Z",
+      "tags": [
+        "motorista_app",
+        "plano_conforto"
+      ],
+      "user_fields": {
+        "health_score": 46,
+        "churn_risk": "Médio",
+        "lifecycle_stage": "churned",
+        "cancelou_em": "2026-06-17",
+        "regiao": "Zona Sul"
+      }
+    },
+    {
+      "id": 10003,
+      "external_id": "10003",
+      "name": "Diego Martins",
+      "role": "end-user",
+      "email": "diego.martins@email.com",
+      "phone": "+55 11 92307-5802",
+      "created_at": "2025-05-11T09:00:00Z",
+      "tags": [
+        "motorista_app",
+        "plano_conforto"
+      ],
+      "user_fields": {
+        "health_score": 32,
+        "churn_risk": "Alto",
+        "lifecycle_stage": "churned",
+        "cancelou_em": "2026-06-06",
+        "regiao": "ABC"
+      }
+    },
+    {
+      "id": 10014,
+      "external_id": "10014",
+      "name": "Anderson Cardoso",
+      "role": "end-user",
+      "email": "anderson.cardoso@email.com",
+      "phone": "+55 11 91155-2000",
+      "created_at": "2024-08-27T09:00:00Z",
+      "tags": [
+        "motorista_app",
+        "plano_essencial"
+      ],
+      "user_fields": {
+        "health_score": 90,
+        "churn_risk": "Baixo",
+        "lifecycle_stage": "churned",
+        "cancelou_em": "2026-06-26",
+        "regiao": "Zona Sul"
+      }
+    },
+    {
+      "id": 10016,
+      "external_id": "10016",
+      "name": "Tatiane Almeida",
+      "role": "end-user",
+      "email": "tatiane.almeida@email.com",
+      "phone": "+55 11 92641-1050",
+      "created_at": "2024-08-05T09:00:00Z",
+      "tags": [
+        "motorista_app",
+        "plano_essencial"
+      ],
+      "user_fields": {
+        "health_score": 43,
+        "churn_risk": "Alto",
+        "lifecycle_stage": "churned",
+        "cancelou_em": "2026-06-13",
+        "regiao": "Zona Norte"
+      }
+    },
+    {
+      "id": 10017,
+      "external_id": "10017",
+      "name": "Juliana Cardoso",
+      "role": "end-user",
+      "email": "juliana.cardoso@email.com",
+      "phone": "+55 11 92333-6707",
+      "created_at": "2025-01-30T09:00:00Z",
+      "tags": [
+        "motorista_app",
+        "plano_conforto"
+      ],
+      "user_fields": {
+        "health_score": 42,
+        "churn_risk": "Alto",
+        "lifecycle_stage": "churned",
+        "cancelou_em": "2026-06-11",
+        "regiao": "Zona Sul"
+      }
+    },
+    {
+      "id": 10018,
+      "external_id": "10018",
+      "name": "Marcelo Martins",
+      "role": "end-user",
+      "email": "marcelo.martins@email.com",
+      "phone": "+55 11 92426-5937",
+      "created_at": "2025-07-22T09:00:00Z",
+      "tags": [
+        "pessoal",
+        "plano_essencial"
+      ],
+      "user_fields": {
+        "health_score": 95,
+        "churn_risk": "Baixo",
+        "lifecycle_stage": "churned",
+        "cancelou_em": "2026-06-09",
+        "regiao": "Centro"
+      }
+    },
+    {
+      "id": 10020,
+      "external_id": "10020",
+      "name": "Tatiane Souza",
+      "role": "end-user",
+      "email": "tatiane.souza@email.com",
+      "phone": "+55 11 96349-7283",
+      "created_at": "2025-08-28T09:00:00Z",
+      "tags": [
+        "pessoal",
+        "plano_essencial"
+      ],
+      "user_fields": {
+        "health_score": 68,
+        "churn_risk": "Médio",
+        "lifecycle_stage": "churned",
+        "cancelou_em": "2026-06-28",
+        "regiao": "Zona Sul"
+      }
+    },
+    {
+      "id": 10021,
+      "external_id": "10021",
+      "name": "Bruno Pereira",
+      "role": "end-user",
+      "email": "bruno.pereira@email.com",
+      "phone": "+55 11 95244-2895",
+      "created_at": "2025-10-06T09:00:00Z",
+      "tags": [
+        "pessoal",
+        "plano_essencial"
+      ],
+      "user_fields": {
+        "health_score": 55,
+        "churn_risk": "Médio",
+        "lifecycle_stage": "churned",
+        "cancelou_em": "2026-06-09",
+        "regiao": "Zona Leste"
+      }
+    },
+    {
+      "id": 10027,
+      "external_id": "10027",
+      "name": "Tatiane Gomes",
+      "role": "end-user",
+      "email": "tatiane.gomes@email.com",
+      "phone": "+55 11 96134-7229",
+      "created_at": "2026-04-01T09:00:00Z",
+      "tags": [
+        "motorista_app",
+        "plano_conforto"
+      ],
+      "user_fields": {
+        "health_score": 89,
+        "churn_risk": "Baixo",
+        "lifecycle_stage": "churned",
+        "cancelou_em": "2026-06-19",
+        "regiao": "Zona Norte"
+      }
+    },
+    {
+      "id": 10031,
+      "external_id": "10031",
+      "name": "Camila Souza",
+      "role": "end-user",
+      "email": "camila.souza@email.com",
+      "phone": "+55 11 93370-5863",
+      "created_at": "2024-07-11T09:00:00Z",
+      "tags": [
+        "motorista_app",
+        "plano_essencial"
+      ],
+      "user_fields": {
+        "health_score": 47,
+        "churn_risk": "Médio",
+        "lifecycle_stage": "churned",
+        "cancelou_em": "2026-06-14",
+        "regiao": "Zona Norte"
+      }
+    },
+    {
+      "id": 10033,
+      "external_id": "10033",
+      "name": "Jefferson Martins",
+      "role": "end-user",
+      "email": "jefferson.martins@email.com",
+      "phone": "+55 11 99110-5775",
+      "created_at": "2025-09-25T09:00:00Z",
+      "tags": [
+        "motorista_app",
+        "plano_essencial"
+      ],
+      "user_fields": {
+        "health_score": 71,
+        "churn_risk": "Baixo",
+        "lifecycle_stage": "churned",
+        "cancelou_em": "2026-06-10",
+        "regiao": "Zona Sul"
+      }
+    },
+    {
+      "id": 10038,
+      "external_id": "10038",
+      "name": "Renata Gomes",
+      "role": "end-user",
+      "email": "renata.gomes@email.com",
+      "phone": "+55 11 96706-7412",
+      "created_at": "2026-05-24T09:00:00Z",
+      "tags": [
+        "motorista_app",
+        "plano_conforto"
+      ],
+      "user_fields": {
+        "health_score": 25,
+        "churn_risk": "Alto",
+        "lifecycle_stage": "churned",
+        "cancelou_em": "2026-06-12",
+        "regiao": "Zona Sul"
+      }
+    },
+    {
+      "id": 10055,
+      "external_id": "10055",
+      "name": "Camila Oliveira",
+      "role": "end-user",
+      "email": "camila.oliveira@email.com",
+      "phone": "+55 11 95769-3372",
+      "created_at": "2026-01-28T09:00:00Z",
+      "tags": [
+        "motorista_app",
+        "plano_essencial"
+      ],
+      "user_fields": {
+        "health_score": 47,
+        "churn_risk": "Médio",
+        "lifecycle_stage": "churned",
+        "cancelou_em": "2026-06-11",
+        "regiao": "ABC"
+      }
+    },
+    {
+      "id": 10059,
+      "external_id": "10059",
+      "name": "Josué Souza",
+      "role": "end-user",
+      "email": "josue.souza@email.com",
+      "phone": "+55 11 95014-1556",
+      "created_at": "2025-01-23T09:00:00Z",
+      "tags": [
+        "motorista_app",
+        "plano_essencial"
+      ],
+      "user_fields": {
+        "health_score": 66,
+        "churn_risk": "Médio",
+        "lifecycle_stage": "churned",
+        "cancelou_em": "2026-06-06",
+        "regiao": "Zona Norte"
+      }
+    },
+    {
+      "id": 10060,
+      "external_id": "10060",
+      "name": "Diego Ferreira",
+      "role": "end-user",
+      "email": "diego.ferreira@email.com",
+      "phone": "+55 11 92966-2910",
+      "created_at": "2025-11-20T09:00:00Z",
+      "tags": [
+        "motorista_app",
+        "plano_essencial"
+      ],
+      "user_fields": {
+        "health_score": 99,
+        "churn_risk": "Baixo",
+        "lifecycle_stage": "churned",
+        "cancelou_em": "2026-06-22",
+        "regiao": "Zona Sul"
+      }
+    },
+    {
+      "id": 10071,
+      "external_id": "10071",
+      "name": "Wagner Nascimento",
+      "role": "end-user",
+      "email": "wagner.nascimento@email.com",
+      "phone": "+55 11 99806-4029",
+      "created_at": "2024-09-16T09:00:00Z",
+      "tags": [
+        "motorista_app",
+        "plano_essencial"
+      ],
+      "user_fields": {
+        "health_score": 65,
+        "churn_risk": "Médio",
+        "lifecycle_stage": "churned",
+        "cancelou_em": "2026-06-30",
+        "regiao": "Zona Oeste"
+      }
+    },
+    {
+      "id": 10081,
+      "external_id": "10081",
+      "name": "Gilberto Oliveira",
+      "role": "end-user",
+      "email": "gilberto.oliveira@email.com",
+      "phone": "+55 11 94378-3641",
+      "created_at": "2025-02-27T09:00:00Z",
+      "tags": [
+        "motorista_app",
+        "plano_essencial"
+      ],
+      "user_fields": {
+        "health_score": 43,
+        "churn_risk": "Alto",
+        "lifecycle_stage": "churned",
+        "cancelou_em": "2026-06-13",
+        "regiao": "Zona Norte"
+      }
+    },
+    {
+      "id": 10087,
+      "external_id": "10087",
+      "name": "Bruno Moreira",
+      "role": "end-user",
+      "email": "bruno.moreira@email.com",
+      "phone": "+55 11 96769-9818",
+      "created_at": "2026-01-01T09:00:00Z",
+      "tags": [
+        "motorista_app",
+        "plano_conforto"
+      ],
+      "user_fields": {
+        "health_score": 38,
+        "churn_risk": "Alto",
+        "lifecycle_stage": "churned",
+        "cancelou_em": "2026-06-30",
+        "regiao": "ABC"
+      }
+    },
+    {
+      "id": 10089,
+      "external_id": "10089",
+      "name": "Josué Rocha",
+      "role": "end-user",
+      "email": "josue.rocha@email.com",
+      "phone": "+55 11 95177-5270",
+      "created_at": "2026-05-13T09:00:00Z",
+      "tags": [
+        "motorista_app",
+        "plano_essencial"
+      ],
+      "user_fields": {
+        "health_score": 32,
+        "churn_risk": "Alto",
+        "lifecycle_stage": "churned",
+        "cancelou_em": "2026-05-22",
+        "regiao": "Zona Sul"
+      }
+    },
+    {
+      "id": 10093,
+      "external_id": "10093",
+      "name": "Wesley Santos",
+      "role": "end-user",
+      "email": "wesley.santos@email.com",
+      "phone": "+55 11 93687-7876",
+      "created_at": "2025-04-06T09:00:00Z",
+      "tags": [
+        "motorista_app",
+        "plano_essencial"
+      ],
+      "user_fields": {
+        "health_score": 52,
+        "churn_risk": "Médio",
+        "lifecycle_stage": "churned",
+        "cancelou_em": "2026-06-23",
+        "regiao": "Centro"
+      }
+    },
+    {
+      "id": 90001,
+      "external_id": null,
+      "name": "Ana (Driva CX)",
+      "role": "agent",
+      "email": "ana@driva.com.br",
+      "created_at": "2025-01-10T09:00:00Z",
+      "tags": [
+        "cx",
+        "suporte"
+      ]
+    },
+    {
+      "id": 90002,
+      "external_id": null,
+      "name": "Bruno (Driva CX)",
+      "role": "agent",
+      "email": "bruno@driva.com.br",
+      "created_at": "2025-01-10T09:00:00Z",
+      "tags": [
+        "cx",
+        "suporte"
+      ]
+    },
+    {
+      "id": 90004,
+      "external_id": null,
+      "name": "Diego (Driva CX)",
+      "role": "agent",
+      "email": "diego@driva.com.br",
+      "created_at": "2025-01-10T09:00:00Z",
+      "tags": [
+        "cx",
+        "suporte"
+      ]
+    },
+    {
+      "id": 90007,
+      "external_id": null,
+      "name": "Gabi (Driva CX)",
+      "role": "agent",
+      "email": "gabi@driva.com.br",
+      "created_at": "2025-01-10T09:00:00Z",
+      "tags": [
+        "cx",
+        "suporte"
+      ]
+    },
+    {
+      "id": 90008,
+      "external_id": null,
+      "name": "Higor (Driva CX)",
+      "role": "agent",
+      "email": "higor@driva.com.br",
+      "created_at": "2025-01-10T09:00:00Z",
+      "tags": [
+        "cx",
+        "suporte"
+      ]
+    },
+    {
+      "id": 90009,
+      "external_id": null,
+      "name": "Ítalo (Driva CX)",
+      "role": "agent",
+      "email": "italo@driva.com.br",
+      "created_at": "2025-01-10T09:00:00Z",
+      "tags": [
+        "cx",
+        "suporte"
+      ]
+    },
+    {
+      "id": 90011,
+      "external_id": null,
+      "name": "Kaio (Driva CX)",
+      "role": "agent",
+      "email": "kaio@driva.com.br",
+      "created_at": "2025-01-10T09:00:00Z",
+      "tags": [
+        "cx",
+        "suporte"
+      ]
+    },
+    {
+      "id": 90012,
+      "external_id": null,
+      "name": "Lia (Driva CX)",
+      "role": "agent",
+      "email": "lia@driva.com.br",
+      "created_at": "2025-01-10T09:00:00Z",
+      "tags": [
+        "cx",
+        "suporte"
+      ]
+    }
+  ],
+  "tickets": [
+    {
+      "id": 810001,
+      "subject": "Carro não liberado após a assinatura",
+      "description": "oi, assinei e paguei a primeira semana, e agora? quando pego o carro?",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10001,
+      "submitter_id": 10001,
+      "assignee_id": 90012,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-08T09:21:00Z",
+      "updated_at": "2026-06-08T09:40:00Z",
+      "tags": [
+        "onboarding",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "offered",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 3
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Onboarding"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Conforto"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500001,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10001,
+          "created_at": "2026-06-08T09:21:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "oi, assinei e paguei a primeira semana, e agora? quando pego o carro?"
+        },
+        {
+          "id": 500002,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2026-06-08T09:34:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Oi, Rafael! Boas-vindas 🎉 Falta só a vistoria pra liberar. Um consultor vai te chamar pra agendar."
+        },
+        {
+          "id": 500003,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10001,
+          "created_at": "2026-06-08T09:40:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "beleza, fico no aguardo então"
+        }
+      ]
+    },
+    {
+      "id": 810002,
+      "subject": "Carro não liberado após a assinatura",
+      "description": "gente já faz 7 dias e ninguém agendou minha vistoria. cadê o carro?",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10001,
+      "submitter_id": 10001,
+      "assignee_id": 90012,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-15T20:04:00Z",
+      "updated_at": "2026-06-15T20:29:00Z",
+      "tags": [
+        "onboarding",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Onboarding"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Conforto"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500004,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10001,
+          "created_at": "2026-06-15T20:04:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "gente já faz 7 dias e ninguém agendou minha vistoria. cadê o carro?"
+        },
+        {
+          "id": 500005,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2026-06-15T20:18:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Rafael, sinto muito pela demora. Vou priorizar seu agendamento e te retorno hoje."
+        },
+        {
+          "id": 500006,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10001,
+          "created_at": "2026-06-15T20:29:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "é a segunda vez que me falam isso. cada dia parado é dinheiro que não entra"
+        }
+      ]
+    },
+    {
+      "id": 810003,
+      "subject": "Pedido de cancelamento de assinatura",
+      "description": "desisti. quero cancelar e pedir o estorno da semana que paguei sem nem ter recebido o carro",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10001,
+      "submitter_id": 10001,
+      "assignee_id": 90012,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-17T10:19:00Z",
+      "updated_at": "2026-06-17T10:45:00Z",
+      "tags": [
+        "cancelamento",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 1
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cancelamento"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Conforto"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        },
+        {
+          "id": 45005,
+          "name": "motivo_cancelamento",
+          "value": null
+        }
+      ],
+      "comments": [
+        {
+          "id": 500007,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10001,
+          "created_at": "2026-06-17T10:19:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "desisti. quero cancelar e pedir o estorno da semana que paguei sem nem ter recebido o carro"
+        },
+        {
+          "id": 500008,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2026-06-17T10:21:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Rafael, você tem razão e isso não deveria ter acontecido. Vou processar o estorno e registrar o cancelamento."
+        },
+        {
+          "id": 500009,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10001,
+          "created_at": "2026-06-17T10:26:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "arrumei outra solução já, não dá pra esperar vocês"
+        },
+        {
+          "id": 500010,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2026-06-17T10:30:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Entendo. Registro algum motivo específico?"
+        },
+        {
+          "id": 500011,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10001,
+          "created_at": "2026-06-17T10:45:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "ah deixa quieto, não precisa marcar nada, só encerra"
+        }
+      ]
+    },
+    {
+      "id": 810004,
+      "subject": "Falha mecânica no carro",
+      "description": "opa bom dia, o VW Virtus tá engasgando e perdendo força na subida",
+      "status": "closed",
+      "priority": "high",
+      "type": "problem",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10003,
+      "submitter_id": 10003,
+      "assignee_id": 90012,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2025-12-17T10:23:00Z",
+      "updated_at": "2025-12-17T11:01:00Z",
+      "tags": [
+        "manutencao",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Manutenção"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Conforto"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500012,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10003,
+          "created_at": "2025-12-17T10:23:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "opa bom dia, o VW Virtus tá engasgando e perdendo força na subida"
+        },
+        {
+          "id": 500013,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2025-12-17T10:30:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Bom dia, Diego! Poxa, sinto muito por isso. Já abri um chamado e vou agendar a oficina mais perto de você. Consegue levar amanhã cedo?"
+        },
+        {
+          "id": 500014,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10003,
+          "created_at": "2025-12-17T10:36:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "amanhã?? mano eu rodo de manhã, é quando mais faço corrida. não tem hoje não?"
+        },
+        {
+          "id": 500015,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2025-12-17T10:44:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Entendo total, carro parado é renda parada. Vou tentar encaixar hoje à tarde e te confirmo já já."
+        },
+        {
+          "id": 500016,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10003,
+          "created_at": "2025-12-17T11:01:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "por favor não me deixa na mão que eu dependo disso"
+        }
+      ]
+    },
+    {
+      "id": 810005,
+      "subject": "Carro parado — preciso de guincho",
+      "description": "o carro morreu aqui na Av. do Estado, não liga de jeito nenhum. preciso de guincho AGORA",
+      "status": "closed",
+      "priority": "urgent",
+      "type": "incident",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10003,
+      "submitter_id": 10003,
+      "assignee_id": 90012,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-02-03T15:49:00Z",
+      "updated_at": "2026-02-03T20:41:00Z",
+      "tags": [
+        "guincho",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 1
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Guincho"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Conforto"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": true
+        }
+      ],
+      "comments": [
+        {
+          "id": 500017,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10003,
+          "created_at": "2026-02-03T15:49:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "o carro morreu aqui na Av. do Estado, não liga de jeito nenhum. preciso de guincho AGORA"
+        },
+        {
+          "id": 500018,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2026-02-03T16:05:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Diego, já estou acionando o guincho pra sua localização. Fica em segurança, por favor."
+        },
+        {
+          "id": 500019,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10003,
+          "created_at": "2026-02-03T16:11:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "quanto tempo demora?"
+        },
+        {
+          "id": 500020,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2026-02-03T16:31:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "A previsão inicial é de até 2h, mas vou monitorar de perto."
+        },
+        {
+          "id": 500021,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10003,
+          "created_at": "2026-02-03T18:51:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "cara já faz mais de 2h e nada... tô parado no sol até agora"
+        },
+        {
+          "id": 500022,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10003,
+          "created_at": "2026-02-03T20:26:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "3h30 esperando. perdi a manhã inteira de trabalho. isso não dá"
+        },
+        {
+          "id": 500023,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2026-02-03T20:34:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Sinto muito de verdade pela demora, Diego. O guincho chega em ~30 min. Vou lançar um crédito pelo transtorno."
+        },
+        {
+          "id": 500024,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10003,
+          "created_at": "2026-02-03T20:41:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "crédito não paga as corridas que eu perdi hoje"
+        }
+      ]
+    },
+    {
+      "id": 810006,
+      "subject": "Pedido de cancelamento de assinatura",
+      "description": "oi, quero cancelar a assinatura",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10003,
+      "submitter_id": 10003,
+      "assignee_id": 90012,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-06T08:17:00Z",
+      "updated_at": "2026-06-06T09:18:00Z",
+      "tags": [
+        "cancelamento",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 1
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cancelamento"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Conforto"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        },
+        {
+          "id": 45005,
+          "name": "motivo_cancelamento",
+          "value": "comprou_carro_proprio"
+        }
+      ],
+      "comments": [
+        {
+          "id": 500025,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10003,
+          "created_at": "2026-06-06T08:17:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "oi, quero cancelar a assinatura"
+        },
+        {
+          "id": 500026,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2026-06-06T08:25:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Diego, que pena ouvir isso. Posso entender o que motivou?"
+        },
+        {
+          "id": 500027,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10003,
+          "created_at": "2026-06-06T08:35:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "3 semanas seguidas com o carro na oficina ou esperando guincho. não consigo trabalhar assim, tô no prejuízo todo dia"
+        },
+        {
+          "id": 500028,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2026-06-06T08:50:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Você tem toda razão e a gente falhou no que mais importa: te manter rodando. Posso te oferecer troca imediata de carro + uma semana de cortesia. Topa tentar mais uma vez?"
+        },
+        {
+          "id": 500029,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10003,
+          "created_at": "2026-06-06T09:06:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "não dá mais não, já perdi a confiança. pode encerrar"
+        },
+        {
+          "id": 500030,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2026-06-06T09:11:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Respeito sua decisão. Vou registrar o cancelamento. Que motivo você quer que eu marque?"
+        },
+        {
+          "id": 500031,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10003,
+          "created_at": "2026-06-06T09:18:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "pode botar que comprei um carro próprio, deixa quieto"
+        }
+      ]
+    },
+    {
+      "id": 810007,
+      "subject": "Dúvida sobre o aplicativo",
+      "description": "oi, tudo certo? só uma dúvida de como pausar a cobrança se eu viajar",
+      "status": "closed",
+      "priority": "low",
+      "type": "question",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10014,
+      "submitter_id": 10014,
+      "assignee_id": 90007,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2025-01-01T11:57:00Z",
+      "updated_at": "2025-01-01T12:11:00Z",
+      "tags": [
+        "duvida_app",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "good",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 4
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Dúvida app"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500032,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10014,
+          "created_at": "2025-01-01T11:57:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "oi, tudo certo? só uma dúvida de como pausar a cobrança se eu viajar"
+        },
+        {
+          "id": 500033,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90007,
+          "created_at": "2025-01-01T12:09:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Oi, Anderson! Consigo te explicar sim, é bem simples."
+        },
+        {
+          "id": 500034,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10014,
+          "created_at": "2025-01-01T12:11:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "show, obrigado pelo atendimento sempre rápido"
+        }
+      ]
+    },
+    {
+      "id": 810008,
+      "subject": "Pedido de cancelamento de assinatura",
+      "description": "boa, preciso cancelar, vou me mudar de cidade mês que vem",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10014,
+      "submitter_id": 10014,
+      "assignee_id": 90007,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-26T17:18:00Z",
+      "updated_at": "2026-06-26T17:57:00Z",
+      "tags": [
+        "cancelamento",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "good",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 5
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cancelamento"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        },
+        {
+          "id": 45005,
+          "name": "motivo_cancelamento",
+          "value": "mudou_de_cidade"
+        }
+      ],
+      "comments": [
+        {
+          "id": 500035,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10014,
+          "created_at": "2026-06-26T17:18:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "boa, preciso cancelar, vou me mudar de cidade mês que vem"
+        },
+        {
+          "id": 500036,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90007,
+          "created_at": "2026-06-26T17:35:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Que notícia boa, Anderson! Fico feliz pela conquista. Foi um prazer ter você com a gente."
+        },
+        {
+          "id": 500037,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10014,
+          "created_at": "2026-06-26T17:52:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "vocês me ajudaram bastante nesse período, valeu de verdade"
+        },
+        {
+          "id": 500038,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90007,
+          "created_at": "2026-06-26T17:57:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Gratidão! A porta fica aberta se precisar voltar. 🧡"
+        }
+      ]
+    },
+    {
+      "id": 810009,
+      "subject": "Falha mecânica no carro",
+      "description": "opa bom dia, o VW Gol tá engasgando e perdendo força na subida",
+      "status": "closed",
+      "priority": "high",
+      "type": "problem",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10016,
+      "submitter_id": 10016,
+      "assignee_id": 90001,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-03-24T08:57:00Z",
+      "updated_at": "2026-03-24T09:49:00Z",
+      "tags": [
+        "manutencao",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Manutenção"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500039,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10016,
+          "created_at": "2026-03-24T08:57:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "opa bom dia, o VW Gol tá engasgando e perdendo força na subida"
+        },
+        {
+          "id": 500040,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90001,
+          "created_at": "2026-03-24T09:15:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Bom dia, Tatiane! Poxa, sinto muito por isso. Já abri um chamado e vou agendar a oficina mais perto de você. Consegue levar amanhã cedo?"
+        },
+        {
+          "id": 500041,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10016,
+          "created_at": "2026-03-24T09:17:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "amanhã?? mano eu rodo de manhã, é quando mais faço corrida. não tem hoje não?"
+        },
+        {
+          "id": 500042,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90001,
+          "created_at": "2026-03-24T09:31:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Entendo total, carro parado é renda parada. Vou tentar encaixar hoje à tarde e te confirmo já já."
+        },
+        {
+          "id": 500043,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10016,
+          "created_at": "2026-03-24T09:49:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "por favor não me deixa na mão que eu dependo disso"
+        }
+      ]
+    },
+    {
+      "id": 810010,
+      "subject": "Carro parado — preciso de guincho",
+      "description": "o carro morreu aqui na Av. do Estado, não liga de jeito nenhum. preciso de guincho AGORA",
+      "status": "closed",
+      "priority": "urgent",
+      "type": "incident",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10016,
+      "submitter_id": 10016,
+      "assignee_id": 90001,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-04-29T15:44:00Z",
+      "updated_at": "2026-04-29T20:37:00Z",
+      "tags": [
+        "guincho",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 1
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Guincho"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": true
+        }
+      ],
+      "comments": [
+        {
+          "id": 500044,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10016,
+          "created_at": "2026-04-29T15:44:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "o carro morreu aqui na Av. do Estado, não liga de jeito nenhum. preciso de guincho AGORA"
+        },
+        {
+          "id": 500045,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90001,
+          "created_at": "2026-04-29T15:56:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Tatiane, já estou acionando o guincho pra sua localização. Fica em segurança, por favor."
+        },
+        {
+          "id": 500046,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10016,
+          "created_at": "2026-04-29T16:02:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "quanto tempo demora?"
+        },
+        {
+          "id": 500047,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90001,
+          "created_at": "2026-04-29T16:17:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "A previsão inicial é de até 2h, mas vou monitorar de perto."
+        },
+        {
+          "id": 500048,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10016,
+          "created_at": "2026-04-29T18:37:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "cara já faz mais de 2h e nada... tô parado no sol até agora"
+        },
+        {
+          "id": 500049,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10016,
+          "created_at": "2026-04-29T20:12:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "3h30 esperando. perdi a manhã inteira de trabalho. isso não dá"
+        },
+        {
+          "id": 500050,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90001,
+          "created_at": "2026-04-29T20:24:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Sinto muito de verdade pela demora, Tatiane. O guincho chega em ~30 min. Vou lançar um crédito pelo transtorno."
+        },
+        {
+          "id": 500051,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10016,
+          "created_at": "2026-04-29T20:37:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "crédito não paga as corridas que eu perdi hoje"
+        }
+      ]
+    },
+    {
+      "id": 810011,
+      "subject": "Pedido de cancelamento de assinatura",
+      "description": "oi, quero cancelar a assinatura",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10016,
+      "submitter_id": 10016,
+      "assignee_id": 90001,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-13T12:41:00Z",
+      "updated_at": "2026-06-13T13:50:00Z",
+      "tags": [
+        "cancelamento",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 1
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cancelamento"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        },
+        {
+          "id": 45005,
+          "name": "motivo_cancelamento",
+          "value": null
+        }
+      ],
+      "comments": [
+        {
+          "id": 500052,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10016,
+          "created_at": "2026-06-13T12:41:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "oi, quero cancelar a assinatura"
+        },
+        {
+          "id": 500053,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90001,
+          "created_at": "2026-06-13T12:54:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Tatiane, que pena ouvir isso. Posso entender o que motivou?"
+        },
+        {
+          "id": 500054,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10016,
+          "created_at": "2026-06-13T13:08:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "3 semanas seguidas com o carro na oficina ou esperando guincho. não consigo trabalhar assim, tô no prejuízo todo dia"
+        },
+        {
+          "id": 500055,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90001,
+          "created_at": "2026-06-13T13:22:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Você tem toda razão e a gente falhou no que mais importa: te manter rodando. Posso te oferecer troca imediata de carro + uma semana de cortesia. Topa tentar mais uma vez?"
+        },
+        {
+          "id": 500056,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10016,
+          "created_at": "2026-06-13T13:25:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "não dá mais não, já perdi a confiança. pode encerrar"
+        },
+        {
+          "id": 500057,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90001,
+          "created_at": "2026-06-13T13:38:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Respeito sua decisão. Vou registrar o cancelamento. Que motivo você quer que eu marque?"
+        },
+        {
+          "id": 500058,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10016,
+          "created_at": "2026-06-13T13:50:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "tanto faz, pode cancelar sem marcar"
+        }
+      ]
+    },
+    {
+      "id": 810012,
+      "subject": "Falha mecânica no carro",
+      "description": "a luz da injeção acendeu e o carro tá falhando feio",
+      "status": "closed",
+      "priority": "high",
+      "type": "problem",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10017,
+      "submitter_id": 10017,
+      "assignee_id": 90012,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2025-08-23T09:34:00Z",
+      "updated_at": "2025-08-23T10:16:00Z",
+      "tags": [
+        "manutencao",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Manutenção"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Conforto"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500059,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10017,
+          "created_at": "2025-08-23T09:34:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "a luz da injeção acendeu e o carro tá falhando feio"
+        },
+        {
+          "id": 500060,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2025-08-23T09:39:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Bom dia, Juliana! Poxa, sinto muito por isso. Já abri um chamado e vou agendar a oficina mais perto de você. Consegue levar amanhã cedo?"
+        },
+        {
+          "id": 500061,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10017,
+          "created_at": "2025-08-23T09:57:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "amanhã?? mano eu rodo de manhã, é quando mais faço corrida. não tem hoje não?"
+        },
+        {
+          "id": 500062,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2025-08-23T10:07:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Entendo total, carro parado é renda parada. Vou tentar encaixar hoje à tarde e te confirmo já já."
+        },
+        {
+          "id": 500063,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10017,
+          "created_at": "2025-08-23T10:16:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "por favor não me deixa na mão que eu dependo disso"
+        }
+      ]
+    },
+    {
+      "id": 810013,
+      "subject": "Carro parado — preciso de guincho",
+      "description": "o carro morreu aqui na 23 de Maio, não liga de jeito nenhum. preciso de guincho AGORA",
+      "status": "closed",
+      "priority": "urgent",
+      "type": "incident",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10017,
+      "submitter_id": 10017,
+      "assignee_id": 90012,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-03-01T15:09:00Z",
+      "updated_at": "2026-03-01T19:53:00Z",
+      "tags": [
+        "guincho",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 1
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Guincho"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Conforto"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": true
+        }
+      ],
+      "comments": [
+        {
+          "id": 500064,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10017,
+          "created_at": "2026-03-01T15:09:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "o carro morreu aqui na 23 de Maio, não liga de jeito nenhum. preciso de guincho AGORA"
+        },
+        {
+          "id": 500065,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2026-03-01T15:27:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Juliana, já estou acionando o guincho pra sua localização. Fica em segurança, por favor."
+        },
+        {
+          "id": 500066,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10017,
+          "created_at": "2026-03-01T15:33:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "quanto tempo demora?"
+        },
+        {
+          "id": 500067,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2026-03-01T15:48:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "A previsão inicial é de até 2h, mas vou monitorar de perto."
+        },
+        {
+          "id": 500068,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10017,
+          "created_at": "2026-03-01T18:08:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "cara já faz mais de 2h e nada... tô parado no sol até agora"
+        },
+        {
+          "id": 500069,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10017,
+          "created_at": "2026-03-01T19:43:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "3h30 esperando. perdi a manhã inteira de trabalho. isso não dá"
+        },
+        {
+          "id": 500070,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2026-03-01T19:51:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Sinto muito de verdade pela demora, Juliana. O guincho chega em ~30 min. Vou lançar um crédito pelo transtorno."
+        },
+        {
+          "id": 500071,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10017,
+          "created_at": "2026-03-01T19:53:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "crédito não paga as corridas que eu perdi hoje"
+        }
+      ]
+    },
+    {
+      "id": 810014,
+      "subject": "Pedido de cancelamento de assinatura",
+      "description": "oi, quero cancelar a assinatura",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10017,
+      "submitter_id": 10017,
+      "assignee_id": 90012,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-11T07:40:00Z",
+      "updated_at": "2026-06-11T08:51:00Z",
+      "tags": [
+        "cancelamento",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 1
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cancelamento"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Conforto"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        },
+        {
+          "id": 45005,
+          "name": "motivo_cancelamento",
+          "value": "problemas_manutencao"
+        }
+      ],
+      "comments": [
+        {
+          "id": 500072,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10017,
+          "created_at": "2026-06-11T07:40:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "oi, quero cancelar a assinatura"
+        },
+        {
+          "id": 500073,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2026-06-11T07:43:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Juliana, que pena ouvir isso. Posso entender o que motivou?"
+        },
+        {
+          "id": 500074,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10017,
+          "created_at": "2026-06-11T07:55:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "3 semanas seguidas com o carro na oficina ou esperando guincho. não consigo trabalhar assim, tô no prejuízo todo dia"
+        },
+        {
+          "id": 500075,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2026-06-11T08:11:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Você tem toda razão e a gente falhou no que mais importa: te manter rodando. Posso te oferecer troca imediata de carro + uma semana de cortesia. Topa tentar mais uma vez?"
+        },
+        {
+          "id": 500076,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10017,
+          "created_at": "2026-06-11T08:20:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "não dá mais não, já perdi a confiança. pode encerrar"
+        },
+        {
+          "id": 500077,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2026-06-11T08:37:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Respeito sua decisão. Vou registrar o cancelamento. Que motivo você quer que eu marque?"
+        },
+        {
+          "id": 500078,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10017,
+          "created_at": "2026-06-11T08:51:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "põe que foi a manutenção, sem dúvida"
+        }
+      ]
+    },
+    {
+      "id": 810015,
+      "subject": "Falha mecânica no carro",
+      "description": "de novo problema no carro... tá difícil viu",
+      "status": "closed",
+      "priority": "high",
+      "type": "problem",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10018,
+      "submitter_id": 10018,
+      "assignee_id": 90008,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2025-09-11T19:55:00Z",
+      "updated_at": "2025-09-11T20:14:00Z",
+      "tags": [
+        "manutencao",
+        "pessoal"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Manutenção"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "pessoal"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500079,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10018,
+          "created_at": "2025-09-11T19:55:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "de novo problema no carro... tá difícil viu"
+        },
+        {
+          "id": 500080,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90008,
+          "created_at": "2025-09-11T20:06:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Marcelo, sinto muito. Vou abrir o chamado e resolver o quanto antes."
+        },
+        {
+          "id": 500081,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10018,
+          "created_at": "2025-09-11T20:14:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "tô começando a achar que não vale a pena"
+        }
+      ]
+    },
+    {
+      "id": 810016,
+      "subject": "Pedido de cancelamento de assinatura",
+      "description": "quero encerrar. achei uma opção melhor que me atende mais rápido",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10018,
+      "submitter_id": 10018,
+      "assignee_id": 90008,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-09T16:22:00Z",
+      "updated_at": "2026-06-09T17:06:00Z",
+      "tags": [
+        "cancelamento",
+        "pessoal"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cancelamento"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "pessoal"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        },
+        {
+          "id": 45005,
+          "name": "motivo_cancelamento",
+          "value": "mudou_de_cidade"
+        }
+      ],
+      "comments": [
+        {
+          "id": 500082,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10018,
+          "created_at": "2026-06-09T16:22:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "quero encerrar. achei uma opção melhor que me atende mais rápido"
+        },
+        {
+          "id": 500083,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90008,
+          "created_at": "2026-06-09T16:40:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Marcelo, poxa. Posso perguntar o que pesou na decisão?"
+        },
+        {
+          "id": 500084,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10018,
+          "created_at": "2026-06-09T16:43:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "sinceramente o atendimento e o carro reserva na hora, que aqui demora"
+        },
+        {
+          "id": 500085,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90008,
+          "created_at": "2026-06-09T16:49:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Justo. Que motivo você quer que eu registre no sistema?"
+        },
+        {
+          "id": 500086,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10018,
+          "created_at": "2026-06-09T17:06:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "marca que mudei de cidade"
+        }
+      ]
+    },
+    {
+      "id": 810017,
+      "subject": "Dúvida sobre plano e valor",
+      "description": "boa tarde, eu uso o carro bem pouco, só pra ir e voltar do trabalho. tem um plano mais barato pra quem roda pouco?",
+      "status": "closed",
+      "priority": "low",
+      "type": "question",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10020,
+      "submitter_id": 10020,
+      "assignee_id": 90008,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2025-11-22T14:51:00Z",
+      "updated_at": "2025-11-22T15:45:00Z",
+      "tags": [
+        "planos",
+        "pessoal"
+      ],
+      "satisfaction_rating": {
+        "score": "offered",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 3
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Planos"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "pessoal"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500087,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10020,
+          "created_at": "2025-11-22T14:51:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "boa tarde, eu uso o carro bem pouco, só pra ir e voltar do trabalho. tem um plano mais barato pra quem roda pouco?"
+        },
+        {
+          "id": 500088,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90008,
+          "created_at": "2025-11-22T15:08:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Boa tarde, Tatiane! Hoje trabalhamos com os planos Essencial e Conforto, sem uma faixa de baixa quilometragem no momento."
+        },
+        {
+          "id": 500089,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10020,
+          "created_at": "2025-11-22T15:27:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "poxa, pagar o mesmo que quem roda o dia todo não compensa pra mim"
+        },
+        {
+          "id": 500090,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90008,
+          "created_at": "2025-11-22T15:36:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Entendo seu ponto. Posso te mostrar se o Essencial reduz um pouco o custo?"
+        },
+        {
+          "id": 500091,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10020,
+          "created_at": "2025-11-22T15:45:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "é que mesmo o essencial tá caro pro tanto que eu ando"
+        }
+      ]
+    },
+    {
+      "id": 810018,
+      "subject": "Pedido de cancelamento de assinatura",
+      "description": "vou cancelar, pro meu uso não vale a pena o valor semanal",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10020,
+      "submitter_id": 10020,
+      "assignee_id": 90008,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-28T10:08:00Z",
+      "updated_at": "2026-06-28T10:37:00Z",
+      "tags": [
+        "cancelamento",
+        "pessoal"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cancelamento"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "pessoal"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        },
+        {
+          "id": 45005,
+          "name": "motivo_cancelamento",
+          "value": "comprou_carro_proprio"
+        }
+      ],
+      "comments": [
+        {
+          "id": 500092,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10020,
+          "created_at": "2026-06-28T10:08:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "vou cancelar, pro meu uso não vale a pena o valor semanal"
+        },
+        {
+          "id": 500093,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90008,
+          "created_at": "2026-06-28T10:13:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Tatiane, respeito. Se em algum momento lançarmos um plano de baixa km, posso te avisar?"
+        },
+        {
+          "id": 500094,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10020,
+          "created_at": "2026-06-28T10:28:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "pode, mas por ora encerra aí"
+        },
+        {
+          "id": 500095,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90008,
+          "created_at": "2026-06-28T10:30:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Feito. Registro como qual motivo?"
+        },
+        {
+          "id": 500096,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10020,
+          "created_at": "2026-06-28T10:37:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "pode botar que comprei um carro próprio, deixa quieto"
+        }
+      ]
+    },
+    {
+      "id": 810019,
+      "subject": "Contestação de cobrança na fatura",
+      "description": "acabei de ver uma cobrança de R$ 1250 na minha fatura que eu não reconheço",
+      "status": "closed",
+      "priority": "normal",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10021,
+      "submitter_id": 10021,
+      "assignee_id": 90004,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-03-25T15:22:00Z",
+      "updated_at": "2026-03-25T16:08:00Z",
+      "tags": [
+        "cobranca",
+        "pessoal"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cobrança"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "pessoal"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500097,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10021,
+          "created_at": "2026-03-25T15:22:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "acabei de ver uma cobrança de R$ 1250 na minha fatura que eu não reconheço"
+        },
+        {
+          "id": 500098,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90004,
+          "created_at": "2026-03-25T15:28:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Oi, Bruno! Deixa eu verificar aqui... consta uma cobrança de avaria registrada na última vistoria."
+        },
+        {
+          "id": 500099,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10021,
+          "created_at": "2026-03-25T15:47:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "avaria?? que avaria? ninguém me falou nada, apareceu do nada na fatura"
+        },
+        {
+          "id": 500100,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90004,
+          "created_at": "2026-03-25T16:04:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Vou levantar as fotos da vistoria de entrega e retorno pra gente comparar, tá?"
+        },
+        {
+          "id": 500101,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10021,
+          "created_at": "2026-03-25T16:08:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "faz isso porque eu não causei dano nenhum nesse carro"
+        }
+      ]
+    },
+    {
+      "id": 810020,
+      "subject": "Contestação de cobrança na fatura",
+      "description": "e aí, conseguiu ver as fotos? já faz 4 dias",
+      "status": "closed",
+      "priority": "normal",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10021,
+      "submitter_id": 10021,
+      "assignee_id": 90004,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-05-08T11:19:00Z",
+      "updated_at": "2026-05-08T11:35:00Z",
+      "tags": [
+        "cobranca",
+        "pessoal"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cobrança"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "pessoal"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500102,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10021,
+          "created_at": "2026-05-08T11:19:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "e aí, conseguiu ver as fotos? já faz 4 dias"
+        },
+        {
+          "id": 500103,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90004,
+          "created_at": "2026-05-08T11:23:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Bruno, ainda estou aguardando a base enviar as imagens. Assim que chegar eu te falo."
+        },
+        {
+          "id": 500104,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10021,
+          "created_at": "2026-05-08T11:35:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "enquanto isso a cobrança tá lá me sufocando. isso é muito errado"
+        }
+      ]
+    },
+    {
+      "id": 810021,
+      "subject": "Pedido de cancelamento de assinatura",
+      "description": "quero cancelar. não confio mais nessa cobrança de vocês",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10021,
+      "submitter_id": 10021,
+      "assignee_id": 90004,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-09T19:38:00Z",
+      "updated_at": "2026-06-09T20:30:00Z",
+      "tags": [
+        "cancelamento",
+        "pessoal"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 1
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cancelamento"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "pessoal"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        },
+        {
+          "id": 45005,
+          "name": "motivo_cancelamento",
+          "value": "comprou_carro_proprio"
+        }
+      ],
+      "comments": [
+        {
+          "id": 500105,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10021,
+          "created_at": "2026-06-09T19:38:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "quero cancelar. não confio mais nessa cobrança de vocês"
+        },
+        {
+          "id": 500106,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90004,
+          "created_at": "2026-06-09T19:57:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Bruno, sinto muito. Se o problema é a cobrança contestada, posso escalar pra resolver antes de você decidir."
+        },
+        {
+          "id": 500107,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10021,
+          "created_at": "2026-06-09T20:12:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "já decidi. cansei de susto na fatura. encerra por favor"
+        },
+        {
+          "id": 500108,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90004,
+          "created_at": "2026-06-09T20:21:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Entendo. Qual motivo você quer que eu registre?"
+        },
+        {
+          "id": 500109,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10021,
+          "created_at": "2026-06-09T20:30:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "marca comprei carro próprio aí, é mais fácil"
+        }
+      ]
+    },
+    {
+      "id": 810022,
+      "subject": "Dúvida sobre o aplicativo",
+      "description": "oi, tudo certo? só uma dúvida de como pausar a cobrança se eu viajar",
+      "status": "closed",
+      "priority": "low",
+      "type": "question",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10027,
+      "submitter_id": 10027,
+      "assignee_id": 90002,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-04-15T08:53:00Z",
+      "updated_at": "2026-04-15T09:21:00Z",
+      "tags": [
+        "duvida_app",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "good",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 4
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Dúvida app"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Conforto"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500110,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10027,
+          "created_at": "2026-04-15T08:53:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "oi, tudo certo? só uma dúvida de como pausar a cobrança se eu viajar"
+        },
+        {
+          "id": 500111,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90002,
+          "created_at": "2026-04-15T09:13:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Oi, Tatiane! Consigo te explicar sim, é bem simples."
+        },
+        {
+          "id": 500112,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10027,
+          "created_at": "2026-04-15T09:21:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "show, obrigado pelo atendimento sempre rápido"
+        }
+      ]
+    },
+    {
+      "id": 810023,
+      "subject": "Pedido de cancelamento de assinatura",
+      "description": "oi! vim encerrar minha assinatura porque consegui comprar meu próprio carro 🙌",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10027,
+      "submitter_id": 10027,
+      "assignee_id": 90002,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-19T19:57:00Z",
+      "updated_at": "2026-06-19T20:36:00Z",
+      "tags": [
+        "cancelamento",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "good",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 5
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cancelamento"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Conforto"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        },
+        {
+          "id": 45005,
+          "name": "motivo_cancelamento",
+          "value": "comprou_carro_proprio"
+        }
+      ],
+      "comments": [
+        {
+          "id": 500113,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10027,
+          "created_at": "2026-06-19T19:57:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "oi! vim encerrar minha assinatura porque consegui comprar meu próprio carro 🙌"
+        },
+        {
+          "id": 500114,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90002,
+          "created_at": "2026-06-19T20:17:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Que notícia boa, Tatiane! Fico feliz pela conquista. Foi um prazer ter você com a gente."
+        },
+        {
+          "id": 500115,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10027,
+          "created_at": "2026-06-19T20:30:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "vocês me ajudaram bastante nesse período, valeu de verdade"
+        },
+        {
+          "id": 500116,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90002,
+          "created_at": "2026-06-19T20:36:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Gratidão! A porta fica aberta se precisar voltar. 🧡"
+        }
+      ]
+    },
+    {
+      "id": 810024,
+      "subject": "Contestação de cobrança na fatura",
+      "description": "acabei de ver uma cobrança de R$ 980 na minha fatura que eu não reconheço",
+      "status": "closed",
+      "priority": "normal",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10031,
+      "submitter_id": 10031,
+      "assignee_id": 90012,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2025-05-25T08:33:00Z",
+      "updated_at": "2025-05-25T09:29:00Z",
+      "tags": [
+        "cobranca",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cobrança"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500117,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10031,
+          "created_at": "2025-05-25T08:33:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "acabei de ver uma cobrança de R$ 980 na minha fatura que eu não reconheço"
+        },
+        {
+          "id": 500118,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2025-05-25T08:52:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Oi, Camila! Deixa eu verificar aqui... consta uma cobrança de avaria registrada na última vistoria."
+        },
+        {
+          "id": 500119,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10031,
+          "created_at": "2025-05-25T09:00:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "avaria?? que avaria? ninguém me falou nada, apareceu do nada na fatura"
+        },
+        {
+          "id": 500120,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2025-05-25T09:14:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Vou levantar as fotos da vistoria de entrega e retorno pra gente comparar, tá?"
+        },
+        {
+          "id": 500121,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10031,
+          "created_at": "2025-05-25T09:29:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "faz isso porque eu não causei dano nenhum nesse carro"
+        }
+      ]
+    },
+    {
+      "id": 810025,
+      "subject": "Contestação de cobrança na fatura",
+      "description": "e aí, conseguiu ver as fotos? já faz 4 dias",
+      "status": "closed",
+      "priority": "normal",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10031,
+      "submitter_id": 10031,
+      "assignee_id": 90012,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2025-11-06T13:29:00Z",
+      "updated_at": "2025-11-06T14:07:00Z",
+      "tags": [
+        "cobranca",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cobrança"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500122,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10031,
+          "created_at": "2025-11-06T13:29:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "e aí, conseguiu ver as fotos? já faz 4 dias"
+        },
+        {
+          "id": 500123,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2025-11-06T13:47:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Camila, ainda estou aguardando a base enviar as imagens. Assim que chegar eu te falo."
+        },
+        {
+          "id": 500124,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10031,
+          "created_at": "2025-11-06T14:07:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "enquanto isso a cobrança tá lá me sufocando. isso é muito errado"
+        }
+      ]
+    },
+    {
+      "id": 810026,
+      "subject": "Pedido de cancelamento de assinatura",
+      "description": "quero cancelar. não confio mais nessa cobrança de vocês",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10031,
+      "submitter_id": 10031,
+      "assignee_id": 90012,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-14T09:13:00Z",
+      "updated_at": "2026-06-14T10:02:00Z",
+      "tags": [
+        "cancelamento",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 1
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cancelamento"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        },
+        {
+          "id": 45005,
+          "name": "motivo_cancelamento",
+          "value": "outro"
+        }
+      ],
+      "comments": [
+        {
+          "id": 500125,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10031,
+          "created_at": "2026-06-14T09:13:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "quero cancelar. não confio mais nessa cobrança de vocês"
+        },
+        {
+          "id": 500126,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2026-06-14T09:15:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Camila, sinto muito. Se o problema é a cobrança contestada, posso escalar pra resolver antes de você decidir."
+        },
+        {
+          "id": 500127,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10031,
+          "created_at": "2026-06-14T09:34:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "já decidi. cansei de susto na fatura. encerra por favor"
+        },
+        {
+          "id": 500128,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2026-06-14T09:50:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Entendo. Qual motivo você quer que eu registre?"
+        },
+        {
+          "id": 500129,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10031,
+          "created_at": "2026-06-14T10:02:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "sei lá, marca como 'outro' aí"
+        }
+      ]
+    },
+    {
+      "id": 810027,
+      "subject": "Dúvida sobre plano e valor",
+      "description": "boa tarde, eu uso o carro bem pouco, só pra ir e voltar do trabalho. tem um plano mais barato pra quem roda pouco?",
+      "status": "closed",
+      "priority": "low",
+      "type": "question",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10033,
+      "submitter_id": 10033,
+      "assignee_id": 90008,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-03-18T15:02:00Z",
+      "updated_at": "2026-03-18T15:34:00Z",
+      "tags": [
+        "planos",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "offered",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 3
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Planos"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500130,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10033,
+          "created_at": "2026-03-18T15:02:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "boa tarde, eu uso o carro bem pouco, só pra ir e voltar do trabalho. tem um plano mais barato pra quem roda pouco?"
+        },
+        {
+          "id": 500131,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90008,
+          "created_at": "2026-03-18T15:13:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Boa tarde, Jefferson! Hoje trabalhamos com os planos Essencial e Conforto, sem uma faixa de baixa quilometragem no momento."
+        },
+        {
+          "id": 500132,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10033,
+          "created_at": "2026-03-18T15:19:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "poxa, pagar o mesmo que quem roda o dia todo não compensa pra mim"
+        },
+        {
+          "id": 500133,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90008,
+          "created_at": "2026-03-18T15:22:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Entendo seu ponto. Posso te mostrar se o Essencial reduz um pouco o custo?"
+        },
+        {
+          "id": 500134,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10033,
+          "created_at": "2026-03-18T15:34:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "é que mesmo o essencial tá caro pro tanto que eu ando"
+        }
+      ]
+    },
+    {
+      "id": 810028,
+      "subject": "Pedido de cancelamento de assinatura",
+      "description": "vou cancelar, pro meu uso não vale a pena o valor semanal",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10033,
+      "submitter_id": 10033,
+      "assignee_id": 90008,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-10T15:49:00Z",
+      "updated_at": "2026-06-10T16:44:00Z",
+      "tags": [
+        "cancelamento",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cancelamento"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        },
+        {
+          "id": 45005,
+          "name": "motivo_cancelamento",
+          "value": "parou_de_rodar"
+        }
+      ],
+      "comments": [
+        {
+          "id": 500135,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10033,
+          "created_at": "2026-06-10T15:49:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "vou cancelar, pro meu uso não vale a pena o valor semanal"
+        },
+        {
+          "id": 500136,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90008,
+          "created_at": "2026-06-10T15:59:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Jefferson, respeito. Se em algum momento lançarmos um plano de baixa km, posso te avisar?"
+        },
+        {
+          "id": 500137,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10033,
+          "created_at": "2026-06-10T16:19:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "pode, mas por ora encerra aí"
+        },
+        {
+          "id": 500138,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90008,
+          "created_at": "2026-06-10T16:36:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Feito. Registro como qual motivo?"
+        },
+        {
+          "id": 500139,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10033,
+          "created_at": "2026-06-10T16:44:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "marca que parei de rodar mesmo"
+        }
+      ]
+    },
+    {
+      "id": 810029,
+      "subject": "Carro não liberado após a assinatura",
+      "description": "oi, assinei e paguei a primeira semana, e agora? quando pego o carro?",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10038,
+      "submitter_id": 10038,
+      "assignee_id": 90001,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-05-26T09:54:00Z",
+      "updated_at": "2026-05-26T10:06:00Z",
+      "tags": [
+        "onboarding",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "offered",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 3
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Onboarding"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Conforto"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500140,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10038,
+          "created_at": "2026-05-26T09:54:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "oi, assinei e paguei a primeira semana, e agora? quando pego o carro?"
+        },
+        {
+          "id": 500141,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90001,
+          "created_at": "2026-05-26T10:03:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Oi, Renata! Boas-vindas 🎉 Falta só a vistoria pra liberar. Um consultor vai te chamar pra agendar."
+        },
+        {
+          "id": 500142,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10038,
+          "created_at": "2026-05-26T10:06:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "beleza, fico no aguardo então"
+        }
+      ]
+    },
+    {
+      "id": 810030,
+      "subject": "Carro não liberado após a assinatura",
+      "description": "gente já faz 17 dias e ninguém agendou minha vistoria. cadê o carro?",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10038,
+      "submitter_id": 10038,
+      "assignee_id": 90001,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-11T10:30:00Z",
+      "updated_at": "2026-06-11T10:55:00Z",
+      "tags": [
+        "onboarding",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Onboarding"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Conforto"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500143,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10038,
+          "created_at": "2026-06-11T10:30:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "gente já faz 17 dias e ninguém agendou minha vistoria. cadê o carro?"
+        },
+        {
+          "id": 500144,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90001,
+          "created_at": "2026-06-11T10:44:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Renata, sinto muito pela demora. Vou priorizar seu agendamento e te retorno hoje."
+        },
+        {
+          "id": 500145,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10038,
+          "created_at": "2026-06-11T10:55:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "é a segunda vez que me falam isso. cada dia parado é dinheiro que não entra"
+        }
+      ]
+    },
+    {
+      "id": 810031,
+      "subject": "Pedido de cancelamento de assinatura",
+      "description": "desisti. quero cancelar e pedir o estorno da semana que paguei sem nem ter recebido o carro",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10038,
+      "submitter_id": 10038,
+      "assignee_id": 90001,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-12T07:51:00Z",
+      "updated_at": "2026-06-12T08:49:00Z",
+      "tags": [
+        "cancelamento",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 1
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cancelamento"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Conforto"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        },
+        {
+          "id": 45005,
+          "name": "motivo_cancelamento",
+          "value": null
+        }
+      ],
+      "comments": [
+        {
+          "id": 500146,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10038,
+          "created_at": "2026-06-12T07:51:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "desisti. quero cancelar e pedir o estorno da semana que paguei sem nem ter recebido o carro"
+        },
+        {
+          "id": 500147,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90001,
+          "created_at": "2026-06-12T08:05:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Renata, você tem razão e isso não deveria ter acontecido. Vou processar o estorno e registrar o cancelamento."
+        },
+        {
+          "id": 500148,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10038,
+          "created_at": "2026-06-12T08:17:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "arrumei outra solução já, não dá pra esperar vocês"
+        },
+        {
+          "id": 500149,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90001,
+          "created_at": "2026-06-12T08:32:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Entendo. Registro algum motivo específico?"
+        },
+        {
+          "id": 500150,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10038,
+          "created_at": "2026-06-12T08:49:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "ah deixa quieto, não precisa marcar nada, só encerra"
+        }
+      ]
+    },
+    {
+      "id": 810032,
+      "subject": "Contestação de cobrança na fatura",
+      "description": "acabei de ver uma cobrança de R$ 1620 na minha fatura que eu não reconheço",
+      "status": "closed",
+      "priority": "normal",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10055,
+      "submitter_id": 10055,
+      "assignee_id": 90002,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-04-10T12:07:00Z",
+      "updated_at": "2026-04-10T12:51:00Z",
+      "tags": [
+        "cobranca",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cobrança"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500151,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10055,
+          "created_at": "2026-04-10T12:07:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "acabei de ver uma cobrança de R$ 1620 na minha fatura que eu não reconheço"
+        },
+        {
+          "id": 500152,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90002,
+          "created_at": "2026-04-10T12:26:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Oi, Camila! Deixa eu verificar aqui... consta uma cobrança de avaria registrada na última vistoria."
+        },
+        {
+          "id": 500153,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10055,
+          "created_at": "2026-04-10T12:40:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "avaria?? que avaria? ninguém me falou nada, apareceu do nada na fatura"
+        },
+        {
+          "id": 500154,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90002,
+          "created_at": "2026-04-10T12:45:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Vou levantar as fotos da vistoria de entrega e retorno pra gente comparar, tá?"
+        },
+        {
+          "id": 500155,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10055,
+          "created_at": "2026-04-10T12:51:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "faz isso porque eu não causei dano nenhum nesse carro"
+        }
+      ]
+    },
+    {
+      "id": 810033,
+      "subject": "Contestação de cobrança na fatura",
+      "description": "e aí, conseguiu ver as fotos? já faz 4 dias",
+      "status": "closed",
+      "priority": "normal",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10055,
+      "submitter_id": 10055,
+      "assignee_id": 90002,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-05-02T20:20:00Z",
+      "updated_at": "2026-05-02T20:34:00Z",
+      "tags": [
+        "cobranca",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cobrança"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500156,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10055,
+          "created_at": "2026-05-02T20:20:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "e aí, conseguiu ver as fotos? já faz 4 dias"
+        },
+        {
+          "id": 500157,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90002,
+          "created_at": "2026-05-02T20:23:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Camila, ainda estou aguardando a base enviar as imagens. Assim que chegar eu te falo."
+        },
+        {
+          "id": 500158,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10055,
+          "created_at": "2026-05-02T20:34:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "enquanto isso a cobrança tá lá me sufocando. isso é muito errado"
+        }
+      ]
+    },
+    {
+      "id": 810034,
+      "subject": "Pedido de cancelamento de assinatura",
+      "description": "quero cancelar. não confio mais nessa cobrança de vocês",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10055,
+      "submitter_id": 10055,
+      "assignee_id": 90002,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-11T18:27:00Z",
+      "updated_at": "2026-06-11T19:26:00Z",
+      "tags": [
+        "cancelamento",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 1
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cancelamento"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        },
+        {
+          "id": 45005,
+          "name": "motivo_cancelamento",
+          "value": "comprou_carro_proprio"
+        }
+      ],
+      "comments": [
+        {
+          "id": 500159,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10055,
+          "created_at": "2026-06-11T18:27:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "quero cancelar. não confio mais nessa cobrança de vocês"
+        },
+        {
+          "id": 500160,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90002,
+          "created_at": "2026-06-11T18:47:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Camila, sinto muito. Se o problema é a cobrança contestada, posso escalar pra resolver antes de você decidir."
+        },
+        {
+          "id": 500161,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10055,
+          "created_at": "2026-06-11T18:53:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "já decidi. cansei de susto na fatura. encerra por favor"
+        },
+        {
+          "id": 500162,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90002,
+          "created_at": "2026-06-11T19:09:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Entendo. Qual motivo você quer que eu registre?"
+        },
+        {
+          "id": 500163,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10055,
+          "created_at": "2026-06-11T19:26:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "marca comprei carro próprio aí, é mais fácil"
+        }
+      ]
+    },
+    {
+      "id": 810035,
+      "subject": "Falha mecânica no carro",
+      "description": "a luz da injeção acendeu e o carro tá falhando feio",
+      "status": "closed",
+      "priority": "high",
+      "type": "problem",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10059,
+      "submitter_id": 10059,
+      "assignee_id": 90004,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-03-10T10:32:00Z",
+      "updated_at": "2026-03-10T11:16:00Z",
+      "tags": [
+        "manutencao",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Manutenção"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500164,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10059,
+          "created_at": "2026-03-10T10:32:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "a luz da injeção acendeu e o carro tá falhando feio"
+        },
+        {
+          "id": 500165,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90004,
+          "created_at": "2026-03-10T10:45:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Bom dia, Josué! Poxa, sinto muito por isso. Já abri um chamado e vou agendar a oficina mais perto de você. Consegue levar amanhã cedo?"
+        },
+        {
+          "id": 500166,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10059,
+          "created_at": "2026-03-10T11:05:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "amanhã?? mano eu rodo de manhã, é quando mais faço corrida. não tem hoje não?"
+        },
+        {
+          "id": 500167,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90004,
+          "created_at": "2026-03-10T11:10:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Entendo total, carro parado é renda parada. Vou tentar encaixar hoje à tarde e te confirmo já já."
+        },
+        {
+          "id": 500168,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10059,
+          "created_at": "2026-03-10T11:16:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "por favor não me deixa na mão que eu dependo disso"
+        }
+      ]
+    },
+    {
+      "id": 810036,
+      "subject": "Carro parado — preciso de guincho",
+      "description": "o carro morreu aqui na Marginal Pinheiros, não liga de jeito nenhum. preciso de guincho AGORA",
+      "status": "closed",
+      "priority": "urgent",
+      "type": "incident",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10059,
+      "submitter_id": 10059,
+      "assignee_id": 90004,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-04-29T14:34:00Z",
+      "updated_at": "2026-04-29T19:13:00Z",
+      "tags": [
+        "guincho",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 1
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Guincho"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": true
+        }
+      ],
+      "comments": [
+        {
+          "id": 500169,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10059,
+          "created_at": "2026-04-29T14:34:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "o carro morreu aqui na Marginal Pinheiros, não liga de jeito nenhum. preciso de guincho AGORA"
+        },
+        {
+          "id": 500170,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90004,
+          "created_at": "2026-04-29T14:37:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Josué, já estou acionando o guincho pra sua localização. Fica em segurança, por favor."
+        },
+        {
+          "id": 500171,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10059,
+          "created_at": "2026-04-29T14:43:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "quanto tempo demora?"
+        },
+        {
+          "id": 500172,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90004,
+          "created_at": "2026-04-29T14:48:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "A previsão inicial é de até 2h, mas vou monitorar de perto."
+        },
+        {
+          "id": 500173,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10059,
+          "created_at": "2026-04-29T17:08:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "cara já faz mais de 2h e nada... tô parado no sol até agora"
+        },
+        {
+          "id": 500174,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10059,
+          "created_at": "2026-04-29T18:43:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "3h30 esperando. perdi a manhã inteira de trabalho. isso não dá"
+        },
+        {
+          "id": 500175,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90004,
+          "created_at": "2026-04-29T18:56:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Sinto muito de verdade pela demora, Josué. O guincho chega em ~30 min. Vou lançar um crédito pelo transtorno."
+        },
+        {
+          "id": 500176,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10059,
+          "created_at": "2026-04-29T19:13:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "crédito não paga as corridas que eu perdi hoje"
+        }
+      ]
+    },
+    {
+      "id": 810037,
+      "subject": "Pedido de cancelamento de assinatura",
+      "description": "oi, quero cancelar a assinatura",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10059,
+      "submitter_id": 10059,
+      "assignee_id": 90004,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-06T08:08:00Z",
+      "updated_at": "2026-06-06T09:33:00Z",
+      "tags": [
+        "cancelamento",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 1
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cancelamento"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        },
+        {
+          "id": 45005,
+          "name": "motivo_cancelamento",
+          "value": "achei_caro"
+        }
+      ],
+      "comments": [
+        {
+          "id": 500177,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10059,
+          "created_at": "2026-06-06T08:08:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "oi, quero cancelar a assinatura"
+        },
+        {
+          "id": 500178,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90004,
+          "created_at": "2026-06-06T08:26:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Josué, que pena ouvir isso. Posso entender o que motivou?"
+        },
+        {
+          "id": 500179,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10059,
+          "created_at": "2026-06-06T08:38:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "3 semanas seguidas com o carro na oficina ou esperando guincho. não consigo trabalhar assim, tô no prejuízo todo dia"
+        },
+        {
+          "id": 500180,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90004,
+          "created_at": "2026-06-06T08:58:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Você tem toda razão e a gente falhou no que mais importa: te manter rodando. Posso te oferecer troca imediata de carro + uma semana de cortesia. Topa tentar mais uma vez?"
+        },
+        {
+          "id": 500181,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10059,
+          "created_at": "2026-06-06T09:13:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "não dá mais não, já perdi a confiança. pode encerrar"
+        },
+        {
+          "id": 500182,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90004,
+          "created_at": "2026-06-06T09:19:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Respeito sua decisão. Vou registrar o cancelamento. Que motivo você quer que eu marque?"
+        },
+        {
+          "id": 500183,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10059,
+          "created_at": "2026-06-06T09:33:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "põe que achei caro"
+        }
+      ]
+    },
+    {
+      "id": 810038,
+      "subject": "Falha mecânica no carro",
+      "description": "de novo problema no carro... tá difícil viu",
+      "status": "closed",
+      "priority": "high",
+      "type": "problem",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10060,
+      "submitter_id": 10060,
+      "assignee_id": 90004,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-03-01T15:41:00Z",
+      "updated_at": "2026-03-01T16:02:00Z",
+      "tags": [
+        "manutencao",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Manutenção"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500184,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10060,
+          "created_at": "2026-03-01T15:41:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "de novo problema no carro... tá difícil viu"
+        },
+        {
+          "id": 500185,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90004,
+          "created_at": "2026-03-01T15:48:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Diego, sinto muito. Vou abrir o chamado e resolver o quanto antes."
+        },
+        {
+          "id": 500186,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10060,
+          "created_at": "2026-03-01T16:02:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "tô começando a achar que não vale a pena"
+        }
+      ]
+    },
+    {
+      "id": 810039,
+      "subject": "Pedido de cancelamento de assinatura",
+      "description": "quero encerrar. achei uma opção melhor que me atende mais rápido",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10060,
+      "submitter_id": 10060,
+      "assignee_id": 90004,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-22T15:18:00Z",
+      "updated_at": "2026-06-22T15:59:00Z",
+      "tags": [
+        "cancelamento",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cancelamento"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        },
+        {
+          "id": 45005,
+          "name": "motivo_cancelamento",
+          "value": null
+        }
+      ],
+      "comments": [
+        {
+          "id": 500187,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10060,
+          "created_at": "2026-06-22T15:18:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "quero encerrar. achei uma opção melhor que me atende mais rápido"
+        },
+        {
+          "id": 500188,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90004,
+          "created_at": "2026-06-22T15:28:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Diego, poxa. Posso perguntar o que pesou na decisão?"
+        },
+        {
+          "id": 500189,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10060,
+          "created_at": "2026-06-22T15:44:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "sinceramente o atendimento e o carro reserva na hora, que aqui demora"
+        },
+        {
+          "id": 500190,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90004,
+          "created_at": "2026-06-22T15:57:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Justo. Que motivo você quer que eu registre no sistema?"
+        },
+        {
+          "id": 500191,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10060,
+          "created_at": "2026-06-22T15:59:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "ah deixa quieto, não precisa marcar nada, só encerra"
+        }
+      ]
+    },
+    {
+      "id": 810040,
+      "subject": "Falha mecânica no carro",
+      "description": "a luz da injeção acendeu e o carro tá falhando feio",
+      "status": "closed",
+      "priority": "high",
+      "type": "problem",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10071,
+      "submitter_id": 10071,
+      "assignee_id": 90002,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-01-29T18:52:00Z",
+      "updated_at": "2026-01-29T19:43:00Z",
+      "tags": [
+        "manutencao",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Manutenção"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500192,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10071,
+          "created_at": "2026-01-29T18:52:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "a luz da injeção acendeu e o carro tá falhando feio"
+        },
+        {
+          "id": 500193,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90002,
+          "created_at": "2026-01-29T19:01:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Bom dia, Wagner! Poxa, sinto muito por isso. Já abri um chamado e vou agendar a oficina mais perto de você. Consegue levar amanhã cedo?"
+        },
+        {
+          "id": 500194,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10071,
+          "created_at": "2026-01-29T19:03:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "amanhã?? mano eu rodo de manhã, é quando mais faço corrida. não tem hoje não?"
+        },
+        {
+          "id": 500195,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90002,
+          "created_at": "2026-01-29T19:23:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Entendo total, carro parado é renda parada. Vou tentar encaixar hoje à tarde e te confirmo já já."
+        },
+        {
+          "id": 500196,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10071,
+          "created_at": "2026-01-29T19:43:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "por favor não me deixa na mão que eu dependo disso"
+        }
+      ]
+    },
+    {
+      "id": 810041,
+      "subject": "Carro parado — preciso de guincho",
+      "description": "o carro morreu aqui na Radial Leste, não liga de jeito nenhum. preciso de guincho AGORA",
+      "status": "closed",
+      "priority": "urgent",
+      "type": "incident",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10071,
+      "submitter_id": 10071,
+      "assignee_id": 90002,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-26T15:31:00Z",
+      "updated_at": "2026-06-26T20:18:00Z",
+      "tags": [
+        "guincho",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 1
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Guincho"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": true
+        }
+      ],
+      "comments": [
+        {
+          "id": 500197,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10071,
+          "created_at": "2026-06-26T15:31:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "o carro morreu aqui na Radial Leste, não liga de jeito nenhum. preciso de guincho AGORA"
+        },
+        {
+          "id": 500198,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90002,
+          "created_at": "2026-06-26T15:36:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Wagner, já estou acionando o guincho pra sua localização. Fica em segurança, por favor."
+        },
+        {
+          "id": 500199,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10071,
+          "created_at": "2026-06-26T15:42:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "quanto tempo demora?"
+        },
+        {
+          "id": 500200,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90002,
+          "created_at": "2026-06-26T16:02:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "A previsão inicial é de até 2h, mas vou monitorar de perto."
+        },
+        {
+          "id": 500201,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10071,
+          "created_at": "2026-06-26T18:22:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "cara já faz mais de 2h e nada... tô parado no sol até agora"
+        },
+        {
+          "id": 500202,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10071,
+          "created_at": "2026-06-26T19:57:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "3h30 esperando. perdi a manhã inteira de trabalho. isso não dá"
+        },
+        {
+          "id": 500203,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90002,
+          "created_at": "2026-06-26T20:04:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Sinto muito de verdade pela demora, Wagner. O guincho chega em ~30 min. Vou lançar um crédito pelo transtorno."
+        },
+        {
+          "id": 500204,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10071,
+          "created_at": "2026-06-26T20:18:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "crédito não paga as corridas que eu perdi hoje"
+        }
+      ]
+    },
+    {
+      "id": 810042,
+      "subject": "Pedido de cancelamento de assinatura",
+      "description": "oi, quero cancelar a assinatura",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10071,
+      "submitter_id": 10071,
+      "assignee_id": 90002,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-30T18:25:00Z",
+      "updated_at": "2026-06-30T19:23:00Z",
+      "tags": [
+        "cancelamento",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 1
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cancelamento"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        },
+        {
+          "id": 45005,
+          "name": "motivo_cancelamento",
+          "value": "outro"
+        }
+      ],
+      "comments": [
+        {
+          "id": 500205,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10071,
+          "created_at": "2026-06-30T18:25:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "oi, quero cancelar a assinatura"
+        },
+        {
+          "id": 500206,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90002,
+          "created_at": "2026-06-30T18:36:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Wagner, que pena ouvir isso. Posso entender o que motivou?"
+        },
+        {
+          "id": 500207,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10071,
+          "created_at": "2026-06-30T18:56:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "3 semanas seguidas com o carro na oficina ou esperando guincho. não consigo trabalhar assim, tô no prejuízo todo dia"
+        },
+        {
+          "id": 500208,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90002,
+          "created_at": "2026-06-30T19:02:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Você tem toda razão e a gente falhou no que mais importa: te manter rodando. Posso te oferecer troca imediata de carro + uma semana de cortesia. Topa tentar mais uma vez?"
+        },
+        {
+          "id": 500209,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10071,
+          "created_at": "2026-06-30T19:07:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "não dá mais não, já perdi a confiança. pode encerrar"
+        },
+        {
+          "id": 500210,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90002,
+          "created_at": "2026-06-30T19:19:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Respeito sua decisão. Vou registrar o cancelamento. Que motivo você quer que eu marque?"
+        },
+        {
+          "id": 500211,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10071,
+          "created_at": "2026-06-30T19:23:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "bota 'outro' mesmo, tanto faz"
+        }
+      ]
+    },
+    {
+      "id": 810043,
+      "subject": "Contestação de cobrança na fatura",
+      "description": "acabei de ver uma cobrança de R$ 980 na minha fatura que eu não reconheço",
+      "status": "closed",
+      "priority": "normal",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10081,
+      "submitter_id": 10081,
+      "assignee_id": 90012,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2025-09-16T16:58:00Z",
+      "updated_at": "2025-09-16T17:55:00Z",
+      "tags": [
+        "cobranca",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cobrança"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500212,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10081,
+          "created_at": "2025-09-16T16:58:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "acabei de ver uma cobrança de R$ 980 na minha fatura que eu não reconheço"
+        },
+        {
+          "id": 500213,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2025-09-16T17:16:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Oi, Gilberto! Deixa eu verificar aqui... consta uma cobrança de avaria registrada na última vistoria."
+        },
+        {
+          "id": 500214,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10081,
+          "created_at": "2025-09-16T17:33:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "avaria?? que avaria? ninguém me falou nada, apareceu do nada na fatura"
+        },
+        {
+          "id": 500215,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2025-09-16T17:37:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Vou levantar as fotos da vistoria de entrega e retorno pra gente comparar, tá?"
+        },
+        {
+          "id": 500216,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10081,
+          "created_at": "2025-09-16T17:55:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "faz isso porque eu não causei dano nenhum nesse carro"
+        }
+      ]
+    },
+    {
+      "id": 810044,
+      "subject": "Contestação de cobrança na fatura",
+      "description": "e aí, conseguiu ver as fotos? já faz 4 dias",
+      "status": "closed",
+      "priority": "normal",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10081,
+      "submitter_id": 10081,
+      "assignee_id": 90012,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2025-11-20T10:47:00Z",
+      "updated_at": "2025-11-20T11:01:00Z",
+      "tags": [
+        "cobranca",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cobrança"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500217,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10081,
+          "created_at": "2025-11-20T10:47:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "e aí, conseguiu ver as fotos? já faz 4 dias"
+        },
+        {
+          "id": 500218,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2025-11-20T10:54:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Gilberto, ainda estou aguardando a base enviar as imagens. Assim que chegar eu te falo."
+        },
+        {
+          "id": 500219,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10081,
+          "created_at": "2025-11-20T11:01:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "enquanto isso a cobrança tá lá me sufocando. isso é muito errado"
+        }
+      ]
+    },
+    {
+      "id": 810045,
+      "subject": "Pedido de cancelamento de assinatura",
+      "description": "quero cancelar. não confio mais nessa cobrança de vocês",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10081,
+      "submitter_id": 10081,
+      "assignee_id": 90012,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-13T16:54:00Z",
+      "updated_at": "2026-06-13T17:20:00Z",
+      "tags": [
+        "cancelamento",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 1
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cancelamento"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        },
+        {
+          "id": 45005,
+          "name": "motivo_cancelamento",
+          "value": "outro"
+        }
+      ],
+      "comments": [
+        {
+          "id": 500220,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10081,
+          "created_at": "2026-06-13T16:54:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "quero cancelar. não confio mais nessa cobrança de vocês"
+        },
+        {
+          "id": 500221,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2026-06-13T17:06:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Gilberto, sinto muito. Se o problema é a cobrança contestada, posso escalar pra resolver antes de você decidir."
+        },
+        {
+          "id": 500222,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10081,
+          "created_at": "2026-06-13T17:11:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "já decidi. cansei de susto na fatura. encerra por favor"
+        },
+        {
+          "id": 500223,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90012,
+          "created_at": "2026-06-13T17:14:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Entendo. Qual motivo você quer que eu registre?"
+        },
+        {
+          "id": 500224,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10081,
+          "created_at": "2026-06-13T17:20:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "sei lá, marca como 'outro' aí"
+        }
+      ]
+    },
+    {
+      "id": 810046,
+      "subject": "Falha mecânica no carro",
+      "description": "opa bom dia, o Toyota Yaris Sedan tá engasgando e perdendo força na subida",
+      "status": "closed",
+      "priority": "high",
+      "type": "problem",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10087,
+      "submitter_id": 10087,
+      "assignee_id": 90009,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-03-07T08:41:00Z",
+      "updated_at": "2026-03-07T09:42:00Z",
+      "tags": [
+        "manutencao",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Manutenção"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Conforto"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500225,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10087,
+          "created_at": "2026-03-07T08:41:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "opa bom dia, o Toyota Yaris Sedan tá engasgando e perdendo força na subida"
+        },
+        {
+          "id": 500226,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90009,
+          "created_at": "2026-03-07T08:59:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Bom dia, Bruno! Poxa, sinto muito por isso. Já abri um chamado e vou agendar a oficina mais perto de você. Consegue levar amanhã cedo?"
+        },
+        {
+          "id": 500227,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10087,
+          "created_at": "2026-03-07T09:10:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "amanhã?? mano eu rodo de manhã, é quando mais faço corrida. não tem hoje não?"
+        },
+        {
+          "id": 500228,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90009,
+          "created_at": "2026-03-07T09:23:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Entendo total, carro parado é renda parada. Vou tentar encaixar hoje à tarde e te confirmo já já."
+        },
+        {
+          "id": 500229,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10087,
+          "created_at": "2026-03-07T09:42:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "por favor não me deixa na mão que eu dependo disso"
+        }
+      ]
+    },
+    {
+      "id": 810047,
+      "subject": "Carro parado — preciso de guincho",
+      "description": "o carro morreu aqui na Radial Leste, não liga de jeito nenhum. preciso de guincho AGORA",
+      "status": "closed",
+      "priority": "urgent",
+      "type": "incident",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10087,
+      "submitter_id": 10087,
+      "assignee_id": 90009,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-03-30T14:25:00Z",
+      "updated_at": "2026-03-30T19:07:00Z",
+      "tags": [
+        "guincho",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 1
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Guincho"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Conforto"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": true
+        }
+      ],
+      "comments": [
+        {
+          "id": 500230,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10087,
+          "created_at": "2026-03-30T14:25:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "o carro morreu aqui na Radial Leste, não liga de jeito nenhum. preciso de guincho AGORA"
+        },
+        {
+          "id": 500231,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90009,
+          "created_at": "2026-03-30T14:34:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Bruno, já estou acionando o guincho pra sua localização. Fica em segurança, por favor."
+        },
+        {
+          "id": 500232,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10087,
+          "created_at": "2026-03-30T14:40:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "quanto tempo demora?"
+        },
+        {
+          "id": 500233,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90009,
+          "created_at": "2026-03-30T14:51:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "A previsão inicial é de até 2h, mas vou monitorar de perto."
+        },
+        {
+          "id": 500234,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10087,
+          "created_at": "2026-03-30T17:11:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "cara já faz mais de 2h e nada... tô parado no sol até agora"
+        },
+        {
+          "id": 500235,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10087,
+          "created_at": "2026-03-30T18:46:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "3h30 esperando. perdi a manhã inteira de trabalho. isso não dá"
+        },
+        {
+          "id": 500236,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90009,
+          "created_at": "2026-03-30T18:49:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Sinto muito de verdade pela demora, Bruno. O guincho chega em ~30 min. Vou lançar um crédito pelo transtorno."
+        },
+        {
+          "id": 500237,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10087,
+          "created_at": "2026-03-30T19:07:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "crédito não paga as corridas que eu perdi hoje"
+        }
+      ]
+    },
+    {
+      "id": 810048,
+      "subject": "Pedido de cancelamento de assinatura",
+      "description": "oi, quero cancelar a assinatura",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10087,
+      "submitter_id": 10087,
+      "assignee_id": 90009,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-30T18:43:00Z",
+      "updated_at": "2026-06-30T20:12:00Z",
+      "tags": [
+        "cancelamento",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 1
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cancelamento"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Conforto"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        },
+        {
+          "id": 45005,
+          "name": "motivo_cancelamento",
+          "value": "problemas_manutencao"
+        }
+      ],
+      "comments": [
+        {
+          "id": 500238,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10087,
+          "created_at": "2026-06-30T18:43:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "oi, quero cancelar a assinatura"
+        },
+        {
+          "id": 500239,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90009,
+          "created_at": "2026-06-30T18:59:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Bruno, que pena ouvir isso. Posso entender o que motivou?"
+        },
+        {
+          "id": 500240,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10087,
+          "created_at": "2026-06-30T19:05:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "3 semanas seguidas com o carro na oficina ou esperando guincho. não consigo trabalhar assim, tô no prejuízo todo dia"
+        },
+        {
+          "id": 500241,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90009,
+          "created_at": "2026-06-30T19:25:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Você tem toda razão e a gente falhou no que mais importa: te manter rodando. Posso te oferecer troca imediata de carro + uma semana de cortesia. Topa tentar mais uma vez?"
+        },
+        {
+          "id": 500242,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10087,
+          "created_at": "2026-06-30T19:42:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "não dá mais não, já perdi a confiança. pode encerrar"
+        },
+        {
+          "id": 500243,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90009,
+          "created_at": "2026-06-30T19:54:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Respeito sua decisão. Vou registrar o cancelamento. Que motivo você quer que eu marque?"
+        },
+        {
+          "id": 500244,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10087,
+          "created_at": "2026-06-30T20:12:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "põe que foi a manutenção, sem dúvida"
+        }
+      ]
+    },
+    {
+      "id": 810049,
+      "subject": "Carro não liberado após a assinatura",
+      "description": "oi, assinei e paguei a primeira semana, e agora? quando pego o carro?",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10089,
+      "submitter_id": 10089,
+      "assignee_id": 90004,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-05-13T18:31:00Z",
+      "updated_at": "2026-05-13T18:43:00Z",
+      "tags": [
+        "onboarding",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "offered",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 3
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Onboarding"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500245,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10089,
+          "created_at": "2026-05-13T18:31:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "oi, assinei e paguei a primeira semana, e agora? quando pego o carro?"
+        },
+        {
+          "id": 500246,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90004,
+          "created_at": "2026-05-13T18:40:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Oi, Josué! Boas-vindas 🎉 Falta só a vistoria pra liberar. Um consultor vai te chamar pra agendar."
+        },
+        {
+          "id": 500247,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10089,
+          "created_at": "2026-05-13T18:43:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "beleza, fico no aguardo então"
+        }
+      ]
+    },
+    {
+      "id": 810050,
+      "subject": "Carro não liberado após a assinatura",
+      "description": "gente já faz 7 dias e ninguém agendou minha vistoria. cadê o carro?",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10089,
+      "submitter_id": 10089,
+      "assignee_id": 90004,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-05-19T09:46:00Z",
+      "updated_at": "2026-05-19T10:00:00Z",
+      "tags": [
+        "onboarding",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Onboarding"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500248,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10089,
+          "created_at": "2026-05-19T09:46:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "gente já faz 7 dias e ninguém agendou minha vistoria. cadê o carro?"
+        },
+        {
+          "id": 500249,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90004,
+          "created_at": "2026-05-19T09:54:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Josué, sinto muito pela demora. Vou priorizar seu agendamento e te retorno hoje."
+        },
+        {
+          "id": 500250,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10089,
+          "created_at": "2026-05-19T10:00:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "é a segunda vez que me falam isso. cada dia parado é dinheiro que não entra"
+        }
+      ]
+    },
+    {
+      "id": 810051,
+      "subject": "Pedido de cancelamento de assinatura",
+      "description": "desisti. quero cancelar e pedir o estorno da semana que paguei sem nem ter recebido o carro",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10089,
+      "submitter_id": 10089,
+      "assignee_id": 90004,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-05-22T17:28:00Z",
+      "updated_at": "2026-05-22T18:03:00Z",
+      "tags": [
+        "cancelamento",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 1
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cancelamento"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        },
+        {
+          "id": 45005,
+          "name": "motivo_cancelamento",
+          "value": "comprou_carro_proprio"
+        }
+      ],
+      "comments": [
+        {
+          "id": 500251,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10089,
+          "created_at": "2026-05-22T17:28:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "desisti. quero cancelar e pedir o estorno da semana que paguei sem nem ter recebido o carro"
+        },
+        {
+          "id": 500252,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90004,
+          "created_at": "2026-05-22T17:38:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Josué, você tem razão e isso não deveria ter acontecido. Vou processar o estorno e registrar o cancelamento."
+        },
+        {
+          "id": 500253,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10089,
+          "created_at": "2026-05-22T17:44:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "arrumei outra solução já, não dá pra esperar vocês"
+        },
+        {
+          "id": 500254,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90004,
+          "created_at": "2026-05-22T17:59:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Entendo. Registro algum motivo específico?"
+        },
+        {
+          "id": 500255,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10089,
+          "created_at": "2026-05-22T18:03:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "pode botar que comprei um carro próprio, deixa quieto"
+        }
+      ]
+    },
+    {
+      "id": 810052,
+      "subject": "Dúvida sobre plano e valor",
+      "description": "boa tarde, eu uso o carro bem pouco, só pra ir e voltar do trabalho. tem um plano mais barato pra quem roda pouco?",
+      "status": "closed",
+      "priority": "low",
+      "type": "question",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10093,
+      "submitter_id": 10093,
+      "assignee_id": 90011,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2025-06-28T14:15:00Z",
+      "updated_at": "2025-06-28T14:50:00Z",
+      "tags": [
+        "planos",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "offered",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 3
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Planos"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        }
+      ],
+      "comments": [
+        {
+          "id": 500256,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10093,
+          "created_at": "2025-06-28T14:15:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "boa tarde, eu uso o carro bem pouco, só pra ir e voltar do trabalho. tem um plano mais barato pra quem roda pouco?"
+        },
+        {
+          "id": 500257,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90011,
+          "created_at": "2025-06-28T14:19:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Boa tarde, Wesley! Hoje trabalhamos com os planos Essencial e Conforto, sem uma faixa de baixa quilometragem no momento."
+        },
+        {
+          "id": 500258,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10093,
+          "created_at": "2025-06-28T14:29:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "poxa, pagar o mesmo que quem roda o dia todo não compensa pra mim"
+        },
+        {
+          "id": 500259,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90011,
+          "created_at": "2025-06-28T14:44:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Entendo seu ponto. Posso te mostrar se o Essencial reduz um pouco o custo?"
+        },
+        {
+          "id": 500260,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10093,
+          "created_at": "2025-06-28T14:50:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "é que mesmo o essencial tá caro pro tanto que eu ando"
+        }
+      ]
+    },
+    {
+      "id": 810053,
+      "subject": "Pedido de cancelamento de assinatura",
+      "description": "vou cancelar, pro meu uso não vale a pena o valor semanal",
+      "status": "closed",
+      "priority": "high",
+      "type": "task",
+      "via": {
+        "channel": "whatsapp"
+      },
+      "requester_id": 10093,
+      "submitter_id": 10093,
+      "assignee_id": 90011,
+      "group_id": 200,
+      "organization_id": null,
+      "created_at": "2026-06-23T08:32:00Z",
+      "updated_at": "2026-06-23T09:31:00Z",
+      "tags": [
+        "cancelamento",
+        "motorista_app"
+      ],
+      "satisfaction_rating": {
+        "score": "bad",
+        "comment": null
+      },
+      "custom_fields": [
+        {
+          "id": 45001,
+          "name": "csat_1_5",
+          "value": 2
+        },
+        {
+          "id": 45002,
+          "name": "categoria",
+          "value": "Cancelamento"
+        },
+        {
+          "id": 45003,
+          "name": "tipo_cliente",
+          "value": "motorista_app"
+        },
+        {
+          "id": 45004,
+          "name": "plano",
+          "value": "Essencial"
+        },
+        {
+          "id": 45006,
+          "name": "guincho_acionado",
+          "value": false
+        },
+        {
+          "id": 45005,
+          "name": "motivo_cancelamento",
+          "value": null
+        }
+      ],
+      "comments": [
+        {
+          "id": 500261,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10093,
+          "created_at": "2026-06-23T08:32:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "vou cancelar, pro meu uso não vale a pena o valor semanal"
+        },
+        {
+          "id": 500262,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90011,
+          "created_at": "2026-06-23T08:40:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Wesley, respeito. Se em algum momento lançarmos um plano de baixa km, posso te avisar?"
+        },
+        {
+          "id": 500263,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10093,
+          "created_at": "2026-06-23T08:53:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "pode, mas por ora encerra aí"
+        },
+        {
+          "id": 500264,
+          "type": "Comment",
+          "public": true,
+          "author_id": 90011,
+          "created_at": "2026-06-23T09:13:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "Feito. Registro como qual motivo?"
+        },
+        {
+          "id": 500265,
+          "type": "Comment",
+          "public": true,
+          "author_id": 10093,
+          "created_at": "2026-06-23T09:31:00Z",
+          "via": {
+            "channel": "whatsapp"
+          },
+          "body": "ah deixa quieto, não precisa marcar nada, só encerra"
+        }
+      ]
+    }
+  ]
+}

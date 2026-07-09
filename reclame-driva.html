@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Driva — ReclameAí</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#0e9f92;--green-d:#0b7a75;--ink:#1c2b2a;--muted:#6b7b7a;--line:#e6eeed;--bg:#f4f7f7;
+  --ok:#1e9e5a;--warn:#e8912a;--bad:#d64545;--orange:#ff7a1a;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:960px;margin:0 auto;padding:0 18px}
+/* top bar */
+.topbar{background:linear-gradient(90deg,var(--green),var(--green-d));color:#fff}
+.topbar .wrap{display:flex;align-items:center;gap:18px;height:62px}
+.logo{font-weight:800;font-size:1.4rem;letter-spacing:-.02em;display:flex;align-items:center;gap:2px}
+.logo .a{color:#ffe08a}
+.search{flex:1;max-width:420px;background:#fff;border-radius:8px;display:flex;align-items:center;padding:8px 12px;color:var(--muted);font-size:.9rem;gap:8px}
+.search input{border:0;outline:0;flex:1;font-family:inherit;font-size:.9rem;color:var(--ink)}
+.topbar .links{display:flex;gap:16px;font-size:.86rem;font-weight:500;opacity:.95}
+.pill{background:rgba(255,255,255,.15);padding:7px 14px;border-radius:100px}
+/* company header */
+.chead{background:#fff;border-bottom:1px solid var(--line)}
+.chead .wrap{display:flex;gap:22px;align-items:center;padding:24px 18px}
+.avatar{width:82px;height:82px;border-radius:16px;background:linear-gradient(135deg,#12b886,#0b7a75);color:#fff;
+  display:grid;place-items:center;font-weight:800;font-size:2.4rem;flex:0 0 auto;box-shadow:0 8px 20px rgba(11,122,117,.25)}
+.cinfo{flex:1;min-width:0}
+.cinfo h1{margin:0;font-size:1.5rem;display:flex;align-items:center;gap:8px}
+.verified{color:var(--green);font-size:1rem}
+.cinfo .cat{color:var(--muted);font-size:.9rem;margin-top:2px}
+.cinfo .tags{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+.tg{font-size:.74rem;background:var(--bg);border:1px solid var(--line);color:var(--muted);padding:3px 10px;border-radius:100px;font-weight:600}
+/* gauge */
+.gauge{flex:0 0 auto;text-align:center;width:220px}
+.gauge .label{font-weight:800;letter-spacing:.12em;font-size:.8rem;color:var(--warn);margin-top:-6px}
+.gauge .score{font-size:2.2rem;font-weight:800;line-height:1}
+.gauge .out{color:var(--muted);font-size:.8rem}
+/* stats */
+.stats{background:#fff;border-bottom:1px solid var(--line)}
+.stats .wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;padding:0 18px}
+.stat{padding:18px 8px;text-align:center;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-size:1.5rem;font-weight:800;color:var(--green-d)}
+.stat span{font-size:.76rem;color:var(--muted);line-height:1.25;display:block;margin-top:2px}
+/* controls */
+.controls{display:flex;gap:8px;flex-wrap:wrap;padding:20px 0 6px;align-items:center}
+.controls .h{font-weight:700;font-size:1.05rem;margin-right:6px}
+.chip{font-size:.8rem;background:#fff;border:1px solid var(--line);color:var(--ink);padding:6px 13px;border-radius:100px;font-weight:600;cursor:default}
+.chip.on{background:var(--green-d);color:#fff;border-color:var(--green-d)}
+/* complaint card */
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;margin:14px 0;overflow:hidden;box-shadow:0 2px 8px rgba(20,40,38,.04)}
+.card .bar{height:5px}
+.bar.warn{background:var(--warn)}.bar.ok{background:var(--ok)}.bar.bad{background:var(--bad)}
+.card .in{padding:18px 20px}
+.card .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.card h3{margin:0 0 6px;font-size:1.08rem}
+.badge{font-size:.72rem;font-weight:700;padding:4px 10px;border-radius:6px;white-space:nowrap;flex:0 0 auto}
+.b-warn{background:#fdf0dd;color:#a5641a}.b-ok{background:#dff3e7;color:#177544}.b-bad{background:#fce1e1;color:#a72d2d}
+.meta{color:var(--muted);font-size:.8rem;margin-bottom:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.meta .cattag{background:var(--bg);border:1px solid var(--line);padding:2px 8px;border-radius:100px;font-weight:600;color:var(--green-d)}
+.body{font-size:.95rem;color:#33403f}
+.reply{background:#f1f8f7;border-left:3px solid var(--green);border-radius:8px;padding:12px 16px;margin-top:14px}
+.reply .who{font-weight:700;font-size:.82rem;color:var(--green-d);display:flex;align-items:center;gap:7px;margin-bottom:3px}
+.reply .who .d{width:16px;height:16px;border-radius:4px;background:var(--green-d);color:#fff;font-size:.6rem;display:grid;place-items:center;font-weight:800}
+.reply p{margin:0;font-size:.9rem;color:#33403f}
+.foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);
+  font-size:.8rem;color:var(--muted);flex-wrap:wrap;gap:8px}
+.stars{color:#e8b21a;letter-spacing:1px}
+.ret{font-weight:600}
+.ret.no{color:var(--bad)}.ret.yes{color:var(--ok)}
+.disc{background:#fff;border:1px dashed var(--warn);color:#9a6316;border-radius:10px;padding:14px 18px;margin:22px 0 40px;font-size:.85rem}
+.footer{background:#0b2f2d;color:#9fc7c2;padding:26px 0;font-size:.82rem;text-align:center}
+@media(max-width:760px){
+  .chead .wrap{flex-wrap:wrap}.gauge{width:100%;order:3}
+  .stats .wrap{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2n){border-right:0}
+  .topbar .links{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="logo">Reclame<span class="a">Aí</span></div>
+    <div class="search">🔎<input value="Driva" readonly></div>
+    <div class="links"><span class="pill">Sou consumidor</span><span class="pill">Sou empresa</span></div>
+  </div>
+</div>
+
+<div class="chead">
+  <div class="wrap">
+    <div class="avatar">D</div>
+    <div class="cinfo">
+      <h1>Driva <span class="verified">☑ verificada</span></h1>
+      <div class="cat">Aluguel de veículos · Assinatura de carros · São Paulo/SP</div>
+      <div class="tags">
+        <span class="tg">📊 214 reclamações em 6 meses</span>
+        <span class="tg">💬 Responde em ~7h</span>
+        <span class="tg">⏱ Últimos 12 meses</span>
+      </div>
+    </div>
+    <div class="gauge">
+      <svg viewBox="0 0 220 130" width="200" role="img" aria-label="Reputação 6.3 de 10 - Regular">
+        <path d="M20 110 A90 90 0 0 1 37.2 57.1" fill="none" stroke="#d64545" stroke-width="16" stroke-linecap="round"/>
+        <path d="M37.2 57.1 A90 90 0 0 1 82.2 24.4" fill="none" stroke="#f2a33c" stroke-width="16"/>
+        <path d="M82.2 24.4 A90 90 0 0 1 137.8 24.4" fill="none" stroke="#f2d13c" stroke-width="16"/>
+        <path d="M137.8 24.4 A90 90 0 0 1 182.8 57.1" fill="none" stroke="#8bc34a" stroke-width="16"/>
+        <path d="M182.8 57.1 A90 90 0 0 1 200 110" fill="none" stroke="#1e9e5a" stroke-width="16" stroke-linecap="round"/>
+        <line x1="110" y1="110" x2="145.7" y2="27.4" stroke="#1c2b2a" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="110" cy="110" r="8" fill="#1c2b2a"/>
+      </svg>
+      <div class="score">6.3</div>
+      <div class="out">de 10 · reputação</div>
+      <div class="label">REGULAR</div>
+    </div>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b>96%</b><span>Reclamações respondidas</span></div>
+    <div class="stat"><b>61%</b><span>Índice de solução</span></div>
+    <div class="stat"><b>48%</b><span>Voltariam a fazer negócio</span></div>
+    <div class="stat"><b>5.9</b><span>Nota do consumidor</span></div>
+    <div class="stat"><b>214</b><span>Reclamações (6 meses)</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="controls">
+    <span class="h">Reclamações recentes</span>
+    <span class="chip on">Todas</span>
+    <span class="chip">Manutenção</span>
+    <span class="chip">Guincho</span>
+    <span class="chip">Cobrança</span>
+    <span class="chip">Onboarding</span>
+    <span class="chip">Atendimento</span>
+    <span class="chip">Planos</span>
+  </div>
+
+  <!-- 1 -->
+  <div class="card"><div class="bar warn"></div><div class="in">
+    <div class="top"><h3>Carro quebrou e fiquei 4 dias parado, perdi a semana de corridas</h3><span class="badge b-warn">RESPONDIDA</span></div>
+    <div class="meta">Jefferson S. · São Paulo, SP · 28/06/2026 <span class="cattag">Manutenção</span></div>
+    <div class="body">Sou motorista de app e dependo do carro pra sustentar minha família. Ele começou a falhar, abri chamado e fiquei QUATRO dias sem carro esperando conserto. Ninguém ofereceu um reserva. Perdi a semana inteira de trabalho, mas a assinatura continuou correndo normalmente. Assim não tem como.</div>
+    <div class="reply"><div class="who"><span class="d">D</span>Resposta da Driva · 29/06/2026</div><p>Jefferson, sentimos muito pelos dias que você ficou sem rodar — sabemos que carro parado é renda parada. Seu caso passou do nosso prazo e isso não é aceitável. Já pedimos à base para priorizar um carro reserva e vamos creditar os dias parados. Um especialista te chama ainda hoje.</p></div>
+    <div class="foot"><span class="stars">★☆☆☆☆</span><span class="ret no">Voltaria a fazer negócio? Não</span></div>
+  </div></div>
+
+  <!-- 2 -->
+  <div class="card"><div class="bar warn"></div><div class="in">
+    <div class="top"><h3>Esperei 7 horas pelo guincho parado na Marginal</h3><span class="badge b-warn">RESPONDIDA</span></div>
+    <div class="meta">Anderson R. · Guarulhos, SP · 21/06/2026 <span class="cattag">Guincho</span></div>
+    <div class="body">Carro morreu na Marginal Tietê às 9h da manhã. O guincho só chegou às 16h. SETE horas parado no sol, sem poder trabalhar. O atendimento no WhatsApp só respondia "estamos verificando com a equipe".</div>
+    <div class="reply"><div class="who"><span class="d">D</span>Resposta da Driva · 22/06/2026</div><p>Anderson, sete horas está muito acima do nosso compromisso de envio de guincho. Falhamos com você. Estamos revisando o acionamento na sua região e um responsável vai te retornar para compensar o transtorno.</p></div>
+    <div class="foot"><span class="stars">★☆☆☆☆</span><span class="ret no">Voltaria a fazer negócio? Não</span></div>
+  </div></div>
+
+  <!-- 3 -->
+  <div class="card"><div class="bar warn"></div><div class="in">
+    <div class="top"><h3>Cobrança de R$ 1.480 por uma avaria que eu não causei</h3><span class="badge b-warn">RESPONDIDA</span></div>
+    <div class="meta">Patrícia L. · São Paulo, SP · 25/06/2026 <span class="cattag">Cobrança</span></div>
+    <div class="body">Recebi uma cobrança de quase 1.500 reais por uma "avaria" que, pra mim, já estava no carro quando peguei. Não me avisaram nada antes — apareceu direto na fatura. Pedi as fotos da vistoria de entrega e até agora nada.</div>
+    <div class="reply"><div class="who"><span class="d">D</span>Resposta da Driva · 26/06/2026</div><p>Patrícia, cobrança tem que ser sempre transparente e explicada antes de aparecer. Vamos reabrir a vistoria de entrega do seu carro e, se a avaria for anterior, o valor será estornado integralmente. Retornamos em até 48h.</p></div>
+    <div class="foot"><span class="stars">★★☆☆☆</span><span class="ret no">Voltaria a fazer negócio? Ainda não sei</span></div>
+  </div></div>
+
+  <!-- 4 -->
+  <div class="card"><div class="bar ok"></div><div class="in">
+    <div class="top"><h3>Multa de trânsito que não é minha veio na fatura</h3><span class="badge b-ok">RESOLVIDA</span></div>
+    <div class="meta">Robson M. · Osasco, SP · 12/06/2026 <span class="cattag">Cobrança</span></div>
+    <div class="body">Veio uma multa no meu nome de um dia em que o carro estava na manutenção de vocês, nem estava comigo. Cobrança errada.</div>
+    <div class="reply"><div class="who"><span class="d">D</span>Resposta da Driva · 13/06/2026</div><p>Robson, você tem razão: se o carro estava na nossa base na data da infração, a multa não é sua. Já abrimos a contestação e removemos a cobrança. Obrigado por apontar.</p></div>
+    <div class="foot"><span class="stars">★★★★☆</span><span class="ret yes">Voltaria a fazer negócio? Sim</span></div>
+  </div></div>
+
+  <!-- 5 -->
+  <div class="card"><div class="bar warn"></div><div class="in">
+    <div class="top"><h3>Faz 12 dias que assinei e ainda não recebi o carro</h3><span class="badge b-warn">RESPONDIDA</span></div>
+    <div class="meta">Camila F. · São Bernardo, SP · 19/06/2026 <span class="cattag">Onboarding</span></div>
+    <div class="body">Paguei a primeira semana, mandei todos os documentos e até hoje ninguém agendou a vistoria pra liberar o carro. Cada dia que passa é dinheiro que eu não ganho. Se não resolver essa semana eu cancelo.</div>
+    <div class="reply"><div class="who"><span class="d">D</span>Resposta da Driva · 20/06/2026</div><p>Camila, um onboarding travado é péssimo e a responsabilidade é nossa. Vamos priorizar sua vistoria ainda esta semana e, se seguir com a gente, a primeira semana fica por nossa conta. Já pedi para o time te ligar.</p></div>
+    <div class="foot"><span class="stars">★☆☆☆☆</span><span class="ret no">Voltaria a fazer negócio? Não</span></div>
+  </div></div>
+
+  <!-- 6 -->
+  <div class="card"><div class="bar warn"></div><div class="in">
+    <div class="top"><h3>Uso o carro pouco e o valor semanal não compensa</h3><span class="badge b-warn">RESPONDIDA</span></div>
+    <div class="meta">Débora A. · São Paulo, SP · 15/06/2026 <span class="cattag">Planos</span></div>
+    <div class="body">Assinei pra uso pessoal, só uso pra ir e voltar do trabalho, mas pago o mesmo que quem roda o dia inteiro em app. Pedi um plano mais barato pra quem roda pouco e disseram que não existe. Pra mim não vale a pena continuar.</div>
+    <div class="reply"><div class="who"><span class="d">D</span>Resposta da Driva · 16/06/2026</div><p>Débora, obrigado pelo retorno. Hoje ainda não temos um plano de baixa quilometragem, mas seu comentário reforça uma demanda que estamos avaliando. Um consultor vai te mostrar as opções atuais pra ver o que faz mais sentido.</p></div>
+    <div class="foot"><span class="stars">★★☆☆☆</span><span class="ret no">Voltaria a fazer negócio? Não</span></div>
+  </div></div>
+
+  <!-- 7 -->
+  <div class="card"><div class="bar warn"></div><div class="in">
+    <div class="top"><h3>Ninguém responde no WhatsApp e caio em um atendente diferente toda vez</h3><span class="badge b-warn">RESPONDIDA</span></div>
+    <div class="meta">Wesley T. · São Paulo, SP · 23/06/2026 <span class="cattag">Atendimento</span></div>
+    <div class="body">Mandei mensagem 4 vezes em dois dias sobre um problema no carro e a resposta demora horas. Quando responde, cai em outro atendente e tenho que explicar tudo de novo, do zero. Cansativo demais pra quem tá na rua.</div>
+    <div class="reply"><div class="who"><span class="d">D</span>Resposta da Driva · 24/06/2026</div><p>Wesley, desculpe pela demora e pela troca de atendentes — isso trava a solução e estamos trabalhando nisso. Passei seu caso para um atendente fixo que vai te acompanhar até resolver.</p></div>
+    <div class="foot"><span class="stars">★★☆☆☆</span><span class="ret no">Voltaria a fazer negócio? Não</span></div>
+  </div></div>
+
+  <!-- 8 -->
+  <div class="card"><div class="bar ok"></div><div class="in">
+    <div class="top"><h3>App não mostrava minha cobrança, mas resolveram rápido</h3><span class="badge b-ok">RESOLVIDA</span></div>
+    <div class="meta">Simone R. · São Paulo, SP · 27/06/2026 <span class="cattag">Dúvida app</span></div>
+    <div class="body">O aplicativo não mostrava minha próxima cobrança e fiquei preocupada de levar susto na fatura. Chamei no suporte e em uns 20 minutos me explicaram tudo e ajustaram. Atendente educado e resolveu.</div>
+    <div class="reply"><div class="who"><span class="d">D</span>Resposta da Driva · 27/06/2026</div><p>Que bom, Simone! Obrigado por contar. Qualquer coisa, é só chamar — estamos aqui.</p></div>
+    <div class="foot"><span class="stars">★★★★★</span><span class="ret yes">Voltaria a fazer negócio? Sim</span></div>
+  </div></div>
+
+  <!-- 9 -->
+  <div class="card"><div class="bar warn"></div><div class="in">
+    <div class="top"><h3>Pedi troca de carro e demorou mais de uma semana</h3><span class="badge b-warn">RESPONDIDA</span></div>
+    <div class="meta">Gilberto S. · Diadema, SP · 10/06/2026 <span class="cattag">Manutenção</span></div>
+    <div class="body">O carro vivia dando problema, então pedi a troca. Demorou 9 dias pra acontecer. Nesse tempo fiquei alternando entre um carro ruim e ficar sem carro nenhum. Perdi renda de novo.</div>
+    <div class="reply"><div class="who"><span class="d">D</span>Resposta da Driva · 11/06/2026</div><p>Gilberto, nove dias é tempo demais. A troca por problema mecânico deveria ser rápida justamente pra você não perder renda. Vamos revisar o que atrasou e compensar os dias impactados.</p></div>
+    <div class="foot"><span class="stars">★★☆☆☆</span><span class="ret no">Voltaria a fazer negócio? Não</span></div>
+  </div></div>
+
+  <!-- 10 -->
+  <div class="card"><div class="bar bad"></div><div class="in">
+    <div class="top"><h3>Cancelei e fui pra concorrência — e não foi porque comprei carro</h3><span class="badge b-warn">RESPONDIDA</span></div>
+    <div class="meta">Everton P. · São Paulo, SP · 08/06/2026 <span class="cattag">Cancelamento</span></div>
+    <div class="body">Depois de três meses de carro quebrando e cobrança confusa, cancelei e fui pra outra empresa, que me deu carro reserva na hora. Detalhe: no cancelamento de vocês eu marquei "comprei carro próprio" só pra sair rápido e não ter que explicar — mas o motivo real foi o serviço mesmo. Fica a dica pra vocês olharem isso.</div>
+    <div class="reply"><div class="who"><span class="d">D</span>Resposta da Driva · 09/06/2026</div><p>Everton, obrigado pela honestidade — e sentimos perder você assim. Os pontos que você cita (carro parado e cobrança) são exatamente onde estamos focando agora. Se um dia quiser voltar, a porta está aberta.</p></div>
+    <div class="foot"><span class="stars">★☆☆☆☆</span><span class="ret no">Voltaria a fazer negócio? Não</span></div>
+  </div></div>
+
+  <div class="disc">⚠️ <b>Página fictícia para fins didáticos.</b> "ReclameAí" e a empresa "Driva" não são reais — foram criados para o workshop de Claude Cowork. As reclamações são inventadas e trazem pistas propositais sobre os problemas do case. Qualquer semelhança com empresas ou portais reais é coincidência.</div>
+</div>
+
+<div class="footer">ReclameAí · portal fictício de treinamento · Driva © 2026 (empresa fictícia)</div>
+
+</body>
+</html>
