@@ -1,0 +1,96 @@
+/* ============================================================
+   CX Academy — skin da "Área do analista" (camada do workshop)
+   Aplicado só nas páginas do participante (Sala de Dados, Setup)
+   e na faixa-portal da home. Não altera a marca Driva (style.css).
+
+   Paleta CX Academy
+   Azul Elétrico #0010CD · Ônix #131313 · Ciano Celeste #5FF7FF
+   Magenta #FF2A79 · Tangerina #FF8644 · Fonte: Poppins
+   ============================================================ */
+
+/* Re-mapeia as variáveis da Driva para a marca CX Academy.
+   Como o style.css usa var(--*), todos os componentes se re-tematizam. */
+body.cxa{
+  --teal:#0010CD;          /* ação primária (botões, links, números) */
+  --teal-dark:#131313;     /* superfícies escuras e títulos → Ônix   */
+  --teal-600:#0010CD;
+  --mint:#0010CD;          /* acento sobre fundo claro → Azul (legível) */
+  --mint-soft:#E7E9FF;     /* tint azul bem claro */
+  --bg-soft:#F5F6FF;       /* fundo de seção suave */
+  --bg-deep:#131313;       /* rodapé Ônix */
+  --ink:#141420;
+  --line:#E6E7F4;
+  --sans:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --display:'Poppins',var(--sans);
+}
+
+/* Títulos com o peso encorpado da Poppins */
+body.cxa h1,body.cxa h2,body.cxa h3{letter-spacing:-.01em}
+body.cxa h1{font-weight:700}
+
+/* Cabeçalho de página com brilho azul (não mais verde) */
+body.cxa .phead{background:linear-gradient(180deg,#F5F6FF,#fff)}
+
+/* ---- superfícies escuras: Ônix + acento Ciano Celeste ---- */
+body.cxa .brief{
+  background-color:#131313;
+  background-image:radial-gradient(600px 240px at 100% 0,rgba(0,16,205,.55),transparent);
+}
+body.cxa .brief h2{color:#fff}
+body.cxa .brief .eyebrow{color:#5FF7FF !important}   /* vence o style inline */
+body.cxa .brief .q b{color:#5FF7FF}
+body.cxa .brief p{color:#E7E9FF !important}
+
+/* Blocos de destaque puxam as cores secundárias:
+   avisos (⚠️) em Magenta, dicas em Tangerina */
+body.cxa .note{border-left-color:#FF2A79}
+body.cxa .callout{border-color:#FF8644}
+
+/* Código com fundo Ônix + texto Ciano */
+body.cxa code{background:#131313;color:#5FF7FF}
+
+/* Rodapé Ônix com textos em azul-claro */
+body.cxa .foot{color:#C7CBF0}
+body.cxa .foot a{color:#AEB4E8}
+body.cxa .foot a:hover{color:#fff}
+body.cxa .disc{color:#8C90C8;border-top-color:rgba(255,255,255,.14)}
+
+/* Selo de co-marca no topo (Pré-work · CX Academy) */
+.cxa-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'Poppins',sans-serif;font-weight:600;font-size:.82rem;
+  color:#0010CD;background:#E7E9FF;border:1px solid #D5D9FF;
+  padding:5px 12px;border-radius:100px;letter-spacing:.01em;
+}
+.cxa-badge .sq{width:12px;height:12px;border-radius:3px;background:#0010CD;
+  box-shadow:2px 2px 0 #5FF7FF}
+
+/* ============================================================
+   Faixa-portal "Área do analista" na HOME (sem body.cxa):
+   bloco Azul Elétrico com brilho ciano, ponte para o workshop.
+   ============================================================ */
+.cxa-band{
+  position:relative;overflow:hidden;
+  background:#0010CD;color:#fff;border-radius:26px;
+  padding:52px 40px;text-align:center;
+  font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  box-shadow:0 24px 60px rgba(0,16,205,.28);
+}
+.cxa-band::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(620px 260px at 88% -10%,rgba(95,247,255,.32),transparent 60%);
+}
+.cxa-band>*{position:relative;z-index:1}
+.cxa-band .eyebrow{
+  font-family:'Poppins',sans-serif;text-transform:uppercase;letter-spacing:.16em;
+  font-size:.78rem;font-weight:600;color:#5FF7FF;margin-bottom:14px;
+}
+.cxa-band h2{color:#fff;font-family:'Poppins',sans-serif;font-weight:700;margin:0 0 .4em}
+.cxa-band .lead{color:#D7DBFF;max-width:60ch;margin:0 auto}
+.cxa-band .btn.light{
+  background:#fff;color:#0010CD;margin-top:22px;
+  transition:transform .15s ease,box-shadow .15s ease;
+}
+.cxa-band .btn.light:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(95,247,255,.35);color:#0010CD}
+.cxa-band .cxa-badge{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22);color:#fff;margin-bottom:18px}
+.cxa-band .cxa-badge .sq{background:#5FF7FF;box-shadow:2px 2px 0 rgba(255,255,255,.4)}
