@@ -66,31 +66,54 @@ body.cxa .disc{color:#8C90C8;border-top-color:rgba(255,255,255,.14)}
   box-shadow:2px 2px 0 #5FF7FF}
 
 /* ============================================================
-   Faixa-portal "Área do analista" na HOME (sem body.cxa):
-   bloco Azul Elétrico com brilho ciano, ponte para o workshop.
+   Faixa-portal na HOME (sem body.cxa): espelha o header do
+   one-pager oficial da CS academy — Ônix→Azul, logo, pills e
+   linha de acento. Ponte da fic\00e7\00e3o Driva para o workshop.
    ============================================================ */
 .cxa-band{
-  position:relative;overflow:hidden;
-  background:#0010CD;color:#fff;border-radius:26px;
-  padding:52px 40px;text-align:center;
+  position:relative;overflow:hidden;color:#fff;border-radius:26px;
+  padding:40px 40px 44px;
+  background:linear-gradient(118deg,#0B0B18 0%,#0A138C 52%,#0010CD 100%);
   font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-  box-shadow:0 24px 60px rgba(0,16,205,.28);
+  box-shadow:0 24px 60px rgba(0,16,205,.30);
 }
-.cxa-band::after{
+.cxa-band::after{                     /* brilho ciano no canto, como no one-pager */
   content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(620px 260px at 88% -10%,rgba(95,247,255,.32),transparent 60%);
+  background:radial-gradient(640px 280px at 90% -20%,rgba(95,247,255,.30),transparent 60%);
 }
 .cxa-band>*{position:relative;z-index:1}
-.cxa-band .eyebrow{
-  font-family:'Poppins',sans-serif;text-transform:uppercase;letter-spacing:.16em;
-  font-size:.78rem;font-weight:600;color:#5FF7FF;margin-bottom:14px;
+
+/* linha multicolor de acento na base (ciano→azul→magenta→tangerina) */
+.cxa-accent{position:absolute;left:0;right:0;bottom:0;height:5px;z-index:2;
+  background:linear-gradient(90deg,#5FF7FF 0%,#0010CD 42%,#FF2A79 74%,#FF8644 100%)}
+
+/* topo: logo à esquerda, pills à direita */
+.cxa-top{display:flex;align-items:center;justify-content:space-between;gap:18px;
+  flex-wrap:wrap;margin-bottom:26px}
+.cxa-logo{display:inline-flex;align-items:center;gap:10px;color:#fff}
+.cxa-logo svg{width:36px;height:36px;flex:0 0 auto}
+.cxa-logo .wm{font-weight:800;font-size:1.18rem;letter-spacing:.01em;line-height:1}
+.cxa-logo .wm .lt{font-weight:400;opacity:.92;border-left:2px solid rgba(255,255,255,.45);
+  padding-left:9px;margin-left:9px}
+.cxa-pills{display:flex;gap:8px;flex-wrap:wrap}
+.cxa-pills .pill{font-weight:600;font-size:.74rem;line-height:1;padding:7px 13px;
+  border-radius:100px;white-space:nowrap}
+.pill-cyan{background:#5FF7FF;color:#001519}
+.pill-ghost{background:rgba(255,255,255,.12);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.28)}
+.pill-mag{background:#FF2A79;color:#fff}
+
+.cxa-band .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.76rem;
+  font-weight:600;color:#5FF7FF;margin-bottom:12px}
+.cxa-band h2{color:#fff;font-weight:700;font-size:clamp(1.7rem,3.6vw,2.6rem);
+  letter-spacing:-.01em;margin:0 0 6px;max-width:20ch}
+.cxa-tag{color:#9FE9F0;font-weight:500;font-size:1.05rem;margin:0 0 16px}
+.cxa-band .lead{color:#D7DBFF;max-width:62ch;margin:0}
+.cxa-band .btn.light{background:#fff;color:#0010CD;margin-top:24px;
+  transition:transform .15s ease,box-shadow .15s ease}
+.cxa-band .btn.light:hover{transform:translateY(-2px);
+  box-shadow:0 12px 28px rgba(95,247,255,.40);color:#0010CD}
+
+@media(max-width:560px){
+  .cxa-band{padding:30px 24px 34px}
+  .cxa-top{margin-bottom:20px}
 }
-.cxa-band h2{color:#fff;font-family:'Poppins',sans-serif;font-weight:700;margin:0 0 .4em}
-.cxa-band .lead{color:#D7DBFF;max-width:60ch;margin:0 auto}
-.cxa-band .btn.light{
-  background:#fff;color:#0010CD;margin-top:22px;
-  transition:transform .15s ease,box-shadow .15s ease;
-}
-.cxa-band .btn.light:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(95,247,255,.35);color:#0010CD}
-.cxa-band .cxa-badge{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22);color:#fff;margin-bottom:18px}
-.cxa-band .cxa-badge .sq{background:#5FF7FF;box-shadow:2px 2px 0 rgba(255,255,255,.4)}
