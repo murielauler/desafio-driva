@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sala de Dados — Desafio Driva</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -40,6 +41,7 @@
       <p class="eyebrow" style="color:var(--mint)">O briefing do CEO</p>
       <h2>Por que estamos perdendo tantos clientes?</h2>
       <p style="color:#DCEFEC">A Driva cresce rápido, mas o churn está em torno de <b style="color:#fff">5% por semana</b> — perto de um quinto da base saindo todo mês. Como cada cliente novo custa cerca de <b style="color:#fff">R$ 1.200 (CAC + onboarding)</b> antes de gerar qualquer receita, esse ritmo de saída ameaça a meta de chegar a 8.000 carros em 2027.</p>
+      <p style="color:#DCEFEC"><b style="color:#fff">Sobre os dados:</b> a planilha é um recorte analítico enriquecido de <b style="color:#fff">285 clientes e 534 tickets</b>, criado para investigar padrões. Ela não representa a frota completa de 2.500 carros da operação.</p>
       <p style="color:#DCEFEC">Na última reunião de operações, a diretoria se dividiu: o CX quer <b style="color:#fff">contratar mais atendentes</b>, o CFO quer <b style="color:#fff">cortar 20% do time</b>, e ninguém concorda sobre a causa. O CEO chamou você — o time de análise — para responder, com base nos dados:</p>
       <div style="margin-top:18px">
         <div class="q"><b>1</b><p>Faz sentido contratar os +8 atendentes que o CX está pedindo? Por quê?</p></div>
@@ -59,7 +61,7 @@
     <div class="center" style="margin-bottom:10px">
       <p class="eyebrow">Materiais do desafio</p>
       <h2>Baixe os arquivos</h2>
-      <p class="lead" style="margin-inline:auto">Cinco materiais da Driva. Baixe todos e guarde na sua pasta local — você vai analisá-los no Claude Cowork.</p>
+      <p class="lead" style="margin-inline:auto">Seis materiais da Driva. Baixe todos e guarde na sua pasta local — você vai analisá-los no Claude Cowork.</p>
     </div>
     <div class="dl-grid">
       <a class="dl" href="downloads/driva_base_operacional.xlsx" download>
@@ -92,6 +94,9 @@
         <div><h3>Históricos de atendimento (leitura)</h3><p>As mesmas conversas em texto, fáceis de ler</p></div>
         <div class="go">↓</div>
       </a>
+    </div>
+    <div class="callout" style="margin-top:20px">
+      <b>Prefere os históricos separados por cliente?</b> O conteúdo é o mesmo do Markdown consolidado. Baixe o <a href="downloads/driva_historicos_atendimento_churn.zip" download>ZIP opcional com 20 arquivos individuais</a>.
     </div>
     <div class="callout" style="margin-top:24px">
       <b>Dica:</b> a “Base operacional” é o coração do desafio — abra as abas e repare que o mesmo <code>customer_id</code> aparece em clientes, tickets e cobranças. É cruzando essas tabelas que a resposta aparece.

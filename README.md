@@ -13,13 +13,20 @@ site-driva/
 ├── quem-somos.html         → Personas e operação
 ├── sala-de-dados.html      → Briefing do desafio + downloads
 ├── setup.html              → Guia de setup do pré-work
+├── reclame-driva.html      → Portal fictício de reclamações
 ├── assets/css/style.css    → Estilo (identidade Driva)
+├── assets/css/cxacademy.css → Estilo da área do participante
 └── downloads/              → Os arquivos que os alunos baixam
     ├── driva_base_operacional.xlsx
     ├── driva_institucional.pdf
     ├── driva_diretrizes_atendimento_sla.pdf
-    └── driva_ata_operacoes.pdf
+    ├── driva_ata_operacoes.pdf
+    ├── driva_tickets_zendesk_export.json
+    ├── driva_historicos_atendimento_churn.md
+    └── driva_historicos_atendimento_churn.zip (formato alternativo opcional)
 ```
+
+São **6 materiais principais**. O ZIP repete os históricos do Markdown em 20 arquivos individuais e é oferecido apenas como formato alternativo.
 
 ## 🚀 Publicar no GitHub Pages (3 passos)
 

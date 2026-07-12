@@ -46,6 +46,7 @@ p{margin:0 0 1rem}
 .btn.ghost:hover{border-color:var(--teal);box-shadow:none}
 .btn.big{padding:15px 30px;font-size:1.05rem}
 .btn.light{background:#fff;color:var(--teal-dark)}
+.btn.disabled{background:#8A9997;color:#fff;cursor:default;pointer-events:none;box-shadow:none;transform:none}
 
 /* ---- hero ---- */
 .hero{position:relative;overflow:hidden;background:
@@ -133,6 +134,8 @@ p{margin:0 0 1rem}
 .slist li::before{content:counter(sl);position:absolute;left:20px;top:20px;width:32px;height:32px;border-radius:50%;
   background:var(--teal);color:#fff;font-family:var(--display);font-weight:700;display:grid;place-items:center}
 .slist h3{margin:0 0 4px}.slist p{margin:0;color:var(--muted)}
+.slist,.slist li{min-width:0}
+.file-tree{overflow-wrap:anywhere;word-break:break-word}
 code{background:#062B29;color:#9BEFD8;padding:2px 8px;border-radius:6px;font-size:.9em;font-family:'Space Grotesk',monospace}
 .callout{border:1px dashed var(--teal);border-radius:var(--radius);padding:20px 24px;background:#fff}
 
@@ -161,4 +164,6 @@ code{background:#062B29;color:#9BEFD8;padding:2px 8px;border-radius:6px;font-siz
 @media(max-width:560px){
   .g3,.g4,.steps,.kpis,.price,.dl-grid,.g2{grid-template-columns:1fr}
   .section{padding:56px 0}
+  .slist li{padding:20px 18px 20px 60px}
+  .file-tree{font-size:.82rem;line-height:1.75!important}
 }

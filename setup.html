@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Guia de setup do pré-work — Driva</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -39,24 +40,27 @@
     <ol class="slist">
       <li>
         <h3>Confirme seu acesso ao Claude</h3>
-        <p>Você precisa do <b>Claude Pro</b> ativo e do <b>Cowork</b> acessível no app de desktop do Claude. Abra o app e verifique se consegue iniciar uma sessão do Cowork. Se tiver qualquer problema de acesso, avise a organização <b>antes</b> do dia.</p>
+        <p>Você precisa de um <b>plano pago elegível do Claude</b> e do <b>Cowork</b> acessível no app de desktop do Claude. Para trabalhar com os arquivos locais do desafio, use o <b>app desktop</b>, abra-o e verifique se consegue iniciar uma sessão do Cowork. Se tiver qualquer problema de acesso, avise a organização <b>antes</b> do dia.</p>
       </li>
       <li>
-        <h3>Baixe os 4 materiais</h3>
-        <p>Vá até a <a href="sala-de-dados.html">Sala de Dados</a> e baixe todos os arquivos do desafio: a base operacional (Excel) e os três documentos (PDF).</p>
+        <h3>Baixe os 6 materiais principais</h3>
+        <p>Vá até a <a href="sala-de-dados.html">Sala de Dados</a> e baixe a base operacional (Excel), os três documentos (PDF), o export de tickets (JSON) e os históricos consolidados (Markdown). O ZIP com um arquivo por cliente é opcional.</p>
       </li>
       <li>
         <h3>Crie a pasta local “Driva - Desafio”</h3>
         <p>No seu computador, crie uma pasta e organize os arquivos exatamente assim:</p>
         <div class="callout" style="margin-top:12px">
-          <div style="font-family:'Space Grotesk',monospace;color:var(--teal-dark);line-height:2">
+          <div class="file-tree" style="font-family:'Space Grotesk',monospace;color:var(--teal-dark);line-height:2">
             📁 <b>Driva - Desafio</b><br>
             &nbsp;&nbsp;📁 dados<br>
             &nbsp;&nbsp;&nbsp;&nbsp;📄 driva_base_operacional.xlsx<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;📄 driva_tickets_zendesk_export.json<br>
             &nbsp;&nbsp;📁 documentos<br>
             &nbsp;&nbsp;&nbsp;&nbsp;📄 driva_institucional.pdf<br>
             &nbsp;&nbsp;&nbsp;&nbsp;📄 driva_diretrizes_atendimento_sla.pdf<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;📄 driva_ata_operacoes.pdf
+            &nbsp;&nbsp;&nbsp;&nbsp;📄 driva_ata_operacoes.pdf<br>
+            &nbsp;&nbsp;📁 conversas<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;📄 driva_historicos_atendimento_churn.md
           </div>
         </div>
       </li>

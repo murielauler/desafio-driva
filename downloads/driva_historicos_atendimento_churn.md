@@ -1,7 +1,9 @@
 # Driva — Históricos de atendimento de clientes que cancelaram
-*Material fictício de treinamento. 20 clientes que churnaram, com o histórico real de conversas do suporte (WhatsApp).*
 
-> **Como usar:** jogue este conteúdo (ou a pasta com um arquivo por cliente) no Claude Cowork e peça pra ele descobrir, lendo as conversas, por que cada cliente saiu — e comparar com o 'motivo registrado'. Spoiler: quase sempre não bate.
+*Material fictício de treinamento. 20 clientes que cancelaram, com 53 tickets e suas conversas de suporte.*
+
+> **Como usar:** analise este conteúdo ou o export JSON no Claude Cowork. Os dois arquivos contêm as mesmas conversas; este Markdown acrescenta o perfil operacional da planilha para facilitar a leitura.
+> Os horários estão em UTC, exatamente como no export JSON.
 
 ---
 
@@ -9,868 +11,826 @@
 
 - **Plano:** Conforto (Toyota Yaris Sedan) · **Perfil:** motorista_app · **App:** 99
 - **Região:** Zona Sul · **Uso:** 748 km/mês · **Health score:** 46
-- **Cliente desde** 2026-06-08 · **Cancelou em** 2026-06-17
+- **Cliente desde:** 2026-06-08 · **Cancelou em:** 2026-06-17
 - **Motivo registrado pela retenção:** (em branco)
-- **Comentário no cancelamento:** "não rodei quase nada, não valeu a pena começar"
+- **Comentário no cancelamento:** “não rodei quase nada, não valeu a pena começar”
 
-> ⚠️ O *motivo registrado* é o campo operacional (pouco confiável). Leia as conversas abaixo para entender o que **realmente** aconteceu.
+> ⚠️ O motivo registrado é pouco confiável. Compare-o com as conversas abaixo para identificar o que realmente aconteceu.
+> Os horários estão em UTC, exatamente como no export JSON.
 
 ---
 
 ### Ticket #810001 · 2026-06-08 · whatsapp · Onboarding · CSAT 3/5
 
-`09:21` **Cliente:** oi, assinei e paguei a primeira semana, e agora? quando pego o carro?
-`09:34` **Driva:** Oi, Rafael! Boas-vindas 🎉 Falta só a vistoria pra liberar. Um consultor vai te chamar pra agendar.
-`09:40` **Cliente:** beleza, fico no aguardo então
+`09:21 UTC` **Cliente:** oi, assinei e paguei a primeira semana, e agora? quando pego o carro?
+`09:34 UTC` **Driva:** Oi, Rafael! Boas-vindas 🎉 Falta só a vistoria pra liberar. Um consultor vai te chamar pra agendar.
+`09:40 UTC` **Cliente:** beleza, fico no aguardo então
 
 ---
 
 ### Ticket #810002 · 2026-06-15 · whatsapp · Onboarding · CSAT 2/5
 
-`20:04` **Cliente:** gente já faz 7 dias e ninguém agendou minha vistoria. cadê o carro?
-`20:18` **Driva:** Rafael, sinto muito pela demora. Vou priorizar seu agendamento e te retorno hoje.
-`20:29` **Cliente:** é a segunda vez que me falam isso. cada dia parado é dinheiro que não entra
+`20:04 UTC` **Cliente:** gente já faz 7 dias e ninguém agendou minha vistoria. cadê o carro?
+`20:18 UTC` **Driva:** Rafael, sinto muito pela demora. Vou priorizar seu agendamento e te retorno hoje.
+`20:29 UTC` **Cliente:** é a segunda vez que me falam isso. cada dia parado é dinheiro que não entra
 
 ---
 
 ### Ticket #810003 · 2026-06-17 · whatsapp · Cancelamento · CSAT 1/5
 
-`10:19` **Cliente:** desisti. quero cancelar e pedir o estorno da semana que paguei sem nem ter recebido o carro
-`10:21` **Driva:** Rafael, você tem razão e isso não deveria ter acontecido. Vou processar o estorno e registrar o cancelamento.
-`10:26` **Cliente:** arrumei outra solução já, não dá pra esperar vocês
-`10:30` **Driva:** Entendo. Registro algum motivo específico?
-`10:45` **Cliente:** ah deixa quieto, não precisa marcar nada, só encerra
+`10:19 UTC` **Cliente:** desisti. quero cancelar e pedir o estorno da semana que paguei sem nem ter recebido o carro
+`10:21 UTC` **Driva:** Rafael, você tem razão e isso não deveria ter acontecido. Vou processar o estorno e registrar o cancelamento.
+`10:26 UTC` **Cliente:** arrumei outra solução já, não dá pra esperar vocês
+`10:30 UTC` **Driva:** Entendo. Registro algum motivo específico?
+`10:45 UTC` **Cliente:** ah deixa quieto, não precisa marcar nada, só encerra
 
 ---
 
-
-
 ============================================================
-
 
 # Histórico de atendimento — Cliente #10003 · Diego Martins
 
 - **Plano:** Conforto (VW Virtus) · **Perfil:** motorista_app · **App:** Uber
 - **Região:** ABC · **Uso:** 2094 km/mês · **Health score:** 32
-- **Cliente desde** 2025-05-11 · **Cancelou em** 2026-06-06
+- **Cliente desde:** 2025-05-11 · **Cancelou em:** 2026-06-06
 - **Motivo registrado pela retenção:** comprou_carro_proprio
-- **Comentário no cancelamento:** "toda semana um problema mecânico, parei de ganhar"
+- **Comentário no cancelamento:** “toda semana um problema mecânico, parei de ganhar”
 
-> ⚠️ O *motivo registrado* é o campo operacional (pouco confiável). Leia as conversas abaixo para entender o que **realmente** aconteceu.
-
----
-
-### Ticket #810004 · 2026-04-11 · whatsapp · Manutenção · CSAT 2/5
-
-`19:55` **Cliente:** gente o carro não pega direito de manhã, já travou 2x essa semana
-`20:02` **Driva:** Bom dia, Diego! Poxa, sinto muito por isso. Já abri um chamado e vou agendar a oficina mais perto de você. Consegue levar amanhã cedo?
-`20:09` **Cliente:** amanhã?? mano eu rodo de manhã, é quando mais faço corrida. não tem hoje não?
-`20:22` **Driva:** Entendo total, carro parado é renda parada. Vou tentar encaixar hoje à tarde e te confirmo já já.
-`20:29` **Cliente:** por favor não me deixa na mão que eu dependo disso
+> ⚠️ O motivo registrado é pouco confiável. Compare-o com as conversas abaixo para identificar o que realmente aconteceu.
+> Os horários estão em UTC, exatamente como no export JSON.
 
 ---
 
-### Ticket #810005 · 2026-05-28 · whatsapp · Guincho · CSAT 1/5 · 🚨 guincho acionado
+### Ticket #810004 · 2025-12-17 · whatsapp · Manutenção · CSAT 2/5
 
-`09:35` **Cliente:** o carro morreu aqui na Av. Jacu-Pêssego, não liga de jeito nenhum. preciso de guincho AGORA
-`09:52` **Driva:** Diego, já estou acionando o guincho pra sua localização. Fica em segurança, por favor.
-`09:58` **Cliente:** quanto tempo demora?
-`10:05` **Driva:** A previsão inicial é de até 2h, mas vou monitorar de perto.
-`12:25` **Cliente:** cara já faz mais de 2h e nada... tô parado no sol até agora
-`14:00` **Cliente:** 3h30 esperando. perdi a manhã inteira de trabalho. isso não dá
-`14:18` **Driva:** Sinto muito de verdade pela demora, Diego. O guincho chega em ~30 min. Vou lançar um crédito pelo transtorno.
-`14:23` **Cliente:** crédito não paga as corridas que eu perdi hoje
+`10:23 UTC` **Cliente:** opa bom dia, o VW Virtus tá engasgando e perdendo força na subida
+`10:30 UTC` **Driva:** Bom dia, Diego! Poxa, sinto muito por isso. Já abri um chamado e vou agendar a oficina mais perto de você. Consegue levar amanhã cedo?
+`10:36 UTC` **Cliente:** amanhã?? mano eu rodo de manhã, é quando mais faço corrida. não tem hoje não?
+`10:44 UTC` **Driva:** Entendo total, carro parado é renda parada. Vou tentar encaixar hoje à tarde e te confirmo já já.
+`11:01 UTC` **Cliente:** por favor não me deixa na mão que eu dependo disso
+
+---
+
+### Ticket #810005 · 2026-02-03 · whatsapp · Guincho · CSAT 1/5 · 🚨 guincho acionado
+
+`15:49 UTC` **Cliente:** o carro morreu aqui na Av. do Estado, não liga de jeito nenhum. preciso de guincho AGORA
+`16:05 UTC` **Driva:** Diego, já estou acionando o guincho pra sua localização. Fica em segurança, por favor.
+`16:11 UTC` **Cliente:** quanto tempo demora?
+`16:31 UTC` **Driva:** A previsão inicial é de até 2h, mas vou monitorar de perto.
+`18:51 UTC` **Cliente:** cara já faz mais de 2h e nada... tô parado no sol até agora
+`20:26 UTC` **Cliente:** 3h30 esperando. perdi a tarde inteira de trabalho. isso não dá
+`20:34 UTC` **Driva:** Sinto muito de verdade pela demora, Diego. O guincho chega em ~30 min. Vou lançar um crédito pelo transtorno.
+`20:41 UTC` **Cliente:** crédito não paga as corridas que eu perdi hoje
 
 ---
 
 ### Ticket #810006 · 2026-06-06 · whatsapp · Cancelamento · CSAT 1/5
 
-`16:58` **Cliente:** oi, quero cancelar a assinatura
-`17:05` **Driva:** Diego, que pena ouvir isso. Posso entender o que motivou?
-`17:13` **Cliente:** 3 semanas seguidas com o carro na oficina ou esperando guincho. não consigo trabalhar assim, tô no prejuízo todo dia
-`17:16` **Driva:** Você tem toda razão e a gente falhou no que mais importa: te manter rodando. Posso te oferecer troca imediata de carro + uma semana de cortesia. Topa tentar mais uma vez?
-`17:23` **Cliente:** não dá mais não, já perdi a confiança. pode encerrar
-`17:31` **Driva:** Respeito sua decisão. Vou registrar o cancelamento. Que motivo você quer que eu marque?
-`17:41` **Cliente:** marca comprei carro próprio aí, é mais fácil
+`08:17 UTC` **Cliente:** oi, quero cancelar a assinatura
+`08:25 UTC` **Driva:** Diego, que pena ouvir isso. Posso entender o que motivou?
+`08:35 UTC` **Cliente:** 3 semanas seguidas com o carro na oficina ou esperando guincho. não consigo trabalhar assim, tô no prejuízo todo dia
+`08:50 UTC` **Driva:** Você tem toda razão e a gente falhou no que mais importa: te manter rodando. Posso te oferecer troca imediata de carro + uma semana de cortesia. Topa tentar mais uma vez?
+`09:06 UTC` **Cliente:** não dá mais não, já perdi a confiança. pode encerrar
+`09:11 UTC` **Driva:** Respeito sua decisão. Vou registrar o cancelamento. Que motivo você quer que eu marque?
+`09:18 UTC` **Cliente:** pode botar que comprei um carro próprio, deixa quieto
 
 ---
 
-
-
 ============================================================
-
 
 # Histórico de atendimento — Cliente #10014 · Anderson Cardoso
 
 - **Plano:** Essencial (VW Gol) · **Perfil:** motorista_app · **App:** 99
 - **Região:** Zona Sul · **Uso:** 2369 km/mês · **Health score:** 90
-- **Cliente desde** 2024-08-27 · **Cancelou em** 2026-06-26
+- **Cliente desde:** 2024-08-27 · **Cancelou em:** 2026-06-26
 - **Motivo registrado pela retenção:** mudou_de_cidade
-- **Comentário no cancelamento:** "consegui comprar meu próprio carro, valeu pela parceria"
+- **Comentário no cancelamento:** “consegui comprar meu próprio carro, valeu pela parceria”
 
-> ⚠️ O *motivo registrado* é o campo operacional (pouco confiável). Leia as conversas abaixo para entender o que **realmente** aconteceu.
+> ⚠️ O motivo registrado é pouco confiável. Compare-o com as conversas abaixo para identificar o que realmente aconteceu.
+> Os horários estão em UTC, exatamente como no export JSON.
 
 ---
 
-### Ticket #810007 · 2026-05-30 · whatsapp · Dúvida app · CSAT 4/5
+### Ticket #810007 · 2025-01-01 · whatsapp · Dúvida app · CSAT 4/5
 
-`17:54` **Cliente:** oi, tudo certo? só uma dúvida de como pausar a cobrança se eu viajar
-`18:01` **Driva:** Oi, Anderson! Consigo te explicar sim, é bem simples.
-`18:05` **Cliente:** show, obrigado pelo atendimento sempre rápido
+`11:57 UTC` **Cliente:** oi, tudo certo? só uma dúvida de como pausar a cobrança se eu viajar
+`12:09 UTC` **Driva:** Oi, Anderson! Consigo te explicar sim, é bem simples.
+`12:11 UTC` **Cliente:** show, obrigado pelo atendimento sempre rápido
 
 ---
 
 ### Ticket #810008 · 2026-06-26 · whatsapp · Cancelamento · CSAT 5/5
 
-`12:14` **Cliente:** boa, preciso cancelar, vou me mudar de cidade mês que vem
-`12:28` **Driva:** Que notícia boa, Anderson! Fico feliz pela conquista. Foi um prazer ter você com a gente.
-`12:33` **Cliente:** vocês me ajudaram bastante nesse período, valeu de verdade
-`12:43` **Driva:** Gratidão! A porta fica aberta se precisar voltar. 🧡
+`17:18 UTC` **Cliente:** boa, preciso cancelar, vou me mudar de cidade mês que vem
+`17:35 UTC` **Driva:** Que notícia boa, Anderson! Fico feliz pela conquista. Foi um prazer ter você com a gente.
+`17:52 UTC` **Cliente:** vocês me ajudaram bastante nesse período, valeu de verdade
+`17:57 UTC` **Driva:** Gratidão! A porta fica aberta se precisar voltar. 🧡
 
 ---
 
-
-
 ============================================================
-
 
 # Histórico de atendimento — Cliente #10016 · Tatiane Almeida
 
 - **Plano:** Essencial (VW Gol) · **Perfil:** motorista_app · **App:** Ambos
 - **Região:** Zona Norte · **Uso:** 3033 km/mês · **Health score:** 43
-- **Cliente desde** 2024-08-05 · **Cancelou em** 2026-06-13
+- **Cliente desde:** 2024-08-05 · **Cancelou em:** 2026-06-13
 - **Motivo registrado pela retenção:** (em branco)
-- **Comentário no cancelamento:** "carro vivia na oficina, perdi vários dias de corrida"
+- **Comentário no cancelamento:** “carro vivia na oficina, perdi vários dias de corrida”
 
-> ⚠️ O *motivo registrado* é o campo operacional (pouco confiável). Leia as conversas abaixo para entender o que **realmente** aconteceu.
-
----
-
-### Ticket #810009 · 2024-09-04 · whatsapp · Manutenção · CSAT 2/5
-
-`11:27` **Cliente:** a luz da injeção acendeu e o carro tá falhando feio
-`11:44` **Driva:** Bom dia, Tatiane! Poxa, sinto muito por isso. Já abri um chamado e vou agendar a oficina mais perto de você. Consegue levar amanhã cedo?
-`11:49` **Cliente:** amanhã?? mano eu rodo de manhã, é quando mais faço corrida. não tem hoje não?
-`11:51` **Driva:** Entendo total, carro parado é renda parada. Vou tentar encaixar hoje à tarde e te confirmo já já.
-`11:54` **Cliente:** por favor não me deixa na mão que eu dependo disso
+> ⚠️ O motivo registrado é pouco confiável. Compare-o com as conversas abaixo para identificar o que realmente aconteceu.
+> Os horários estão em UTC, exatamente como no export JSON.
 
 ---
 
-### Ticket #810010 · 2025-06-05 · whatsapp · Guincho · CSAT 1/5 · 🚨 guincho acionado
+### Ticket #810009 · 2026-03-24 · whatsapp · Manutenção · CSAT 2/5
 
-`20:01` **Cliente:** o carro morreu aqui na Radial Leste, não liga de jeito nenhum. preciso de guincho AGORA
-`20:21` **Driva:** Tatiane, já estou acionando o guincho pra sua localização. Fica em segurança, por favor.
-`20:27` **Cliente:** quanto tempo demora?
-`20:30` **Driva:** A previsão inicial é de até 2h, mas vou monitorar de perto.
-`22:50` **Cliente:** cara já faz mais de 2h e nada... tô parado no sol até agora
-`00:25` **Cliente:** 3h30 esperando. perdi a manhã inteira de trabalho. isso não dá
-`00:30` **Driva:** Sinto muito de verdade pela demora, Tatiane. O guincho chega em ~30 min. Vou lançar um crédito pelo transtorno.
-`00:38` **Cliente:** crédito não paga as corridas que eu perdi hoje
+`08:57 UTC` **Cliente:** opa bom dia, o VW Gol tá engasgando e perdendo força na subida
+`09:15 UTC` **Driva:** Bom dia, Tatiane! Poxa, sinto muito por isso. Já abri um chamado e vou agendar a oficina mais perto de você. Consegue levar amanhã cedo?
+`09:17 UTC` **Cliente:** amanhã?? mano eu rodo de manhã, é quando mais faço corrida. não tem hoje não?
+`09:31 UTC` **Driva:** Entendo total, carro parado é renda parada. Vou tentar encaixar hoje à tarde e te confirmo já já.
+`09:49 UTC` **Cliente:** por favor não me deixa na mão que eu dependo disso
+
+---
+
+### Ticket #810010 · 2026-04-29 · whatsapp · Guincho · CSAT 1/5 · 🚨 guincho acionado
+
+`15:44 UTC` **Cliente:** o carro morreu aqui na Av. do Estado, não liga de jeito nenhum. preciso de guincho AGORA
+`15:56 UTC` **Driva:** Tatiane, já estou acionando o guincho pra sua localização. Fica em segurança, por favor.
+`16:02 UTC` **Cliente:** quanto tempo demora?
+`16:17 UTC` **Driva:** A previsão inicial é de até 2h, mas vou monitorar de perto.
+`18:37 UTC` **Cliente:** cara já faz mais de 2h e nada... tô parado no sol até agora
+`20:12 UTC` **Cliente:** 3h30 esperando. perdi a tarde inteira de trabalho. isso não dá
+`20:24 UTC` **Driva:** Sinto muito de verdade pela demora, Tatiane. O guincho chega em ~30 min. Vou lançar um crédito pelo transtorno.
+`20:37 UTC` **Cliente:** crédito não paga as corridas que eu perdi hoje
 
 ---
 
 ### Ticket #810011 · 2026-06-13 · whatsapp · Cancelamento · CSAT 1/5
 
-`13:52` **Cliente:** oi, quero cancelar a assinatura
-`14:02` **Driva:** Tatiane, que pena ouvir isso. Posso entender o que motivou?
-`14:19` **Cliente:** 3 semanas seguidas com o carro na oficina ou esperando guincho. não consigo trabalhar assim, tô no prejuízo todo dia
-`14:36` **Driva:** Você tem toda razão e a gente falhou no que mais importa: te manter rodando. Posso te oferecer troca imediata de carro + uma semana de cortesia. Topa tentar mais uma vez?
-`14:48` **Cliente:** não dá mais não, já perdi a confiança. pode encerrar
-`15:03` **Driva:** Respeito sua decisão. Vou registrar o cancelamento. Que motivo você quer que eu marque?
-`15:15` **Cliente:** ah deixa quieto, não precisa marcar nada, só encerra
+`12:41 UTC` **Cliente:** oi, quero cancelar a assinatura
+`12:54 UTC` **Driva:** Tatiane, que pena ouvir isso. Posso entender o que motivou?
+`13:08 UTC` **Cliente:** 3 semanas seguidas com o carro na oficina ou esperando guincho. não consigo trabalhar assim, tô no prejuízo todo dia
+`13:22 UTC` **Driva:** Você tem toda razão e a gente falhou no que mais importa: te manter rodando. Posso te oferecer troca imediata de carro + uma semana de cortesia. Topa tentar mais uma vez?
+`13:25 UTC` **Cliente:** não dá mais não, já perdi a confiança. pode encerrar
+`13:38 UTC` **Driva:** Respeito sua decisão. Vou registrar o cancelamento. Que motivo você quer que eu marque?
+`13:50 UTC` **Cliente:** tanto faz, pode cancelar sem marcar
 
 ---
 
-
-
 ============================================================
-
 
 # Histórico de atendimento — Cliente #10017 · Juliana Cardoso
 
 - **Plano:** Conforto (Chevrolet Onix Plus) · **Perfil:** motorista_app · **App:** Uber
 - **Região:** Zona Sul · **Uso:** 1724 km/mês · **Health score:** 42
-- **Cliente desde** 2025-01-30 · **Cancelou em** 2026-06-11
+- **Cliente desde:** 2025-01-30 · **Cancelou em:** 2026-06-11
 - **Motivo registrado pela retenção:** problemas_manutencao
-- **Comentário no cancelamento:** "carro vivia na oficina, perdi vários dias de corrida"
+- **Comentário no cancelamento:** “carro vivia na oficina, perdi vários dias de corrida”
 
-> ⚠️ O *motivo registrado* é o campo operacional (pouco confiável). Leia as conversas abaixo para entender o que **realmente** aconteceu.
-
----
-
-### Ticket #810012 · 2026-04-30 · whatsapp · Manutenção · CSAT 2/5
-
-`12:41` **Cliente:** gente o carro não pega direito de manhã, já travou 2x essa semana
-`12:54` **Driva:** Bom dia, Juliana! Poxa, sinto muito por isso. Já abri um chamado e vou agendar a oficina mais perto de você. Consegue levar amanhã cedo?
-`13:08` **Cliente:** amanhã?? mano eu rodo de manhã, é quando mais faço corrida. não tem hoje não?
-`13:22` **Driva:** Entendo total, carro parado é renda parada. Vou tentar encaixar hoje à tarde e te confirmo já já.
-`13:25` **Cliente:** por favor não me deixa na mão que eu dependo disso
+> ⚠️ O motivo registrado é pouco confiável. Compare-o com as conversas abaixo para identificar o que realmente aconteceu.
+> Os horários estão em UTC, exatamente como no export JSON.
 
 ---
 
-### Ticket #810013 · 2026-05-24 · whatsapp · Guincho · CSAT 1/5 · 🚨 guincho acionado
+### Ticket #810012 · 2025-08-23 · whatsapp · Manutenção · CSAT 2/5
 
-`12:53` **Cliente:** o carro morreu aqui na Rod. Anhanguera, não liga de jeito nenhum. preciso de guincho AGORA
-`12:55` **Driva:** Juliana, já estou acionando o guincho pra sua localização. Fica em segurança, por favor.
-`13:01` **Cliente:** quanto tempo demora?
-`13:17` **Driva:** A previsão inicial é de até 2h, mas vou monitorar de perto.
-`15:37` **Cliente:** cara já faz mais de 2h e nada... tô parado no sol até agora
-`17:12` **Cliente:** 3h30 esperando. perdi a manhã inteira de trabalho. isso não dá
-`17:26` **Driva:** Sinto muito de verdade pela demora, Juliana. O guincho chega em ~30 min. Vou lançar um crédito pelo transtorno.
-`17:32` **Cliente:** crédito não paga as corridas que eu perdi hoje
+`09:34 UTC` **Cliente:** a luz da injeção acendeu e o carro tá falhando feio
+`09:39 UTC` **Driva:** Bom dia, Juliana! Poxa, sinto muito por isso. Já abri um chamado e vou agendar a oficina mais perto de você. Consegue levar amanhã cedo?
+`09:57 UTC` **Cliente:** amanhã?? mano eu rodo de manhã, é quando mais faço corrida. não tem hoje não?
+`10:07 UTC` **Driva:** Entendo total, carro parado é renda parada. Vou tentar encaixar hoje à tarde e te confirmo já já.
+`10:16 UTC` **Cliente:** por favor não me deixa na mão que eu dependo disso
+
+---
+
+### Ticket #810013 · 2026-03-01 · whatsapp · Guincho · CSAT 1/5 · 🚨 guincho acionado
+
+`15:09 UTC` **Cliente:** o carro morreu aqui na 23 de Maio, não liga de jeito nenhum. preciso de guincho AGORA
+`15:27 UTC` **Driva:** Juliana, já estou acionando o guincho pra sua localização. Fica em segurança, por favor.
+`15:33 UTC` **Cliente:** quanto tempo demora?
+`15:48 UTC` **Driva:** A previsão inicial é de até 2h, mas vou monitorar de perto.
+`18:08 UTC` **Cliente:** cara já faz mais de 2h e nada... tô parado no sol até agora
+`19:43 UTC` **Cliente:** 3h30 esperando. perdi a tarde inteira de trabalho. isso não dá
+`19:51 UTC` **Driva:** Sinto muito de verdade pela demora, Juliana. O guincho chega em ~30 min. Vou lançar um crédito pelo transtorno.
+`19:53 UTC` **Cliente:** crédito não paga as corridas que eu perdi hoje
 
 ---
 
 ### Ticket #810014 · 2026-06-11 · whatsapp · Cancelamento · CSAT 1/5
 
-`17:31` **Cliente:** oi, quero cancelar a assinatura
-`17:49` **Driva:** Juliana, que pena ouvir isso. Posso entender o que motivou?
-`17:59` **Cliente:** 3 semanas seguidas com o carro na oficina ou esperando guincho. não consigo trabalhar assim, tô no prejuízo todo dia
-`18:08` **Driva:** Você tem toda razão e a gente falhou no que mais importa: te manter rodando. Posso te oferecer troca imediata de carro + uma semana de cortesia. Topa tentar mais uma vez?
-`18:21` **Cliente:** não dá mais não, já perdi a confiança. pode encerrar
-`18:37` **Driva:** Respeito sua decisão. Vou registrar o cancelamento. Que motivo você quer que eu marque?
-`18:54` **Cliente:** marca problema de manutenção, foi isso mesmo
+`07:40 UTC` **Cliente:** oi, quero cancelar a assinatura
+`07:43 UTC` **Driva:** Juliana, que pena ouvir isso. Posso entender o que motivou?
+`07:55 UTC` **Cliente:** 3 semanas seguidas com o carro na oficina ou esperando guincho. não consigo trabalhar assim, tô no prejuízo todo dia
+`08:11 UTC` **Driva:** Você tem toda razão e a gente falhou no que mais importa: te manter rodando. Posso te oferecer troca imediata de carro + uma semana de cortesia. Topa tentar mais uma vez?
+`08:20 UTC` **Cliente:** não dá mais não, já perdi a confiança. pode encerrar
+`08:37 UTC` **Driva:** Respeito sua decisão. Vou registrar o cancelamento. Que motivo você quer que eu marque?
+`08:51 UTC` **Cliente:** põe que foi a manutenção, sem dúvida
 
 ---
 
-
-
 ============================================================
-
 
 # Histórico de atendimento — Cliente #10018 · Marcelo Martins
 
 - **Plano:** Essencial (Chevrolet Onix) · **Perfil:** pessoal · **App:** Uso pessoal
 - **Região:** Centro · **Uso:** 324 km/mês · **Health score:** 95
-- **Cliente desde** 2025-07-22 · **Cancelou em** 2026-06-09
+- **Cliente desde:** 2025-07-22 · **Cancelou em:** 2026-06-09
 - **Motivo registrado pela retenção:** mudou_de_cidade
-- **Comentário no cancelamento:** "achei uma opção melhor, valeu"
+- **Comentário no cancelamento:** “achei uma opção melhor, valeu”
 
-> ⚠️ O *motivo registrado* é o campo operacional (pouco confiável). Leia as conversas abaixo para entender o que **realmente** aconteceu.
+> ⚠️ O motivo registrado é pouco confiável. Compare-o com as conversas abaixo para identificar o que realmente aconteceu.
+> Os horários estão em UTC, exatamente como no export JSON.
 
 ---
 
-### Ticket #810015 · 2025-10-26 · whatsapp · Manutenção · CSAT 2/5
+### Ticket #810015 · 2025-09-11 · whatsapp · Manutenção · CSAT 2/5
 
-`07:25` **Cliente:** de novo problema no carro... tá difícil viu
-`07:27` **Driva:** Marcelo, sinto muito. Vou abrir o chamado e resolver o quanto antes.
-`07:40` **Cliente:** tô começando a achar que não vale a pena
+`19:55 UTC` **Cliente:** de novo problema no carro... tá difícil viu
+`20:06 UTC` **Driva:** Marcelo, sinto muito. Vou abrir o chamado e resolver o quanto antes.
+`20:14 UTC` **Cliente:** tô começando a achar que não vale a pena
 
 ---
 
 ### Ticket #810016 · 2026-06-09 · whatsapp · Cancelamento · CSAT 2/5
 
-`19:55` **Cliente:** quero encerrar. achei uma opção melhor que me atende mais rápido
-`20:11` **Driva:** Marcelo, poxa. Posso perguntar o que pesou na decisão?
-`20:20` **Cliente:** sinceramente o atendimento e o carro reserva na hora, que aqui demora
-`20:37` **Driva:** Justo. Que motivo você quer que eu registre no sistema?
-`20:51` **Cliente:** marca que mudei de cidade
+`16:22 UTC` **Cliente:** quero encerrar. achei uma opção melhor que me atende mais rápido
+`16:40 UTC` **Driva:** Marcelo, poxa. Posso perguntar o que pesou na decisão?
+`16:43 UTC` **Cliente:** sinceramente o atendimento e o carro reserva na hora, que aqui demora
+`16:49 UTC` **Driva:** Justo. Que motivo você quer que eu registre no sistema?
+`17:06 UTC` **Cliente:** marca que mudei de cidade
 
 ---
 
-
-
 ============================================================
-
 
 # Histórico de atendimento — Cliente #10020 · Tatiane Souza
 
 - **Plano:** Essencial (Hyundai HB20) · **Perfil:** pessoal · **App:** Uso pessoal
 - **Região:** Zona Sul · **Uso:** 193 km/mês · **Health score:** 68
-- **Cliente desde** 2025-08-28 · **Cancelou em** 2026-06-28
+- **Cliente desde:** 2025-08-28 · **Cancelou em:** 2026-06-28
 - **Motivo registrado pela retenção:** comprou_carro_proprio
-- **Comentário no cancelamento:** "uso pouco, não compensa o valor semanal pra mim"
+- **Comentário no cancelamento:** “uso pouco, não compensa o valor semanal pra mim”
 
-> ⚠️ O *motivo registrado* é o campo operacional (pouco confiável). Leia as conversas abaixo para entender o que **realmente** aconteceu.
+> ⚠️ O motivo registrado é pouco confiável. Compare-o com as conversas abaixo para identificar o que realmente aconteceu.
+> Os horários estão em UTC, exatamente como no export JSON.
 
 ---
 
-### Ticket #810017 · 2026-02-22 · whatsapp · Planos · CSAT 3/5
+### Ticket #810017 · 2025-11-22 · whatsapp · Planos · CSAT 3/5
 
-`14:45` **Cliente:** boa tarde, eu uso o carro bem pouco, só pra ir e voltar do trabalho. tem um plano mais barato pra quem roda pouco?
-`14:50` **Driva:** Boa tarde, Tatiane! Hoje trabalhamos com os planos Essencial e Conforto, sem uma faixa de baixa quilometragem no momento.
-`15:04` **Cliente:** poxa, pagar o mesmo que quem roda o dia todo não compensa pra mim
-`15:15` **Driva:** Entendo seu ponto. Posso te mostrar se o Essencial reduz um pouco o custo?
-`15:23` **Cliente:** é que mesmo o essencial tá caro pro tanto que eu ando
+`14:51 UTC` **Cliente:** boa tarde, eu uso o carro bem pouco, só pra ir e voltar do trabalho. tem um plano mais barato pra quem roda pouco?
+`15:08 UTC` **Driva:** Boa tarde, Tatiane! Hoje trabalhamos com os planos Essencial e Conforto, sem uma faixa de baixa quilometragem no momento.
+`15:27 UTC` **Cliente:** poxa, pagar o mesmo que quem roda o dia todo não compensa pra mim
+`15:36 UTC` **Driva:** Entendo seu ponto. Posso te mostrar se o Essencial reduz um pouco o custo?
+`15:45 UTC` **Cliente:** é que mesmo o essencial tá caro pro tanto que eu ando
 
 ---
 
 ### Ticket #810018 · 2026-06-28 · whatsapp · Cancelamento · CSAT 2/5
 
-`16:22` **Cliente:** vou cancelar, pro meu uso não vale a pena o valor semanal
-`16:40` **Driva:** Tatiane, respeito. Se em algum momento lançarmos um plano de baixa km, posso te avisar?
-`16:43` **Cliente:** pode, mas por ora encerra aí
-`16:49` **Driva:** Feito. Registro como qual motivo?
-`17:06` **Cliente:** pode botar que comprei um carro próprio, deixa quieto
+`10:08 UTC` **Cliente:** vou cancelar, pro meu uso não vale a pena o valor semanal
+`10:13 UTC` **Driva:** Tatiane, respeito. Se em algum momento lançarmos um plano de baixa km, posso te avisar?
+`10:28 UTC` **Cliente:** pode, mas por ora encerra aí
+`10:30 UTC` **Driva:** Feito. Registro como qual motivo?
+`10:37 UTC` **Cliente:** pode botar que comprei um carro próprio, deixa quieto
 
 ---
 
-
-
 ============================================================
-
 
 # Histórico de atendimento — Cliente #10021 · Bruno Pereira
 
 - **Plano:** Essencial (Fiat Mobi) · **Perfil:** pessoal · **App:** Uso pessoal
 - **Região:** Zona Leste · **Uso:** 547 km/mês · **Health score:** 55
-- **Cliente desde** 2025-10-06 · **Cancelou em** 2026-06-09
+- **Cliente desde:** 2025-10-06 · **Cancelou em:** 2026-06-09
 - **Motivo registrado pela retenção:** comprou_carro_proprio
-- **Comentário no cancelamento:** "cobrança surpresa de avaria, achei um absurdo"
+- **Comentário no cancelamento:** “cobrança surpresa de avaria, achei um absurdo”
 
-> ⚠️ O *motivo registrado* é o campo operacional (pouco confiável). Leia as conversas abaixo para entender o que **realmente** aconteceu.
-
----
-
-### Ticket #810019 · 2026-05-17 · whatsapp · Cobrança · CSAT 2/5
-
-`15:15` **Cliente:** acabei de ver uma cobrança de R$ 1620 na minha fatura que eu não reconheço
-`15:31` **Driva:** Oi, Bruno! Deixa eu verificar aqui... consta uma cobrança de avaria registrada na última vistoria.
-`15:36` **Cliente:** avaria?? que avaria? ninguém me falou nada, apareceu do nada na fatura
-`15:53` **Driva:** Vou levantar as fotos da vistoria de entrega e retorno pra gente comparar, tá?
-`16:12` **Cliente:** faz isso porque eu não causei dano nenhum nesse carro
+> ⚠️ O motivo registrado é pouco confiável. Compare-o com as conversas abaixo para identificar o que realmente aconteceu.
+> Os horários estão em UTC, exatamente como no export JSON.
 
 ---
 
-### Ticket #810020 · 2026-05-26 · whatsapp · Cobrança · CSAT 2/5
+### Ticket #810019 · 2026-03-25 · whatsapp · Cobrança · CSAT 2/5
 
-`11:27` **Cliente:** e aí, conseguiu ver as fotos? já faz 4 dias
-`11:34` **Driva:** Bruno, ainda estou aguardando a base enviar as imagens. Assim que chegar eu te falo.
-`11:38` **Cliente:** enquanto isso a cobrança tá lá me sufocando. isso é muito errado
+`15:22 UTC` **Cliente:** acabei de ver uma cobrança de R$ 1250 na minha fatura que eu não reconheço
+`15:28 UTC` **Driva:** Oi, Bruno! Deixa eu verificar aqui... consta uma cobrança de avaria registrada na última vistoria.
+`15:47 UTC` **Cliente:** avaria?? que avaria? ninguém me falou nada, apareceu do nada na fatura
+`16:04 UTC` **Driva:** Vou levantar as fotos da vistoria de entrega e retorno pra gente comparar, tá?
+`16:08 UTC` **Cliente:** faz isso porque eu não causei dano nenhum nesse carro
+
+---
+
+### Ticket #810020 · 2026-05-08 · whatsapp · Cobrança · CSAT 2/5
+
+`11:19 UTC` **Cliente:** e aí, conseguiu ver as fotos? já faz 4 dias
+`11:23 UTC` **Driva:** Bruno, ainda estou aguardando a base enviar as imagens. Assim que chegar eu te falo.
+`11:35 UTC` **Cliente:** enquanto isso a cobrança tá lá me sufocando. isso é muito errado
 
 ---
 
 ### Ticket #810021 · 2026-06-09 · whatsapp · Cancelamento · CSAT 1/5
 
-`14:37` **Cliente:** quero cancelar. não confio mais nessa cobrança de vocês
-`14:44` **Driva:** Bruno, sinto muito. Se o problema é a cobrança contestada, posso escalar pra resolver antes de você decidir.
-`14:56` **Cliente:** já decidi. cansei de susto na fatura. encerra por favor
-`15:10` **Driva:** Entendo. Qual motivo você quer que eu registre?
-`15:20` **Cliente:** pode botar que comprei um carro próprio, deixa quieto
+`19:38 UTC` **Cliente:** quero cancelar. não confio mais nessa cobrança de vocês
+`19:57 UTC` **Driva:** Bruno, sinto muito. Se o problema é a cobrança contestada, posso escalar pra resolver antes de você decidir.
+`20:12 UTC` **Cliente:** já decidi. cansei de susto na fatura. encerra por favor
+`20:21 UTC` **Driva:** Entendo. Qual motivo você quer que eu registre?
+`20:30 UTC` **Cliente:** marca comprei carro próprio aí, é mais fácil
 
 ---
 
-
-
 ============================================================
-
 
 # Histórico de atendimento — Cliente #10027 · Tatiane Gomes
 
 - **Plano:** Conforto (VW Virtus) · **Perfil:** motorista_app · **App:** Uber
 - **Região:** Zona Norte · **Uso:** 2475 km/mês · **Health score:** 89
-- **Cliente desde** 2026-04-01 · **Cancelou em** 2026-06-19
+- **Cliente desde:** 2026-04-01 · **Cancelou em:** 2026-06-19
 - **Motivo registrado pela retenção:** comprou_carro_proprio
-- **Comentário no cancelamento:** "consegui comprar meu próprio carro, valeu pela parceria"
+- **Comentário no cancelamento:** “consegui comprar meu próprio carro, valeu pela parceria”
 
-> ⚠️ O *motivo registrado* é o campo operacional (pouco confiável). Leia as conversas abaixo para entender o que **realmente** aconteceu.
+> ⚠️ O motivo registrado é pouco confiável. Compare-o com as conversas abaixo para identificar o que realmente aconteceu.
+> Os horários estão em UTC, exatamente como no export JSON.
 
 ---
 
-### Ticket #810022 · 2026-05-03 · whatsapp · Dúvida app · CSAT 4/5
+### Ticket #810022 · 2026-04-15 · whatsapp · Dúvida app · CSAT 4/5
 
-`18:48` **Cliente:** oi, tudo certo? só uma dúvida de como pausar a cobrança se eu viajar
-`18:53` **Driva:** Oi, Tatiane! Consigo te explicar sim, é bem simples.
-`18:59` **Cliente:** show, obrigado pelo atendimento sempre rápido
+`08:53 UTC` **Cliente:** oi, tudo certo? só uma dúvida de como pausar a cobrança se eu viajar
+`09:13 UTC` **Driva:** Oi, Tatiane! Consigo te explicar sim, é bem simples.
+`09:21 UTC` **Cliente:** show, obrigado pelo atendimento sempre rápido
 
 ---
 
 ### Ticket #810023 · 2026-06-19 · whatsapp · Cancelamento · CSAT 5/5
 
-`16:34` **Cliente:** oi! vim encerrar minha assinatura porque consegui comprar meu próprio carro 🙌
-`16:38` **Driva:** Que notícia boa, Tatiane! Fico feliz pela conquista. Foi um prazer ter você com a gente.
-`16:50` **Cliente:** vocês me ajudaram bastante nesse período, valeu de verdade
-`16:59` **Driva:** Gratidão! A porta fica aberta se precisar voltar. 🧡
+`19:57 UTC` **Cliente:** oi! vim encerrar minha assinatura porque consegui comprar meu próprio carro 🙌
+`20:17 UTC` **Driva:** Que notícia boa, Tatiane! Fico feliz pela conquista. Foi um prazer ter você com a gente.
+`20:30 UTC` **Cliente:** vocês me ajudaram bastante nesse período, valeu de verdade
+`20:36 UTC` **Driva:** Gratidão! A porta fica aberta se precisar voltar. 🧡
 
 ---
 
-
-
 ============================================================
-
 
 # Histórico de atendimento — Cliente #10031 · Camila Souza
 
 - **Plano:** Essencial (Renault Kwid) · **Perfil:** motorista_app · **App:** Uber
 - **Região:** Zona Norte · **Uso:** 2116 km/mês · **Health score:** 47
-- **Cliente desde** 2024-07-11 · **Cancelou em** 2026-06-14
+- **Cliente desde:** 2024-07-11 · **Cancelou em:** 2026-06-14
 - **Motivo registrado pela retenção:** outro
-- **Comentário no cancelamento:** "me cobraram 1.400 do nada por uma batida que nem foi culpa minha"
+- **Comentário no cancelamento:** “me cobraram 1.400 do nada por uma batida que nem foi culpa minha”
 
-> ⚠️ O *motivo registrado* é o campo operacional (pouco confiável). Leia as conversas abaixo para entender o que **realmente** aconteceu.
-
----
-
-### Ticket #810024 · 2026-05-01 · whatsapp · Cobrança · CSAT 2/5
-
-`13:15` **Cliente:** acabei de ver uma cobrança de R$ 980 na minha fatura que eu não reconheço
-`13:29` **Driva:** Oi, Camila! Deixa eu verificar aqui... consta uma cobrança de avaria registrada na última vistoria.
-`13:48` **Cliente:** avaria?? que avaria? ninguém me falou nada, apareceu do nada na fatura
-`14:03` **Driva:** Vou levantar as fotos da vistoria de entrega e retorno pra gente comparar, tá?
-`14:12` **Cliente:** faz isso porque eu não causei dano nenhum nesse carro
+> ⚠️ O motivo registrado é pouco confiável. Compare-o com as conversas abaixo para identificar o que realmente aconteceu.
+> Os horários estão em UTC, exatamente como no export JSON.
 
 ---
 
-### Ticket #810025 · 2026-05-17 · whatsapp · Cobrança · CSAT 2/5
+### Ticket #810024 · 2025-05-25 · whatsapp · Cobrança · CSAT 2/5
 
-`11:40` **Cliente:** e aí, conseguiu ver as fotos? já faz 4 dias
-`11:51` **Driva:** Camila, ainda estou aguardando a base enviar as imagens. Assim que chegar eu te falo.
-`11:55` **Cliente:** enquanto isso a cobrança tá lá me sufocando. isso é muito errado
+`08:33 UTC` **Cliente:** acabei de ver uma cobrança de R$ 980 na minha fatura que eu não reconheço
+`08:52 UTC` **Driva:** Oi, Camila! Deixa eu verificar aqui... consta uma cobrança de avaria registrada na última vistoria.
+`09:00 UTC` **Cliente:** avaria?? que avaria? ninguém me falou nada, apareceu do nada na fatura
+`09:14 UTC` **Driva:** Vou levantar as fotos da vistoria de entrega e retorno pra gente comparar, tá?
+`09:29 UTC` **Cliente:** faz isso porque eu não causei dano nenhum nesse carro
+
+---
+
+### Ticket #810025 · 2025-11-06 · whatsapp · Cobrança · CSAT 2/5
+
+`13:29 UTC` **Cliente:** e aí, conseguiu ver as fotos? já faz 4 dias
+`13:47 UTC` **Driva:** Camila, ainda estou aguardando a base enviar as imagens. Assim que chegar eu te falo.
+`14:07 UTC` **Cliente:** enquanto isso a cobrança tá lá me sufocando. isso é muito errado
 
 ---
 
 ### Ticket #810026 · 2026-06-14 · whatsapp · Cancelamento · CSAT 1/5
 
-`08:53` **Cliente:** quero cancelar. não confio mais nessa cobrança de vocês
-`09:13` **Driva:** Camila, sinto muito. Se o problema é a cobrança contestada, posso escalar pra resolver antes de você decidir.
-`09:21` **Cliente:** já decidi. cansei de susto na fatura. encerra por favor
-`09:26` **Driva:** Entendo. Qual motivo você quer que eu registre?
-`09:46` **Cliente:** sei lá, marca como 'outro' aí
+`09:13 UTC` **Cliente:** quero cancelar. não confio mais nessa cobrança de vocês
+`09:15 UTC` **Driva:** Camila, sinto muito. Se o problema é a cobrança contestada, posso escalar pra resolver antes de você decidir.
+`09:34 UTC` **Cliente:** já decidi. cansei de susto na fatura. encerra por favor
+`09:50 UTC` **Driva:** Entendo. Qual motivo você quer que eu registre?
+`10:02 UTC` **Cliente:** sei lá, marca como 'outro' aí
 
 ---
 
-
-
 ============================================================
-
 
 # Histórico de atendimento — Cliente #10033 · Jefferson Martins
 
 - **Plano:** Essencial (Renault Kwid) · **Perfil:** motorista_app · **App:** Uber
 - **Região:** Zona Sul · **Uso:** 983 km/mês · **Health score:** 71
-- **Cliente desde** 2025-09-25 · **Cancelou em** 2026-06-10
+- **Cliente desde:** 2025-09-25 · **Cancelou em:** 2026-06-10
 - **Motivo registrado pela retenção:** parou_de_rodar
-- **Comentário no cancelamento:** "só usava fim de semana, ficou caro"
+- **Comentário no cancelamento:** “só usava fim de semana, ficou caro”
 
-> ⚠️ O *motivo registrado* é o campo operacional (pouco confiável). Leia as conversas abaixo para entender o que **realmente** aconteceu.
+> ⚠️ O motivo registrado é pouco confiável. Compare-o com as conversas abaixo para identificar o que realmente aconteceu.
+> Os horários estão em UTC, exatamente como no export JSON.
 
 ---
 
-### Ticket #810027 · 2026-05-01 · whatsapp · Planos · CSAT 3/5
+### Ticket #810027 · 2026-03-18 · whatsapp · Planos · CSAT 3/5
 
-`12:44` **Cliente:** boa tarde, eu uso o carro bem pouco, só pra ir e voltar do trabalho. tem um plano mais barato pra quem roda pouco?
-`13:04` **Driva:** Boa tarde, Jefferson! Hoje trabalhamos com os planos Essencial e Conforto, sem uma faixa de baixa quilometragem no momento.
-`13:06` **Cliente:** poxa, pagar o mesmo que quem roda o dia todo não compensa pra mim
-`13:17` **Driva:** Entendo seu ponto. Posso te mostrar se o Essencial reduz um pouco o custo?
-`13:20` **Cliente:** é que mesmo o essencial tá caro pro tanto que eu ando
+`15:02 UTC` **Cliente:** boa tarde, eu uso o carro bem pouco, só pra ir e voltar do trabalho. tem um plano mais barato pra quem roda pouco?
+`15:13 UTC` **Driva:** Boa tarde, Jefferson! Hoje trabalhamos com os planos Essencial e Conforto, sem uma faixa de baixa quilometragem no momento.
+`15:19 UTC` **Cliente:** poxa, pagar o mesmo que quem roda o dia todo não compensa pra mim
+`15:22 UTC` **Driva:** Entendo seu ponto. Posso te mostrar se o Essencial reduz um pouco o custo?
+`15:34 UTC` **Cliente:** é que mesmo o essencial tá caro pro tanto que eu ando
 
 ---
 
 ### Ticket #810028 · 2026-06-10 · whatsapp · Cancelamento · CSAT 2/5
 
-`14:02` **Cliente:** vou cancelar, pro meu uso não vale a pena o valor semanal
-`14:14` **Driva:** Jefferson, respeito. Se em algum momento lançarmos um plano de baixa km, posso te avisar?
-`14:27` **Cliente:** pode, mas por ora encerra aí
-`14:33` **Driva:** Feito. Registro como qual motivo?
-`14:51` **Cliente:** põe que parei de rodar
+`15:49 UTC` **Cliente:** vou cancelar, pro meu uso não vale a pena o valor semanal
+`15:59 UTC` **Driva:** Jefferson, respeito. Se em algum momento lançarmos um plano de baixa km, posso te avisar?
+`16:19 UTC` **Cliente:** pode, mas por ora encerra aí
+`16:36 UTC` **Driva:** Feito. Registro como qual motivo?
+`16:44 UTC` **Cliente:** marca que parei de rodar mesmo
 
 ---
 
-
-
 ============================================================
-
 
 # Histórico de atendimento — Cliente #10038 · Renata Gomes
 
 - **Plano:** Conforto (VW Virtus) · **Perfil:** motorista_app · **App:** Ambos
 - **Região:** Zona Sul · **Uso:** 899 km/mês · **Health score:** 25
-- **Cliente desde** 2026-05-24 · **Cancelou em** 2026-06-12
+- **Cliente desde:** 2026-05-24 · **Cancelou em:** 2026-06-12
 - **Motivo registrado pela retenção:** (em branco)
-- **Comentário no cancelamento:** "demorou pra liberar o carro, arrumei outra coisa"
+- **Comentário no cancelamento:** “demorou pra liberar o carro, arrumei outra coisa”
 
-> ⚠️ O *motivo registrado* é o campo operacional (pouco confiável). Leia as conversas abaixo para entender o que **realmente** aconteceu.
+> ⚠️ O motivo registrado é pouco confiável. Compare-o com as conversas abaixo para identificar o que realmente aconteceu.
+> Os horários estão em UTC, exatamente como no export JSON.
 
 ---
 
-### Ticket #810029 · 2026-05-25 · whatsapp · Onboarding · CSAT 3/5
+### Ticket #810029 · 2026-05-26 · whatsapp · Onboarding · CSAT 3/5
 
-`09:13` **Cliente:** oi, assinei e paguei a primeira semana, e agora? quando pego o carro?
-`09:15` **Driva:** Oi, Renata! Boas-vindas 🎉 Falta só a vistoria pra liberar. Um consultor vai te chamar pra agendar.
-`09:34` **Cliente:** beleza, fico no aguardo então
+`09:54 UTC` **Cliente:** oi, assinei e paguei a primeira semana, e agora? quando pego o carro?
+`10:03 UTC` **Driva:** Oi, Renata! Boas-vindas 🎉 Falta só a vistoria pra liberar. Um consultor vai te chamar pra agendar.
+`10:06 UTC` **Cliente:** beleza, fico no aguardo então
 
 ---
 
 ### Ticket #810030 · 2026-06-11 · whatsapp · Onboarding · CSAT 2/5
 
-`15:13` **Cliente:** gente já faz 17 dias e ninguém agendou minha vistoria. cadê o carro?
-`15:19` **Driva:** Renata, sinto muito pela demora. Vou priorizar seu agendamento e te retorno hoje.
-`15:30` **Cliente:** é a segunda vez que me falam isso. cada dia parado é dinheiro que não entra
+`10:30 UTC` **Cliente:** gente já faz 17 dias e ninguém agendou minha vistoria. cadê o carro?
+`10:44 UTC` **Driva:** Renata, sinto muito pela demora. Vou priorizar seu agendamento e te retorno hoje.
+`10:55 UTC` **Cliente:** é a segunda vez que me falam isso. cada dia parado é dinheiro que não entra
 
 ---
 
 ### Ticket #810031 · 2026-06-12 · whatsapp · Cancelamento · CSAT 1/5
 
-`15:57` **Cliente:** desisti. quero cancelar e pedir o estorno da semana que paguei sem nem ter recebido o carro
-`16:03` **Driva:** Renata, você tem razão e isso não deveria ter acontecido. Vou processar o estorno e registrar o cancelamento.
-`16:14` **Cliente:** arrumei outra solução já, não dá pra esperar vocês
-`16:20` **Driva:** Entendo. Registro algum motivo específico?
-`16:23` **Cliente:** ah deixa quieto, não precisa marcar nada, só encerra
+`07:51 UTC` **Cliente:** desisti. quero cancelar e pedir o estorno da semana que paguei sem nem ter recebido o carro
+`08:05 UTC` **Driva:** Renata, você tem razão e isso não deveria ter acontecido. Vou processar o estorno e registrar o cancelamento.
+`08:17 UTC` **Cliente:** arrumei outra solução já, não dá pra esperar vocês
+`08:32 UTC` **Driva:** Entendo. Registro algum motivo específico?
+`08:49 UTC` **Cliente:** ah deixa quieto, não precisa marcar nada, só encerra
 
 ---
 
-
-
 ============================================================
-
 
 # Histórico de atendimento — Cliente #10055 · Camila Oliveira
 
 - **Plano:** Essencial (Chevrolet Onix) · **Perfil:** motorista_app · **App:** Ambos
 - **Região:** ABC · **Uso:** 2166 km/mês · **Health score:** 47
-- **Cliente desde** 2026-01-28 · **Cancelou em** 2026-06-11
+- **Cliente desde:** 2026-01-28 · **Cancelou em:** 2026-06-11
 - **Motivo registrado pela retenção:** comprou_carro_proprio
-- **Comentário no cancelamento:** "cobrança surpresa de avaria, achei um absurdo"
+- **Comentário no cancelamento:** “cobrança surpresa de avaria, achei um absurdo”
 
-> ⚠️ O *motivo registrado* é o campo operacional (pouco confiável). Leia as conversas abaixo para entender o que **realmente** aconteceu.
-
----
-
-### Ticket #810032 · 2026-06-05 · whatsapp · Cobrança · CSAT 2/5
-
-`19:00` **Cliente:** acabei de ver uma cobrança de R$ 1250 na minha fatura que eu não reconheço
-`19:10` **Driva:** Oi, Camila! Deixa eu verificar aqui... consta uma cobrança de avaria registrada na última vistoria.
-`19:30` **Cliente:** avaria?? que avaria? ninguém me falou nada, apareceu do nada na fatura
-`19:47` **Driva:** Vou levantar as fotos da vistoria de entrega e retorno pra gente comparar, tá?
-`19:55` **Cliente:** faz isso porque eu não causei dano nenhum nesse carro
+> ⚠️ O motivo registrado é pouco confiável. Compare-o com as conversas abaixo para identificar o que realmente aconteceu.
+> Os horários estão em UTC, exatamente como no export JSON.
 
 ---
 
-### Ticket #810033 · 2026-06-10 · whatsapp · Cobrança · CSAT 2/5
+### Ticket #810032 · 2026-04-10 · whatsapp · Cobrança · CSAT 2/5
 
-`12:22` **Cliente:** e aí, conseguiu ver as fotos? já faz 4 dias
-`12:25` **Driva:** Camila, ainda estou aguardando a base enviar as imagens. Assim que chegar eu te falo.
-`12:37` **Cliente:** enquanto isso a cobrança tá lá me sufocando. isso é muito errado
+`12:07 UTC` **Cliente:** acabei de ver uma cobrança de R$ 1620 na minha fatura que eu não reconheço
+`12:26 UTC` **Driva:** Oi, Camila! Deixa eu verificar aqui... consta uma cobrança de avaria registrada na última vistoria.
+`12:40 UTC` **Cliente:** avaria?? que avaria? ninguém me falou nada, apareceu do nada na fatura
+`12:45 UTC` **Driva:** Vou levantar as fotos da vistoria de entrega e retorno pra gente comparar, tá?
+`12:51 UTC` **Cliente:** faz isso porque eu não causei dano nenhum nesse carro
+
+---
+
+### Ticket #810033 · 2026-05-02 · whatsapp · Cobrança · CSAT 2/5
+
+`20:20 UTC` **Cliente:** e aí, conseguiu ver as fotos? já faz 4 dias
+`20:23 UTC` **Driva:** Camila, ainda estou aguardando a base enviar as imagens. Assim que chegar eu te falo.
+`20:34 UTC` **Cliente:** enquanto isso a cobrança tá lá me sufocando. isso é muito errado
 
 ---
 
 ### Ticket #810034 · 2026-06-11 · whatsapp · Cancelamento · CSAT 1/5
 
-`19:31` **Cliente:** quero cancelar. não confio mais nessa cobrança de vocês
-`19:40` **Driva:** Camila, sinto muito. Se o problema é a cobrança contestada, posso escalar pra resolver antes de você decidir.
-`19:43` **Cliente:** já decidi. cansei de susto na fatura. encerra por favor
-`19:50` **Driva:** Entendo. Qual motivo você quer que eu registre?
-`20:07` **Cliente:** pode botar que comprei um carro próprio, deixa quieto
+`18:27 UTC` **Cliente:** quero cancelar. não confio mais nessa cobrança de vocês
+`18:47 UTC` **Driva:** Camila, sinto muito. Se o problema é a cobrança contestada, posso escalar pra resolver antes de você decidir.
+`18:53 UTC` **Cliente:** já decidi. cansei de susto na fatura. encerra por favor
+`19:09 UTC` **Driva:** Entendo. Qual motivo você quer que eu registre?
+`19:26 UTC` **Cliente:** marca comprei carro próprio aí, é mais fácil
 
 ---
 
-
-
 ============================================================
-
 
 # Histórico de atendimento — Cliente #10059 · Josué Souza
 
 - **Plano:** Essencial (Chevrolet Onix) · **Perfil:** motorista_app · **App:** Ambos
 - **Região:** Zona Norte · **Uso:** 1674 km/mês · **Health score:** 66
-- **Cliente desde** 2025-01-23 · **Cancelou em** 2026-06-06
+- **Cliente desde:** 2025-01-23 · **Cancelou em:** 2026-06-06
 - **Motivo registrado pela retenção:** achei_caro
-- **Comentário no cancelamento:** "carro vivia na oficina, perdi vários dias de corrida"
+- **Comentário no cancelamento:** “carro vivia na oficina, perdi vários dias de corrida”
 
-> ⚠️ O *motivo registrado* é o campo operacional (pouco confiável). Leia as conversas abaixo para entender o que **realmente** aconteceu.
-
----
-
-### Ticket #810035 · 2026-03-16 · whatsapp · Manutenção · CSAT 2/5
-
-`09:55` **Cliente:** a luz da injeção acendeu e o carro tá falhando feio
-`10:14` **Driva:** Bom dia, Josué! Poxa, sinto muito por isso. Já abri um chamado e vou agendar a oficina mais perto de você. Consegue levar amanhã cedo?
-`10:28` **Cliente:** amanhã?? mano eu rodo de manhã, é quando mais faço corrida. não tem hoje não?
-`10:40` **Driva:** Entendo total, carro parado é renda parada. Vou tentar encaixar hoje à tarde e te confirmo já já.
-`10:55` **Cliente:** por favor não me deixa na mão que eu dependo disso
+> ⚠️ O motivo registrado é pouco confiável. Compare-o com as conversas abaixo para identificar o que realmente aconteceu.
+> Os horários estão em UTC, exatamente como no export JSON.
 
 ---
 
-### Ticket #810036 · 2026-05-17 · whatsapp · Guincho · CSAT 1/5 · 🚨 guincho acionado
+### Ticket #810035 · 2026-03-10 · whatsapp · Manutenção · CSAT 2/5
 
-`13:20` **Cliente:** o carro morreu aqui na Av. Sapopemba, não liga de jeito nenhum. preciso de guincho AGORA
-`13:34` **Driva:** Josué, já estou acionando o guincho pra sua localização. Fica em segurança, por favor.
-`13:40` **Cliente:** quanto tempo demora?
-`13:44` **Driva:** A previsão inicial é de até 2h, mas vou monitorar de perto.
-`16:04` **Cliente:** cara já faz mais de 2h e nada... tô parado no sol até agora
-`17:39` **Cliente:** 3h30 esperando. perdi a manhã inteira de trabalho. isso não dá
-`17:57` **Driva:** Sinto muito de verdade pela demora, Josué. O guincho chega em ~30 min. Vou lançar um crédito pelo transtorno.
-`18:08` **Cliente:** crédito não paga as corridas que eu perdi hoje
+`10:32 UTC` **Cliente:** a luz da injeção acendeu e o carro tá falhando feio
+`10:45 UTC` **Driva:** Bom dia, Josué! Poxa, sinto muito por isso. Já abri um chamado e vou agendar a oficina mais perto de você. Consegue levar amanhã cedo?
+`11:05 UTC` **Cliente:** amanhã?? mano eu rodo de manhã, é quando mais faço corrida. não tem hoje não?
+`11:10 UTC` **Driva:** Entendo total, carro parado é renda parada. Vou tentar encaixar hoje à tarde e te confirmo já já.
+`11:16 UTC` **Cliente:** por favor não me deixa na mão que eu dependo disso
+
+---
+
+### Ticket #810036 · 2026-04-29 · whatsapp · Guincho · CSAT 1/5 · 🚨 guincho acionado
+
+`14:34 UTC` **Cliente:** o carro morreu aqui na Marginal Pinheiros, não liga de jeito nenhum. preciso de guincho AGORA
+`14:37 UTC` **Driva:** Josué, já estou acionando o guincho pra sua localização. Fica em segurança, por favor.
+`14:43 UTC` **Cliente:** quanto tempo demora?
+`14:48 UTC` **Driva:** A previsão inicial é de até 2h, mas vou monitorar de perto.
+`17:08 UTC` **Cliente:** cara já faz mais de 2h e nada... tô parado no sol até agora
+`18:43 UTC` **Cliente:** 3h30 esperando. perdi a tarde inteira de trabalho. isso não dá
+`18:56 UTC` **Driva:** Sinto muito de verdade pela demora, Josué. O guincho chega em ~30 min. Vou lançar um crédito pelo transtorno.
+`19:13 UTC` **Cliente:** crédito não paga as corridas que eu perdi hoje
 
 ---
 
 ### Ticket #810037 · 2026-06-06 · whatsapp · Cancelamento · CSAT 1/5
 
-`19:11` **Cliente:** oi, quero cancelar a assinatura
-`19:30` **Driva:** Josué, que pena ouvir isso. Posso entender o que motivou?
-`19:44` **Cliente:** 3 semanas seguidas com o carro na oficina ou esperando guincho. não consigo trabalhar assim, tô no prejuízo todo dia
-`19:49` **Driva:** Você tem toda razão e a gente falhou no que mais importa: te manter rodando. Posso te oferecer troca imediata de carro + uma semana de cortesia. Topa tentar mais uma vez?
-`19:55` **Cliente:** não dá mais não, já perdi a confiança. pode encerrar
-`20:07` **Driva:** Respeito sua decisão. Vou registrar o cancelamento. Que motivo você quer que eu marque?
-`20:27` **Cliente:** marca que ficou caro pra mim, é isso
+`08:08 UTC` **Cliente:** oi, quero cancelar a assinatura
+`08:26 UTC` **Driva:** Josué, que pena ouvir isso. Posso entender o que motivou?
+`08:38 UTC` **Cliente:** 3 semanas seguidas com o carro na oficina ou esperando guincho. não consigo trabalhar assim, tô no prejuízo todo dia
+`08:58 UTC` **Driva:** Você tem toda razão e a gente falhou no que mais importa: te manter rodando. Posso te oferecer troca imediata de carro + uma semana de cortesia. Topa tentar mais uma vez?
+`09:13 UTC` **Cliente:** não dá mais não, já perdi a confiança. pode encerrar
+`09:19 UTC` **Driva:** Respeito sua decisão. Vou registrar o cancelamento. Que motivo você quer que eu marque?
+`09:33 UTC` **Cliente:** põe que achei caro
 
 ---
 
-
-
 ============================================================
-
 
 # Histórico de atendimento — Cliente #10060 · Diego Ferreira
 
 - **Plano:** Essencial (Renault Kwid) · **Perfil:** motorista_app · **App:** Ambos
 - **Região:** Zona Sul · **Uso:** 2538 km/mês · **Health score:** 99
-- **Cliente desde** 2025-11-20 · **Cancelou em** 2026-06-22
+- **Cliente desde:** 2025-11-20 · **Cancelou em:** 2026-06-22
 - **Motivo registrado pela retenção:** (em branco)
-- **Comentário no cancelamento:** "achei uma opção melhor, valeu"
+- **Comentário no cancelamento:** “achei uma opção melhor, valeu”
 
-> ⚠️ O *motivo registrado* é o campo operacional (pouco confiável). Leia as conversas abaixo para entender o que **realmente** aconteceu.
+> ⚠️ O motivo registrado é pouco confiável. Compare-o com as conversas abaixo para identificar o que realmente aconteceu.
+> Os horários estão em UTC, exatamente como no export JSON.
 
 ---
 
-### Ticket #810038 · 2026-02-05 · whatsapp · Manutenção · CSAT 2/5
+### Ticket #810038 · 2026-03-01 · whatsapp · Manutenção · CSAT 2/5
 
-`15:05` **Cliente:** de novo problema no carro... tá difícil viu
-`15:25` **Driva:** Diego, sinto muito. Vou abrir o chamado e resolver o quanto antes.
-`15:31` **Cliente:** tô começando a achar que não vale a pena
+`15:41 UTC` **Cliente:** de novo problema no carro... tá difícil viu
+`15:48 UTC` **Driva:** Diego, sinto muito. Vou abrir o chamado e resolver o quanto antes.
+`16:02 UTC` **Cliente:** tô começando a achar que não vale a pena
 
 ---
 
 ### Ticket #810039 · 2026-06-22 · whatsapp · Cancelamento · CSAT 2/5
 
-`19:19` **Cliente:** quero encerrar. achei uma opção melhor que me atende mais rápido
-`19:30` **Driva:** Diego, poxa. Posso perguntar o que pesou na decisão?
-`19:36` **Cliente:** sinceramente o atendimento e o carro reserva na hora, que aqui demora
-`19:44` **Driva:** Justo. Que motivo você quer que eu registre no sistema?
-`19:52` **Cliente:** tanto faz, pode cancelar sem marcar
+`15:18 UTC` **Cliente:** quero encerrar. achei uma opção melhor que me atende mais rápido
+`15:28 UTC` **Driva:** Diego, poxa. Posso perguntar o que pesou na decisão?
+`15:44 UTC` **Cliente:** sinceramente o atendimento e o carro reserva na hora, que aqui demora
+`15:57 UTC` **Driva:** Justo. Que motivo você quer que eu registre no sistema?
+`15:59 UTC` **Cliente:** ah deixa quieto, não precisa marcar nada, só encerra
 
 ---
 
-
-
 ============================================================
-
 
 # Histórico de atendimento — Cliente #10071 · Wagner Nascimento
 
 - **Plano:** Essencial (Fiat Mobi) · **Perfil:** motorista_app · **App:** Ambos
 - **Região:** Zona Oeste · **Uso:** 2788 km/mês · **Health score:** 65
-- **Cliente desde** 2024-09-16 · **Cancelou em** 2026-06-30
+- **Cliente desde:** 2024-09-16 · **Cancelou em:** 2026-06-30
 - **Motivo registrado pela retenção:** outro
-- **Comentário no cancelamento:** "carro vivia na oficina, perdi vários dias de corrida"
+- **Comentário no cancelamento:** “carro vivia na oficina, perdi vários dias de corrida”
 
-> ⚠️ O *motivo registrado* é o campo operacional (pouco confiável). Leia as conversas abaixo para entender o que **realmente** aconteceu.
-
----
-
-### Ticket #810040 · 2024-09-25 · whatsapp · Manutenção · CSAT 2/5
-
-`19:53` **Cliente:** gente o carro não pega direito de manhã, já travou 2x essa semana
-`19:58` **Driva:** Bom dia, Wagner! Poxa, sinto muito por isso. Já abri um chamado e vou agendar a oficina mais perto de você. Consegue levar amanhã cedo?
-`20:04` **Cliente:** amanhã?? mano eu rodo de manhã, é quando mais faço corrida. não tem hoje não?
-`20:18` **Driva:** Entendo total, carro parado é renda parada. Vou tentar encaixar hoje à tarde e te confirmo já já.
-`20:33` **Cliente:** por favor não me deixa na mão que eu dependo disso
+> ⚠️ O motivo registrado é pouco confiável. Compare-o com as conversas abaixo para identificar o que realmente aconteceu.
+> Os horários estão em UTC, exatamente como no export JSON.
 
 ---
 
-### Ticket #810041 · 2025-03-18 · whatsapp · Guincho · CSAT 1/5 · 🚨 guincho acionado
+### Ticket #810040 · 2026-01-29 · whatsapp · Manutenção · CSAT 2/5
 
-`08:12` **Cliente:** o carro morreu aqui na Marginal Pinheiros, não liga de jeito nenhum. preciso de guincho AGORA
-`08:25` **Driva:** Wagner, já estou acionando o guincho pra sua localização. Fica em segurança, por favor.
-`08:31` **Cliente:** quanto tempo demora?
-`08:48` **Driva:** A previsão inicial é de até 2h, mas vou monitorar de perto.
-`11:08` **Cliente:** cara já faz mais de 2h e nada... tô parado no sol até agora
-`12:43` **Cliente:** 3h30 esperando. perdi a manhã inteira de trabalho. isso não dá
-`12:50` **Driva:** Sinto muito de verdade pela demora, Wagner. O guincho chega em ~30 min. Vou lançar um crédito pelo transtorno.
-`12:53` **Cliente:** crédito não paga as corridas que eu perdi hoje
+`18:52 UTC` **Cliente:** a luz da injeção acendeu e o carro tá falhando feio
+`19:01 UTC` **Driva:** Boa tarde, Wagner! Poxa, sinto muito por isso. Já abri um chamado e vou agendar a oficina mais perto de você. Consegue levar amanhã cedo?
+`19:03 UTC` **Cliente:** amanhã?? mano eu rodo de manhã, é quando mais faço corrida. não tem hoje não?
+`19:23 UTC` **Driva:** Entendo total, carro parado é renda parada. Vou tentar encaixar hoje à tarde e te confirmo já já.
+`19:43 UTC` **Cliente:** por favor não me deixa na mão que eu dependo disso
+
+---
+
+### Ticket #810041 · 2026-06-26 · whatsapp · Guincho · CSAT 1/5 · 🚨 guincho acionado
+
+`15:31 UTC` **Cliente:** o carro morreu aqui na Radial Leste, não liga de jeito nenhum. preciso de guincho AGORA
+`15:36 UTC` **Driva:** Wagner, já estou acionando o guincho pra sua localização. Fica em segurança, por favor.
+`15:42 UTC` **Cliente:** quanto tempo demora?
+`16:02 UTC` **Driva:** A previsão inicial é de até 2h, mas vou monitorar de perto.
+`18:22 UTC` **Cliente:** cara já faz mais de 2h e nada... tô parado no sol até agora
+`19:57 UTC` **Cliente:** 3h30 esperando. perdi a tarde inteira de trabalho. isso não dá
+`20:04 UTC` **Driva:** Sinto muito de verdade pela demora, Wagner. O guincho chega em ~30 min. Vou lançar um crédito pelo transtorno.
+`20:18 UTC` **Cliente:** crédito não paga as corridas que eu perdi hoje
 
 ---
 
 ### Ticket #810042 · 2026-06-30 · whatsapp · Cancelamento · CSAT 1/5
 
-`16:09` **Cliente:** oi, quero cancelar a assinatura
-`16:29` **Driva:** Wagner, que pena ouvir isso. Posso entender o que motivou?
-`16:44` **Cliente:** 3 semanas seguidas com o carro na oficina ou esperando guincho. não consigo trabalhar assim, tô no prejuízo todo dia
-`16:50` **Driva:** Você tem toda razão e a gente falhou no que mais importa: te manter rodando. Posso te oferecer troca imediata de carro + uma semana de cortesia. Topa tentar mais uma vez?
-`17:04` **Cliente:** não dá mais não, já perdi a confiança. pode encerrar
-`17:13` **Driva:** Respeito sua decisão. Vou registrar o cancelamento. Que motivo você quer que eu marque?
-`17:16` **Cliente:** sei lá, marca como 'outro' aí
+`18:25 UTC` **Cliente:** oi, quero cancelar a assinatura
+`18:36 UTC` **Driva:** Wagner, que pena ouvir isso. Posso entender o que motivou?
+`18:56 UTC` **Cliente:** 3 semanas seguidas com o carro na oficina ou esperando guincho. não consigo trabalhar assim, tô no prejuízo todo dia
+`19:02 UTC` **Driva:** Você tem toda razão e a gente falhou no que mais importa: te manter rodando. Posso te oferecer troca imediata de carro + uma semana de cortesia. Topa tentar mais uma vez?
+`19:07 UTC` **Cliente:** não dá mais não, já perdi a confiança. pode encerrar
+`19:19 UTC` **Driva:** Respeito sua decisão. Vou registrar o cancelamento. Que motivo você quer que eu marque?
+`19:23 UTC` **Cliente:** bota 'outro' mesmo, tanto faz
 
 ---
 
-
-
 ============================================================
-
 
 # Histórico de atendimento — Cliente #10081 · Gilberto Oliveira
 
 - **Plano:** Essencial (Renault Kwid) · **Perfil:** motorista_app · **App:** 99
 - **Região:** Zona Norte · **Uso:** 2554 km/mês · **Health score:** 43
-- **Cliente desde** 2025-02-27 · **Cancelou em** 2026-06-13
+- **Cliente desde:** 2025-02-27 · **Cancelou em:** 2026-06-13
 - **Motivo registrado pela retenção:** outro
-- **Comentário no cancelamento:** "cobrança surpresa de avaria, achei um absurdo"
+- **Comentário no cancelamento:** “cobrança surpresa de avaria, achei um absurdo”
 
-> ⚠️ O *motivo registrado* é o campo operacional (pouco confiável). Leia as conversas abaixo para entender o que **realmente** aconteceu.
-
----
-
-### Ticket #810043 · 2025-11-04 · whatsapp · Cobrança · CSAT 2/5
-
-`12:26` **Cliente:** acabei de ver uma cobrança de R$ 1480 na minha fatura que eu não reconheço
-`12:40` **Driva:** Oi, Gilberto! Deixa eu verificar aqui... consta uma cobrança de avaria registrada na última vistoria.
-`12:44` **Cliente:** avaria?? que avaria? ninguém me falou nada, apareceu do nada na fatura
-`13:00` **Driva:** Vou levantar as fotos da vistoria de entrega e retorno pra gente comparar, tá?
-`13:14` **Cliente:** faz isso porque eu não causei dano nenhum nesse carro
+> ⚠️ O motivo registrado é pouco confiável. Compare-o com as conversas abaixo para identificar o que realmente aconteceu.
+> Os horários estão em UTC, exatamente como no export JSON.
 
 ---
 
-### Ticket #810044 · 2026-01-15 · whatsapp · Cobrança · CSAT 2/5
+### Ticket #810043 · 2025-09-16 · whatsapp · Cobrança · CSAT 2/5
 
-`18:13` **Cliente:** e aí, conseguiu ver as fotos? já faz 4 dias
-`18:26` **Driva:** Gilberto, ainda estou aguardando a base enviar as imagens. Assim que chegar eu te falo.
-`18:28` **Cliente:** enquanto isso a cobrança tá lá me sufocando. isso é muito errado
+`16:58 UTC` **Cliente:** acabei de ver uma cobrança de R$ 980 na minha fatura que eu não reconheço
+`17:16 UTC` **Driva:** Oi, Gilberto! Deixa eu verificar aqui... consta uma cobrança de avaria registrada na última vistoria.
+`17:33 UTC` **Cliente:** avaria?? que avaria? ninguém me falou nada, apareceu do nada na fatura
+`17:37 UTC` **Driva:** Vou levantar as fotos da vistoria de entrega e retorno pra gente comparar, tá?
+`17:55 UTC` **Cliente:** faz isso porque eu não causei dano nenhum nesse carro
+
+---
+
+### Ticket #810044 · 2025-11-20 · whatsapp · Cobrança · CSAT 2/5
+
+`10:47 UTC` **Cliente:** e aí, conseguiu ver as fotos? já faz 4 dias
+`10:54 UTC` **Driva:** Gilberto, ainda estou aguardando a base enviar as imagens. Assim que chegar eu te falo.
+`11:01 UTC` **Cliente:** enquanto isso a cobrança tá lá me sufocando. isso é muito errado
 
 ---
 
 ### Ticket #810045 · 2026-06-13 · whatsapp · Cancelamento · CSAT 1/5
 
-`09:13` **Cliente:** quero cancelar. não confio mais nessa cobrança de vocês
-`09:18` **Driva:** Gilberto, sinto muito. Se o problema é a cobrança contestada, posso escalar pra resolver antes de você decidir.
-`09:35` **Cliente:** já decidi. cansei de susto na fatura. encerra por favor
-`09:53` **Driva:** Entendo. Qual motivo você quer que eu registre?
-`10:02` **Cliente:** sei lá, marca como 'outro' aí
+`16:54 UTC` **Cliente:** quero cancelar. não confio mais nessa cobrança de vocês
+`17:06 UTC` **Driva:** Gilberto, sinto muito. Se o problema é a cobrança contestada, posso escalar pra resolver antes de você decidir.
+`17:11 UTC` **Cliente:** já decidi. cansei de susto na fatura. encerra por favor
+`17:14 UTC` **Driva:** Entendo. Qual motivo você quer que eu registre?
+`17:20 UTC` **Cliente:** sei lá, marca como 'outro' aí
 
 ---
 
-
-
 ============================================================
-
 
 # Histórico de atendimento — Cliente #10087 · Bruno Moreira
 
 - **Plano:** Conforto (Toyota Yaris Sedan) · **Perfil:** motorista_app · **App:** Uber
 - **Região:** ABC · **Uso:** 2353 km/mês · **Health score:** 38
-- **Cliente desde** 2026-01-01 · **Cancelou em** 2026-06-30
+- **Cliente desde:** 2026-01-01 · **Cancelou em:** 2026-06-30
 - **Motivo registrado pela retenção:** problemas_manutencao
-- **Comentário no cancelamento:** "fiquei 3 dias sem carro esperando conserto, não dá"
+- **Comentário no cancelamento:** “fiquei 3 dias sem carro esperando conserto, não dá”
 
-> ⚠️ O *motivo registrado* é o campo operacional (pouco confiável). Leia as conversas abaixo para entender o que **realmente** aconteceu.
-
----
-
-### Ticket #810046 · 2026-05-27 · whatsapp · Manutenção · CSAT 2/5
-
-`15:31` **Cliente:** a luz da injeção acendeu e o carro tá falhando feio
-`15:36` **Driva:** Bom dia, Bruno! Poxa, sinto muito por isso. Já abri um chamado e vou agendar a oficina mais perto de você. Consegue levar amanhã cedo?
-`15:56` **Cliente:** amanhã?? mano eu rodo de manhã, é quando mais faço corrida. não tem hoje não?
-`16:03` **Driva:** Entendo total, carro parado é renda parada. Vou tentar encaixar hoje à tarde e te confirmo já já.
-`16:17` **Cliente:** por favor não me deixa na mão que eu dependo disso
+> ⚠️ O motivo registrado é pouco confiável. Compare-o com as conversas abaixo para identificar o que realmente aconteceu.
+> Os horários estão em UTC, exatamente como no export JSON.
 
 ---
 
-### Ticket #810047 · 2026-06-13 · whatsapp · Guincho · CSAT 1/5 · 🚨 guincho acionado
+### Ticket #810046 · 2026-03-07 · whatsapp · Manutenção · CSAT 2/5
 
-`18:25` **Cliente:** o carro morreu aqui na Marginal Tietê, não liga de jeito nenhum. preciso de guincho AGORA
-`18:36` **Driva:** Bruno, já estou acionando o guincho pra sua localização. Fica em segurança, por favor.
-`18:42` **Cliente:** quanto tempo demora?
-`19:02` **Driva:** A previsão inicial é de até 2h, mas vou monitorar de perto.
-`21:22` **Cliente:** cara já faz mais de 2h e nada... tô parado no sol até agora
-`22:57` **Cliente:** 3h30 esperando. perdi a manhã inteira de trabalho. isso não dá
-`23:03` **Driva:** Sinto muito de verdade pela demora, Bruno. O guincho chega em ~30 min. Vou lançar um crédito pelo transtorno.
-`23:08` **Cliente:** crédito não paga as corridas que eu perdi hoje
+`08:41 UTC` **Cliente:** opa bom dia, o Toyota Yaris Sedan tá engasgando e perdendo força na subida
+`08:59 UTC` **Driva:** Bom dia, Bruno! Poxa, sinto muito por isso. Já abri um chamado e vou agendar a oficina mais perto de você. Consegue levar amanhã cedo?
+`09:10 UTC` **Cliente:** amanhã?? mano eu rodo de manhã, é quando mais faço corrida. não tem hoje não?
+`09:23 UTC` **Driva:** Entendo total, carro parado é renda parada. Vou tentar encaixar hoje à tarde e te confirmo já já.
+`09:42 UTC` **Cliente:** por favor não me deixa na mão que eu dependo disso
+
+---
+
+### Ticket #810047 · 2026-03-30 · whatsapp · Guincho · CSAT 1/5 · 🚨 guincho acionado
+
+`14:25 UTC` **Cliente:** o carro morreu aqui na Radial Leste, não liga de jeito nenhum. preciso de guincho AGORA
+`14:34 UTC` **Driva:** Bruno, já estou acionando o guincho pra sua localização. Fica em segurança, por favor.
+`14:40 UTC` **Cliente:** quanto tempo demora?
+`14:51 UTC` **Driva:** A previsão inicial é de até 2h, mas vou monitorar de perto.
+`17:11 UTC` **Cliente:** cara já faz mais de 2h e nada... tô parado no sol até agora
+`18:46 UTC` **Cliente:** 3h30 esperando. perdi a tarde inteira de trabalho. isso não dá
+`18:49 UTC` **Driva:** Sinto muito de verdade pela demora, Bruno. O guincho chega em ~30 min. Vou lançar um crédito pelo transtorno.
+`19:07 UTC` **Cliente:** crédito não paga as corridas que eu perdi hoje
 
 ---
 
 ### Ticket #810048 · 2026-06-30 · whatsapp · Cancelamento · CSAT 1/5
 
-`08:34` **Cliente:** oi, quero cancelar a assinatura
-`08:41` **Driva:** Bruno, que pena ouvir isso. Posso entender o que motivou?
-`08:55` **Cliente:** 3 semanas seguidas com o carro na oficina ou esperando guincho. não consigo trabalhar assim, tô no prejuízo todo dia
-`08:57` **Driva:** Você tem toda razão e a gente falhou no que mais importa: te manter rodando. Posso te oferecer troca imediata de carro + uma semana de cortesia. Topa tentar mais uma vez?
-`09:11` **Cliente:** não dá mais não, já perdi a confiança. pode encerrar
-`09:30` **Driva:** Respeito sua decisão. Vou registrar o cancelamento. Que motivo você quer que eu marque?
-`09:49` **Cliente:** põe que foi a manutenção, sem dúvida
+`18:43 UTC` **Cliente:** oi, quero cancelar a assinatura
+`18:59 UTC` **Driva:** Bruno, que pena ouvir isso. Posso entender o que motivou?
+`19:05 UTC` **Cliente:** 3 semanas seguidas com o carro na oficina ou esperando guincho. não consigo trabalhar assim, tô no prejuízo todo dia
+`19:25 UTC` **Driva:** Você tem toda razão e a gente falhou no que mais importa: te manter rodando. Posso te oferecer troca imediata de carro + uma semana de cortesia. Topa tentar mais uma vez?
+`19:42 UTC` **Cliente:** não dá mais não, já perdi a confiança. pode encerrar
+`19:54 UTC` **Driva:** Respeito sua decisão. Vou registrar o cancelamento. Que motivo você quer que eu marque?
+`20:12 UTC` **Cliente:** põe que foi a manutenção, sem dúvida
 
 ---
 
-
-
 ============================================================
-
 
 # Histórico de atendimento — Cliente #10089 · Josué Rocha
 
 - **Plano:** Essencial (Fiat Mobi) · **Perfil:** motorista_app · **App:** Ambos
 - **Região:** Zona Sul · **Uso:** 998 km/mês · **Health score:** 32
-- **Cliente desde** 2026-05-13 · **Cancelou em** 2026-05-22
+- **Cliente desde:** 2026-05-13 · **Cancelou em:** 2026-05-22
 - **Motivo registrado pela retenção:** comprou_carro_proprio
-- **Comentário no cancelamento:** "demorou pra liberar o carro, arrumei outra coisa"
+- **Comentário no cancelamento:** “demorou pra liberar o carro, arrumei outra coisa”
 
-> ⚠️ O *motivo registrado* é o campo operacional (pouco confiável). Leia as conversas abaixo para entender o que **realmente** aconteceu.
+> ⚠️ O motivo registrado é pouco confiável. Compare-o com as conversas abaixo para identificar o que realmente aconteceu.
+> Os horários estão em UTC, exatamente como no export JSON.
 
 ---
 
 ### Ticket #810049 · 2026-05-13 · whatsapp · Onboarding · CSAT 3/5
 
-`16:21` **Cliente:** oi, assinei e paguei a primeira semana, e agora? quando pego o carro?
-`16:40` **Driva:** Oi, Josué! Boas-vindas 🎉 Falta só a vistoria pra liberar. Um consultor vai te chamar pra agendar.
-`16:45` **Cliente:** beleza, fico no aguardo então
+`18:31 UTC` **Cliente:** oi, assinei e paguei a primeira semana, e agora? quando pego o carro?
+`18:40 UTC` **Driva:** Oi, Josué! Boas-vindas 🎉 Falta só a vistoria pra liberar. Um consultor vai te chamar pra agendar.
+`18:43 UTC` **Cliente:** beleza, fico no aguardo então
 
 ---
 
 ### Ticket #810050 · 2026-05-19 · whatsapp · Onboarding · CSAT 2/5
 
-`18:29` **Cliente:** gente já faz 7 dias e ninguém agendou minha vistoria. cadê o carro?
-`18:36` **Driva:** Josué, sinto muito pela demora. Vou priorizar seu agendamento e te retorno hoje.
-`18:43` **Cliente:** é a segunda vez que me falam isso. cada dia parado é dinheiro que não entra
+`09:46 UTC` **Cliente:** gente já faz 7 dias e ninguém agendou minha vistoria. cadê o carro?
+`09:54 UTC` **Driva:** Josué, sinto muito pela demora. Vou priorizar seu agendamento e te retorno hoje.
+`10:00 UTC` **Cliente:** é a segunda vez que me falam isso. cada dia parado é dinheiro que não entra
 
 ---
 
 ### Ticket #810051 · 2026-05-22 · whatsapp · Cancelamento · CSAT 1/5
 
-`16:54` **Cliente:** desisti. quero cancelar e pedir o estorno da semana que paguei sem nem ter recebido o carro
-`17:06` **Driva:** Josué, você tem razão e isso não deveria ter acontecido. Vou processar o estorno e registrar o cancelamento.
-`17:11` **Cliente:** arrumei outra solução já, não dá pra esperar vocês
-`17:14` **Driva:** Entendo. Registro algum motivo específico?
-`17:20` **Cliente:** pode botar que comprei um carro próprio, deixa quieto
+`17:28 UTC` **Cliente:** desisti. quero cancelar e pedir o estorno da semana que paguei sem nem ter recebido o carro
+`17:38 UTC` **Driva:** Josué, você tem razão e isso não deveria ter acontecido. Vou processar o estorno e registrar o cancelamento.
+`17:44 UTC` **Cliente:** arrumei outra solução já, não dá pra esperar vocês
+`17:59 UTC` **Driva:** Entendo. Registro algum motivo específico?
+`18:03 UTC` **Cliente:** pode botar que comprei um carro próprio, deixa quieto
 
 ---
 
-
-
 ============================================================
-
 
 # Histórico de atendimento — Cliente #10093 · Wesley Santos
 
 - **Plano:** Essencial (VW Gol) · **Perfil:** motorista_app · **App:** Uber
 - **Região:** Centro · **Uso:** 882 km/mês · **Health score:** 52
-- **Cliente desde** 2025-04-06 · **Cancelou em** 2026-06-23
+- **Cliente desde:** 2025-04-06 · **Cancelou em:** 2026-06-23
 - **Motivo registrado pela retenção:** (em branco)
-- **Comentário no cancelamento:** "só usava fim de semana, ficou caro"
+- **Comentário no cancelamento:** “só usava fim de semana, ficou caro”
 
-> ⚠️ O *motivo registrado* é o campo operacional (pouco confiável). Leia as conversas abaixo para entender o que **realmente** aconteceu.
+> ⚠️ O motivo registrado é pouco confiável. Compare-o com as conversas abaixo para identificar o que realmente aconteceu.
+> Os horários estão em UTC, exatamente como no export JSON.
 
 ---
 
-### Ticket #810052 · 2026-03-06 · whatsapp · Planos · CSAT 3/5
+### Ticket #810052 · 2025-06-28 · whatsapp · Planos · CSAT 3/5
 
-`09:59` **Cliente:** boa tarde, eu uso o carro bem pouco, só pra ir e voltar do trabalho. tem um plano mais barato pra quem roda pouco?
-`10:18` **Driva:** Boa tarde, Wesley! Hoje trabalhamos com os planos Essencial e Conforto, sem uma faixa de baixa quilometragem no momento.
-`10:28` **Cliente:** poxa, pagar o mesmo que quem roda o dia todo não compensa pra mim
-`10:31` **Driva:** Entendo seu ponto. Posso te mostrar se o Essencial reduz um pouco o custo?
-`10:35` **Cliente:** é que mesmo o essencial tá caro pro tanto que eu ando
+`14:15 UTC` **Cliente:** boa tarde, eu uso o carro bem pouco, só pra ir e voltar do trabalho. tem um plano mais barato pra quem roda pouco?
+`14:19 UTC` **Driva:** Boa tarde, Wesley! Hoje trabalhamos com os planos Essencial e Conforto, sem uma faixa de baixa quilometragem no momento.
+`14:29 UTC` **Cliente:** poxa, pagar o mesmo que quem roda o dia todo não compensa pra mim
+`14:44 UTC` **Driva:** Entendo seu ponto. Posso te mostrar se o Essencial reduz um pouco o custo?
+`14:50 UTC` **Cliente:** é que mesmo o essencial tá caro pro tanto que eu ando
 
 ---
 
 ### Ticket #810053 · 2026-06-23 · whatsapp · Cancelamento · CSAT 2/5
 
-`15:59` **Cliente:** vou cancelar, pro meu uso não vale a pena o valor semanal
-`16:12` **Driva:** Wesley, respeito. Se em algum momento lançarmos um plano de baixa km, posso te avisar?
-`16:31` **Cliente:** pode, mas por ora encerra aí
-`16:38` **Driva:** Feito. Registro como qual motivo?
-`16:53` **Cliente:** ah deixa quieto, não precisa marcar nada, só encerra
+`08:32 UTC` **Cliente:** vou cancelar, pro meu uso não vale a pena o valor semanal
+`08:40 UTC` **Driva:** Wesley, respeito. Se em algum momento lançarmos um plano de baixa km, posso te avisar?
+`08:53 UTC` **Cliente:** pode, mas por ora encerra aí
+`09:13 UTC` **Driva:** Feito. Registro como qual motivo?
+`09:31 UTC` **Cliente:** ah deixa quieto, não precisa marcar nada, só encerra
 
 ---
-
-
-
-============================================================
-
