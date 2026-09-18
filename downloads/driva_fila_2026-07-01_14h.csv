@@ -1,0 +1,6 @@
+﻿ticket_id,recebido_em,canal,customer_id,nome_cliente,categoria,mensagem_cliente,guincho_acionado_em,guincho_enviado_em,valor_contestado_reais,contrato_inicio,onboarding_status
+700535,2026-07-01 12:05,whatsapp,10175,Rose Ribeiro,Guincho,Já é meio-dia e nada do guincho. Perdi o dia inteiro.,2026-07-01 02:10,,,,
+700555,2026-07-01 13:12,app,10173,Josué Nascimento,Guincho,"O carro não liga. Pedi guincho, qual a previsão?",2026-07-01 13:10,2026-07-01 13:38,,,
+700556,2026-07-01 13:25,whatsapp,10131,Elaine Rocha,Cancelamento,Desisto. Ontem esperei o guincho a madrugada toda. Quero cancelar.,,,,,
+700557,2026-07-01 13:40,whatsapp,10140,Diego Teixeira,Cobrança,Cobrança de avaria de R$ 1.200? O carro já tinha esse amassado quando retirei.,,,1200,,
+700558,2026-07-01 13:52,app,10190,Rose Oliveira,Dúvida app,Como vejo a quilometragem do mês no app?,,,,,
