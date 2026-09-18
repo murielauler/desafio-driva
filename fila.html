@@ -12,19 +12,14 @@
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/cxacademy.css">
 <style>
-.pbox{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin-top:18px}
-.pbox .pbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line)}
-.pbox .pbar b{font-family:var(--display);font-size:1rem}
-.pbox pre{margin:0;padding:16px 18px;white-space:pre-wrap;word-wrap:break-word;font:14px/1.6 ui-monospace,Menlo,Consolas,monospace;color:#1d2433;background:#fafaf8}
-.copy{border:0;border-radius:10px;padding:9px 16px;font-weight:600;cursor:pointer;background:var(--teal);color:#fff;font-size:.92rem;min-height:40px;flex:0 0 auto}
+body.cxa,body.cxa h1,body.cxa h2,body.cxa h3,body.cxa .eyebrow,body.cxa .lead,body.cxa .dl p{font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.copy{font-family:'Poppins',sans-serif;border:0;border-radius:10px;padding:9px 16px;font-weight:600;cursor:pointer;background:var(--teal);color:#fff;font-size:.92rem;min-height:40px;flex:0 0 auto}
 .copy.done{background:#1e8e5a}
-.ex{display:inline-block;font-family:var(--display);font-weight:700;font-size:.8rem;padding:3px 10px;border-radius:999px;background:var(--mint-soft);color:var(--teal-dark);margin-right:8px}
 .chat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
 .chat .who{font-size:.82rem;color:var(--muted);margin-bottom:10px}
 .chat .who b{color:var(--teal-dark)}
 .chat p{background:#EEF7F5;border-radius:14px 14px 14px 4px;padding:10px 14px;margin:0 0 8px;max-width:640px}
-@media(max-width:700px){.dl-grid{grid-template-columns:1fr}.pbox .pbar{flex-wrap:wrap}}
-</style>
+@media(max-width:700px){.dl-grid{grid-template-columns:1fr}</style>
 </head>
 <body class="cxa">
 <nav class="nav">
@@ -43,13 +38,12 @@
 <p class="crumb"><a href="index.html">Início</a> › <a href="sala-de-dados.html">Sala de dados</a> › Desafio 2</p>
 <span class="cxa-badge"><span class="sq"></span>Desafio 2 · Workshop de IA · CS academy</span>
 <h1 style="margin-top:14px">A fila da manhã · 1º de julho, 8h</h1>
-<p class="lead">Chegaram 20 casos durante a noite. Sua missão: criar uma Skill que faça a triagem de cada caso, com o humano onde há risco.</p></div></header>
+<p class="lead">Chegaram 20 casos durante a noite. O Rafael quer a triagem pronta.</p></div></header>
 <section class="section"><div class="wrap">
 <div class="dl-grid">
-<a class="dl" href="downloads/driva_fila_2026-07-01.csv" download><div class="ft" style="background:#0e9f92">CSV</div><div><h3>Fila da manhã</h3><p>20 casos recebidos entre 30/06 à noite e 01/07 às 8h. Coloque na pasta da Driva.</p></div><div class="go">↓</div></a>
-<a class="dl" href="downloads/driva_diretrizes_atendimento_sla.pdf" download><div class="ft" style="background:#c0392b">PDF</div><div><h3>Diretrizes & SLAs</h3><p>O mesmo arquivo do pré-work: SLAs, régua de retenção e escalonamento.</p></div><div class="go">↓</div></a>
+<a class="dl" href="downloads/driva_fila_2026-07-01.csv" download><div class="ft" style="background:#0e9f92">CSV</div><div><h3>Fila da manhã</h3><p>20 casos recebidos entre 30/06 à noite e 01/07 às 8h.</p></div><div class="go">↓</div></a>
+<a class="dl" href="downloads/driva_diretrizes_atendimento_sla.pdf" download><div class="ft" style="background:#c0392b">PDF</div><div><h3>Diretrizes & SLAs</h3><p>O mesmo arquivo do pré-work.</p></div><div class="go">↓</div></a>
 </div>
-<div class="callout" style="margin-top:20px"><b>Cada caso sai com uma de quatro decisões:</b> responder · escalar · oferta de retenção · faltam dados. A fila traz alguns clientes que não estão no recorte da base operacional: confira o que a própria fila informa antes de concluir.</div>
 </div></section>
 
 <section class="section soft"><div class="wrap">
@@ -61,36 +55,6 @@ O que vocês acharam no churn entra como prioridade: cliente com menos de 30 dia
 Carro parado há mais de 4h: escala. Não responde no automático.
 Nenhuma oferta (cortesia, desconto, pausa) sai sem eu aprovar.
 Cliente que já cancelou não entra em retenção. E se faltar informação, não chuta: marca &quot;faltam dados&quot;.</pre><button class="copy" type="button" data-t="rafael-manha" style="margin-top:6px">Copiar</button></div>
-</div></section>
-
-<section class="section"><div class="wrap">
-<p class="eyebrow">Prompts</p><h2>Copie e cole no Cowork</h2>
-<div class="pbox"><div class="pbar"><b><span class="ex">EX5</span>Critérios + Skill: triar a fila da manhã</b><button class="copy" type="button" data-t="ex5">Copiar</button></div><pre id="ex5">Na pasta da Driva está a fila de hoje: driva_fila_2026-07-01.csv. Faça a triagem de cada caso seguindo as orientações do Rafael abaixo e as diretrizes de atendimento da pasta.
-
-Para cada caso, cruze com a base operacional (cliente, onboarding, cobranças, tickets) e defina:
-1. decisão: responder, escalar, oferta de retenção ou faltam dados
-2. prioridade (crítica, alta, média, baixa) e prazo pelo SLA
-3. evidência: qual arquivo e qual campo sustentam a decisão
-4. quem decide e próxima ação
-5. para os casos de &quot;responder&quot;, um rascunho de resposta no tom das diretrizes
-
-Salve em triagem_2026-07-01.xlsx, sem alterar os arquivos originais.
-
-Orientações do Rafael (Head de CX):
-Bom dia! Monta a triagem da fila de hoje pra mim?
-Segue as diretrizes que estão na pasta: SLA, régua de retenção e escalonamento.
-O que vocês acharam no churn entra como prioridade: cliente com menos de 30 dias e onboarding travado vai pro topo.
-Carro parado há mais de 4h: escala. Não responde no automático.
-Nenhuma oferta (cortesia, desconto, pausa) sai sem eu aprovar.
-Cliente que já cancelou não entra em retenção. E se faltar informação, não chuta: marca &quot;faltam dados&quot;.</pre></div>
-<div class="pbox"><div class="pbar"><b><span class="ex">EX5</span>Depois da triagem</b><button class="copy" type="button" data-t="ex5b">Copiar</button></div><pre id="ex5b">Transforme esse passo a passo em uma Skill chamada triagem_fila_driva.</pre></div>
-<div class="pbox"><div class="pbar"><b><span class="ex">EX6</span>Artefato: o painel da fila</b><button class="copy" type="button" data-t="ex6">Copiar</button></div><pre id="ex6">Crie um painel em HTML com a triagem de hoje:
-- casos críticos no topo, com o prazo de SLA de cada um
-- quantos casos em cada decisão (responder, escalar, retenção, faltam dados)
-- o que está esperando aprovação do Rafael
-- os rascunhos de resposta prontos para revisão</pre></div>
-<div class="pbox"><div class="pbar"><b><span class="ex">EX9</span>Todo dia às 8h, sem ninguém pedir</b><button class="copy" type="button" data-t="ex9">Copiar</button></div><pre id="ex9">Crie um schedule que rode a skill triagem_fila_driva todo dia às 8h, sobre o arquivo de fila mais recente da pasta da Driva, e atualize o painel. Ao final, me avise quantos casos críticos e quantas aprovações estão pendentes.</pre></div>
-<div class="note" style="margin-top:22px">Antes de confiar, confira 3 casos na mão: um de cada decisão. A evidência citada existe mesmo?</div>
 </div></section>
 
 <footer class="foot">
@@ -106,7 +70,7 @@ Cliente que já cancelou não entra em retenção. E se faltar informação, nã
 </footer>
 <script>
 document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
-  var t=document.getElementById(b.dataset.t).innerText;
+  var t=document.getElementById(b.dataset.t).textContent;
   function ok(){b.textContent='Copiado ✓';b.classList.add('done');setTimeout(function(){b.textContent='Copiar';b.classList.remove('done')},2000)}
   function fb(){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();try{document.execCommand('copy');ok()}catch(e){b.textContent='Selecione e copie'}document.body.removeChild(a)}
   if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(ok,fb)}else{fb()}
