@@ -18,6 +18,12 @@ body.cxa,body.cxa h1,body.cxa h2,body.cxa h3,body.cxa .eyebrow,body.cxa .lead,bo
 .chat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
 .chat .who{font-size:.82rem;color:var(--muted);margin-bottom:10px}
 .chat .who b{color:var(--teal-dark)}
+.lote{margin:26px 0 38px}.lote h3{margin:0 0 12px}.lote .dl{max-width:520px}
+.tbl{overflow-x:auto;margin-top:14px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.tbl table{border-collapse:collapse;width:100%;font-size:.86rem}
+.tbl th,.tbl td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.tbl th{background:#F3F6F5;font-weight:600;white-space:nowrap}
+.tbl td{min-width:90px}
 .chat p{background:#EEF7F5;border-radius:14px 14px 14px 4px;padding:10px 14px;margin:0 0 8px;max-width:640px}
 @media(max-width:700px){.dl-grid{grid-template-columns:1fr}</style>
 </head>
@@ -41,8 +47,13 @@ body.cxa,body.cxa h1,body.cxa h2,body.cxa h3,body.cxa .eyebrow,body.cxa .lead,bo
 <p class="lead">Os novos lotes de casos são publicados aqui ao longo do dia, o mais recente primeiro.</p></div></header>
 <section class="section"><div class="wrap">
 <p class="eyebrow">Lotes publicados</p>
-<div class="dl-grid" id="lotes" style="grid-template-columns:1fr">
-<a class="dl" href="downloads/driva_fila_2026-07-01_14h.csv" download><div class="ft" style="background:#0e9f92">CSV</div><div><h3>Lote publicado em 01/07 às 14h00</h3><p>5 casos · arquivo driva_fila_2026-07-01_14h.csv</p></div><div class="go">↓</div></a>
+<div id="lotes">
+<div class="lote"><h3>Lote publicado em 01/07 às 17h00 · 5 casos</h3>
+<a class="dl" href="downloads/driva_fila_2026-07-01_17h.csv" download><div class="ft" style="background:#0e9f92">CSV</div><div><h3>Baixar o arquivo</h3><p>driva_fila_2026-07-01_17h.csv</p></div><div class="go">↓</div></a>
+<div class="tbl"><table><thead><tr><th>ticket_id</th><th>recebido_em</th><th>canal</th><th>customer_id</th><th>nome_cliente</th><th>categoria</th><th>mensagem_cliente</th><th>guincho_acionado_em</th><th>valor_contestado_reais</th></tr></thead><tbody><tr><td>700559</td><td>2026-07-01 16:48</td><td>whatsapp</td><td>10213</td><td>Marcelo Ribeiro</td><td>Guincho</td><td>Estou esperando o guincho desde o almoço. De novo.</td><td>2026-07-01 12:40</td><td></td></tr><tr><td>700560</td><td>2026-07-01 16:20</td><td>app</td><td>10225</td><td>Kelly Lima</td><td>Planos</td><td>Vou viajar três semanas. Consigo pausar a assinatura?</td><td></td><td></td></tr><tr><td>700561</td><td>2026-07-01 16:35</td><td>whatsapp</td><td>10284</td><td>Ednaldo Souza</td><td>Cobrança</td><td>Me cobraram R$ 900 de avaria no para-choque. Não fui eu.</td><td></td><td>900</td></tr><tr><td>700562</td><td>2026-07-01 16:52</td><td>app</td><td>10019</td><td>Camila Ferreira</td><td>Planos</td><td>Cancelei semana passada, mas queria voltar. Como faço?</td><td></td><td></td></tr><tr><td>700556</td><td>2026-07-01 16:58</td><td>whatsapp</td><td>10131</td><td>Elaine Rocha</td><td>Cancelamento</td><td>Ninguém me ligou ainda. Vou cancelar pelo app mesmo.</td><td></td><td></td></tr></tbody></table></div></div>
+<div class="lote"><h3>Lote publicado em 01/07 às 14h00 · 5 casos</h3>
+<a class="dl" href="downloads/driva_fila_2026-07-01_14h.csv" download><div class="ft" style="background:#0e9f92">CSV</div><div><h3>Baixar o arquivo</h3><p>driva_fila_2026-07-01_14h.csv</p></div><div class="go">↓</div></a>
+<div class="tbl"><table><thead><tr><th>ticket_id</th><th>recebido_em</th><th>canal</th><th>customer_id</th><th>nome_cliente</th><th>categoria</th><th>mensagem_cliente</th><th>guincho_acionado_em</th><th>guincho_enviado_em</th><th>valor_contestado_reais</th></tr></thead><tbody><tr><td>700535</td><td>2026-07-01 12:05</td><td>whatsapp</td><td>10175</td><td>Rose Ribeiro</td><td>Guincho</td><td>Já é meio-dia e nada do guincho. Perdi o dia inteiro.</td><td>2026-07-01 02:10</td><td></td><td></td></tr><tr><td>700555</td><td>2026-07-01 13:12</td><td>app</td><td>10173</td><td>Josué Nascimento</td><td>Guincho</td><td>O carro não liga. Pedi guincho, qual a previsão?</td><td>2026-07-01 13:10</td><td>2026-07-01 13:38</td><td></td></tr><tr><td>700556</td><td>2026-07-01 13:25</td><td>whatsapp</td><td>10131</td><td>Elaine Rocha</td><td>Cancelamento</td><td>Desisto. Ontem esperei o guincho a madrugada toda. Quero cancelar.</td><td></td><td></td><td></td></tr><tr><td>700557</td><td>2026-07-01 13:40</td><td>whatsapp</td><td>10140</td><td>Diego Teixeira</td><td>Cobrança</td><td>Cobrança de avaria de R$ 1.200? O carro já tinha esse amassado quando retirei.</td><td></td><td></td><td>1200</td></tr><tr><td>700558</td><td>2026-07-01 13:52</td><td>app</td><td>10190</td><td>Rose Oliveira</td><td>Dúvida app</td><td>Como vejo a quilometragem do mês no app?</td><td></td><td></td><td></td></tr></tbody></table></div></div>
 </div>
 </div></section>
 

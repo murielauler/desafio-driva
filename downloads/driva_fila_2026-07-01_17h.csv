@@ -1,0 +1,6 @@
+﻿ticket_id,recebido_em,canal,customer_id,nome_cliente,categoria,mensagem_cliente,guincho_acionado_em,guincho_enviado_em,valor_contestado_reais,contrato_inicio,onboarding_status
+700559,2026-07-01 16:48,whatsapp,10213,Marcelo Ribeiro,Guincho,Estou esperando o guincho desde o almoço. De novo.,2026-07-01 12:40,,,,
+700560,2026-07-01 16:20,app,10225,Kelly Lima,Planos,Vou viajar três semanas. Consigo pausar a assinatura?,,,,,
+700561,2026-07-01 16:35,whatsapp,10284,Ednaldo Souza,Cobrança,Me cobraram R$ 900 de avaria no para-choque. Não fui eu.,,,900,,
+700562,2026-07-01 16:52,app,10019,Camila Ferreira,Planos,"Cancelei semana passada, mas queria voltar. Como faço?",,,,,
+700556,2026-07-01 16:58,whatsapp,10131,Elaine Rocha,Cancelamento,Ninguém me ligou ainda. Vou cancelar pelo app mesmo.,,,,,
